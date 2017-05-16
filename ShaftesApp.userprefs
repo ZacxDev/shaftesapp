@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{9C3D4CFC-C251-4328-904D-EC8B06FEA58F}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ShaftesApp" expanded="True">
+            <Node name="ShaftesApp" expanded="True" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ShaftesApp PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.17F28691-9E2F-4C4E-ADF5-71BC25CDB750" />
+</Properties>
