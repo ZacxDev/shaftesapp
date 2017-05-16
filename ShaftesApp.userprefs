@@ -1,9 +1,8 @@
 ﻿<Properties StartupConfiguration="{9C3D4CFC-C251-4328-904D-EC8B06FEA58F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="C.cs">
     <Files>
-      <File FileName="Loader.cs" Line="106" Column="21" />
-      <File FileName="Resources/LaunchScreen.xib" />
-      <File FileName="Main.cs" Line="12" Column="1" />
+      <File FileName="Loader.cs" Line="72" Column="43" />
+      <File FileName="C.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +12,7 @@
               <Node name="References" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="Resources" expanded="True" />
-              <Node name="Main.cs" selected="True" />
+              <Node name="C.cs" selected="True" />
             </Node>
           </Node>
         </State>

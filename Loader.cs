@@ -82,7 +82,7 @@ namespace ShaftesApp
             announce.Render();
 
             //tutor button
-            SRButton tutor = new SRButton(96, C.Y_MAX - 64, 64, 64, new Selector("TutorFunc"), "button_tutor");
+            SRButton tutor = new SRButton(96, C.Y_MAX - 64, 32, 32, new Selector("TutorFunc"), "button_tutor");
             tutor.Render();
 
             //add things based on appstate
