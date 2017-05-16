@@ -6,7 +6,7 @@ using UIKit;
 namespace ShaftesApp
 {
     public enum AppState
-    { MAIN, MUSIC_LOCAL }
+    { ANNOUNCEMENTS, TUTOR }
 
     public partial class ViewController : UIViewController
     {
