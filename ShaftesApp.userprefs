@@ -1,10 +1,20 @@
 ﻿<Properties StartupConfiguration="{9C3D4CFC-C251-4328-904D-EC8B06FEA58F}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Main.cs">
+    <Files>
+      <File FileName="Loader.cs" Line="106" Column="21" />
+      <File FileName="Resources/LaunchScreen.xib" />
+      <File FileName="Main.cs" Line="12" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ShaftesApp" expanded="True">
-            <Node name="ShaftesApp" expanded="True" selected="True" />
+            <Node name="ShaftesApp" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Resources" expanded="True" />
+              <Node name="Main.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>

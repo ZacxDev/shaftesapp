@@ -1,11 +1,21 @@
-C:\Users\Zach\documents\visual studio 2017\Projects\ShaftesApp\ShaftesApp\bin\iPhoneSimulator\Debug\ShaftesApp.exe
-C:\Users\Zach\documents\visual studio 2017\Projects\ShaftesApp\ShaftesApp\bin\iPhoneSimulator\Debug\ShaftesApp.pdb
-C:\Users\Zach\documents\visual studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
-C:\Users\Zach\documents\visual studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
-C:\Users\Zach\documents\visual studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
-C:\Users\Zach\documents\visual studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\optimized\Entitlements.plist
-C:\Users\Zach\documents\visual studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\optimized\
-C:\Users\Zach\documents\visual studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\ShaftesApp.exe
-C:\Users\Zach\documents\visual studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\ShaftesApp.pdb
-C:\Users\Zach\documents\visual studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\ShaftesApp.exe.mdb
-C:\Users\Zach\documents\visual studio 2017\Projects\ShaftesApp\ShaftesApp\bin\iPhoneSimulator\Debug\ShaftesApp.exe.mdb
+C:/Users/Zach/documents/visual studio 2017/Projects/ShaftesApp/ShaftesApp/bin/iPhoneSimulator/Debug/ShaftesApp.exe
+C:/Users/Zach/documents/visual studio 2017/Projects/ShaftesApp/ShaftesApp/bin/iPhoneSimulator/Debug/ShaftesApp.pdb
+C:/Users/Zach/documents/visual studio 2017/Projects/ShaftesApp/ShaftesApp/obj/iPhoneSimulator/Debug/ibtool/_BundleResourceWithLogicalName.items
+C:/Users/Zach/documents/visual studio 2017/Projects/ShaftesApp/ShaftesApp/obj/iPhoneSimulator/Debug/actool/_PartialAppManifest.items
+C:/Users/Zach/documents/visual studio 2017/Projects/ShaftesApp/ShaftesApp/obj/iPhoneSimulator/Debug/actool/_BundleResourceWithLogicalName.items
+C:/Users/Zach/documents/visual studio 2017/Projects/ShaftesApp/ShaftesApp/obj/iPhoneSimulator/Debug/optimized/Entitlements.plist
+C:/Users/Zach/documents/visual studio 2017/Projects/ShaftesApp/ShaftesApp/obj/iPhoneSimulator/Debug/optimized/
+C:/Users/Zach/documents/visual studio 2017/Projects/ShaftesApp/ShaftesApp/obj/iPhoneSimulator/Debug/ShaftesApp.exe
+C:/Users/Zach/documents/visual studio 2017/Projects/ShaftesApp/ShaftesApp/obj/iPhoneSimulator/Debug/ShaftesApp.pdb
+C:/Users/Zach/documents/visual studio 2017/Projects/ShaftesApp/ShaftesApp/obj/iPhoneSimulator/Debug/ShaftesApp.exe.mdb
+C:/Users/Zach/documents/visual studio 2017/Projects/ShaftesApp/ShaftesApp/bin/iPhoneSimulator/Debug/ShaftesApp.exe.mdb
+/Users/Alex/GitHub/shaftesapp/bin/iPhoneSimulator/Debug/ShaftesApp.exe
+/Users/Alex/GitHub/shaftesapp/bin/iPhoneSimulator/Debug/ShaftesApp.pdb
+/Users/Alex/GitHub/shaftesapp/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/ibtool/_BundleResourceWithLogicalName.items
+/Users/Alex/GitHub/shaftesapp/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/_PartialAppManifest.items
+/Users/Alex/GitHub/shaftesapp/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/_BundleResourceWithLogicalName.items
+/Users/Alex/GitHub/shaftesapp/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/Entitlements.plist
+/Users/Alex/GitHub/shaftesapp/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/
+/Users/Alex/GitHub/shaftesapp/obj/iPhoneSimulator/Debug/ShaftesApp.csproj.CoreCompileInputs.cache
+/Users/Alex/GitHub/shaftesapp/obj/iPhoneSimulator/Debug/ShaftesApp.exe
+/Users/Alex/GitHub/shaftesapp/obj/iPhoneSimulator/Debug/ShaftesApp.pdb

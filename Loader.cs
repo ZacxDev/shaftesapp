@@ -7,6 +7,7 @@ using ObjCRuntime;
 namespace ShaftesApp
 {
     //THIS CLASS DOES NOTHING, FEEL FREE TO MESS WITH IT
+    //what if it does something and you're just ignoring it #allcodeisuseful
     public class PrimeView : UIView
     {
 
