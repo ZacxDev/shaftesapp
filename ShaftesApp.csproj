@@ -90,6 +90,7 @@
     <Compile Include="Access.cs" />
     <Compile Include="ButtonHandler.cs" />
     <Compile Include="C.cs" />
+    <Compile Include="Fonts.cs" />
     <Compile Include="Loader.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
@@ -98,6 +99,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\AnnouncementsView.cs" />
+    <Compile Include="Views\SettingsView.cs" />
     <Compile Include="SRButton.cs" />
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
@@ -126,6 +129,12 @@
       <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Resources\UIAssets.xcassets\button_bars.imageset\barsHorizontal.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\button_settings.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\button_settings.imageset\gear.png">
       <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Resources\UIAssets.xcassets\button_tutor.imageset\button_tutor.png">

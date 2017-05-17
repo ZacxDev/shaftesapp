@@ -42,5 +42,12 @@ namespace ShaftesApp
         {
             Console.WriteLine("change state to tutor");
         }
+
+        [Export("SettingsFunc")]
+        void SettingsFunc()
+        {
+            Loader.ShowSettings();
+        }
+
     }
 }
