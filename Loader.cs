@@ -4,6 +4,8 @@ using CoreGraphics;
 using MonoTouch;
 using Foundation;
 using ObjCRuntime;
+using ShaftesApp.Views;
+
 namespace ShaftesApp
 {
     //THIS CLASS DOES NOTHING, FEEL FREE TO MESS WITH IT
@@ -39,19 +41,10 @@ namespace ShaftesApp
             UITouch t = touches.AnyObject as UITouch;
             CGPoint tap = t.LocationInView(this);
 
-            // check loaded buttons
-            //for (int i = 0; i < SRButton.buttons.Count; i++)
-            //{
-            //    SRButton b = SRButton.buttons[i];
+            //if tap is outside setting window thingy, reload current view without settings window (effectivly closing it)
+            if (Loader.SETTINGS_OPEN)
+                new Loader(Loader.CurrentState);
 
-            //    if (b.bounds.Contains(tap))
-            //    {
-            //        //Access.vc.ButtonFunction(b);
-            //        PerformSelector(new Selector("playfunc:"), new NSString("ddd"), 0);
-            //        break;
-            //    }
-
-            //}
         }
 
     }
@@ -60,8 +53,13 @@ namespace ShaftesApp
     {
         private ViewController vc;
 
+        public static bool SETTINGS_OPEN = false;
+        public static AppState CurrentState;
+
         public Loader(AppState astate)
         {
+            SETTINGS_OPEN = false;
+            CurrentState = astate;
             vc = Access.vc;
             clearSubviews();
 
@@ -71,7 +69,7 @@ namespace ShaftesApp
             //shaftes logo
             UIImageView logo = new UIImageView(UIImage.FromBundle("main_logo"));
             logo.Frame = new CGRect(0, 0, 256, 64);
-            render(logo);
+            //render(logo);
 
             //bars button
             SRButton bars = new SRButton(C.MOX, C.MOY + 16, 32, 32, new Selector("BarsFunc"), "button_bars");
@@ -85,17 +83,22 @@ namespace ShaftesApp
             SRButton tutor = new SRButton(96, C.Y_MAX - 64, 32, 32, new Selector("TutorFunc"), "button_tutor");
             tutor.Render();
 
+            //setting button
+            SRButton settings = new SRButton(C.X_MAX - 74, 16, 32, 32, new Selector("SettingsFunc"), "button_settings");
+            settings.Render();
+
             //add things based on appstate
-            if (astate == AppState.MAIN)
+            if (astate == AppState.ANNOUNCEMENTS)
             {
-                
+
                 //ugly title box <- make pretty pls
                 //render(Access.newTextView(C.MOX + 50, C.MOY + 50, 256, 32, "ShaftesApp", UIColor.White));
 
+                new AnnouncementsView();
 
                 //render sidebar thingy
                 if (ButtonHandler.BARS_OPEN)
-				{
+                {
                     //sidebar background fill rect, XBARINSET = space to main background
                     render(Access.newRect(0, 0, C.X_BAR_INSET, vc.ViewHeight, UIColor.White));
 
@@ -104,7 +107,11 @@ namespace ShaftesApp
                     //little seperator for constant button and groups
                     render(Access.newRect(0, 96, C.X_BAR_INSET, 3, UIColor.Gray));
 
-				}
+                }
+
+            }
+            else if (astate == AppState.TUTOR)
+            {
 
             }
             //var pv = new PrimeView();
@@ -123,7 +130,11 @@ namespace ShaftesApp
             }
         }
 
-		
+        public static void ShowSettings()
+        {
+            new SettingsView();
+            SETTINGS_OPEN = true;
+        }
 
     }
 }
