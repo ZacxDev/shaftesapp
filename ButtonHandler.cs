@@ -43,6 +43,24 @@ namespace ShaftesApp
             Console.WriteLine("change state to tutor");
         }
 
+        [Export("ForumFunc")]
+        void ForumFunc()
+        {
+            Console.WriteLine("change state to forum");
+        }
+
+        [Export("GradesFunc")]
+        void GradesFunc()
+        {
+            Console.WriteLine("change state to grdsea");
+        }
+
+        [Export("ProfileFunc")]
+        void ProfileFunc()
+        {
+            Console.WriteLine("change state to profile");
+        }
+
         [Export("SettingsFunc")]
         void SettingsFunc()
         {

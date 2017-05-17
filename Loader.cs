@@ -74,13 +74,29 @@ namespace ShaftesApp
             SRButton bars = new SRButton(C.MOX, C.MOY + 16, 32, 32, new Selector("BarsFunc"), "button_bars");
             bars.Render();
 
-            //announcements button
-            SRButton announce = new SRButton(0, C.Y_MAX - 64, 64, 64, new Selector("AnnounceFunc"), "button_announcements");
+            //little seperator line above icons
+            UIView seperator = Access.newRect(0, C.Y_MAX - 69, C.X_MAX, 2, UIColor.Gray);
+            render(seperator);
+
+            //announcements button (each btn seperated by 72px)
+            SRButton announce = new SRButton(C.X_MID - 178, C.Y_MAX - 64, 48, 48, new Selector("AnnounceFunc"), "button_announcements");
             announce.Render();
 
             //tutor button
-            SRButton tutor = new SRButton(96, C.Y_MAX - 64, 64, 64, new Selector("TutorFunc"), "button_tutor");
+            SRButton tutor = new SRButton(C.X_MID - 106, C.Y_MAX - 64, 48, 48, new Selector("TutorFunc"), "button_tutor");
             tutor.Render();
+
+            //forum button
+            SRButton forum = new SRButton(C.X_MID - 24, C.Y_MAX - 64, 48, 48, new Selector("ForumFunc"), "button_forum");
+            forum.Render();
+
+            //grades button
+            SRButton grades = new SRButton(C.X_MID + 48, C.Y_MAX - 64, 48, 48, new Selector("GradesFunc"), "button_grades");
+            grades.Render();
+
+            //profile button
+            SRButton profile = new SRButton(C.X_MID + 120, C.Y_MAX - 64, 48, 48, new Selector("ProfileFunc"), "button_profile");
+            profile.Render();
 
             //setting button
             SRButton settings = new SRButton(C.X_MAX - 74, 16, 32, 32, new Selector("SettingsFunc"), "button_settings");

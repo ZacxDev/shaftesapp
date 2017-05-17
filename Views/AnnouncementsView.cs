@@ -32,7 +32,7 @@ namespace ShaftesApp.Views
         {
 
             Title = new UITextView();
-            Title.Frame = new CGRect(C.X_MID - 64, 0, 128, 64);
+            Title.Frame = new CGRect(C.X_MID - 92, 24, 184, 64);
             Title.BackgroundColor = UIColor.Clear;
             Title.Text = "Announcements";
             Title.Font = Fonts.Settings_Title;
