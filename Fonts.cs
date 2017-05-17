@@ -8,5 +8,6 @@ namespace ShaftesApp
     class Fonts
     {
         public static UIFont Settings_Title = UIFont.SystemFontOfSize(16);
+        public static UIFont Announcements_Text = UIFont.SystemFontOfSize(10);
     }
 }

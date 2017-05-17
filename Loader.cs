@@ -4,6 +4,8 @@ using CoreGraphics;
 using MonoTouch;
 using Foundation;
 using ObjCRuntime;
+using ShaftesApp.Views;
+
 namespace ShaftesApp
 {
     //THIS CLASS DOES NOTHING, FEEL FREE TO MESS WITH IT
@@ -66,7 +68,7 @@ namespace ShaftesApp
             //shaftes logo
             UIImageView logo = new UIImageView(UIImage.FromBundle("main_logo"));
             logo.Frame = new CGRect(0, 0, 256, 64);
-            render(logo);
+            //render(logo);
 
             //bars button
             SRButton bars = new SRButton(C.MOX, C.MOY + 16, 32, 32, new Selector("BarsFunc"), "button_bars");
@@ -91,6 +93,7 @@ namespace ShaftesApp
                 //ugly title box <- make pretty pls
                 //render(Access.newTextView(C.MOX + 50, C.MOY + 50, 256, 32, "ShaftesApp", UIColor.White));
 
+                new AnnouncementsView();
 
                 //render sidebar thingy
                 if (ButtonHandler.BARS_OPEN)

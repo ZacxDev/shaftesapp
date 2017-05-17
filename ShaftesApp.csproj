@@ -99,7 +99,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SettingsView.cs" />
+    <Compile Include="Views\AnnouncementsView.cs" />
+    <Compile Include="Views\SettingsView.cs" />
     <Compile Include="SRButton.cs" />
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>

@@ -7,7 +7,7 @@ using Foundation;
 using UIKit;
 using CoreGraphics;
 
-namespace ShaftesApp
+namespace ShaftesApp.Views
 {
     class SettingsView
     {
