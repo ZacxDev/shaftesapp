@@ -58,7 +58,13 @@ namespace ShaftesApp
         [Export("ProfileFunc")]
         void ProfileFunc()
         {
-            Console.WriteLine("change state to profile");
+            Access.vc.changeView(AppState.PROFILE);
+        }
+
+        [Export("ProfileRoomsFunc")]
+        void ProfileRoomsFunc()
+        {
+            Console.WriteLine("show rooms");
         }
 
         [Export("SettingsFunc")]

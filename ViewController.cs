@@ -2,17 +2,19 @@
 using Mono;
 using Foundation;
 using UIKit;
+using ShaftesApp.Net;
 
 namespace ShaftesApp
 {
     public enum AppState
-    { ANNOUNCEMENTS, TUTOR }
+    { ANNOUNCEMENTS, TUTOR, FORUMS, PROFILE }
 
     public partial class ViewController : UIViewController
     {
         public static Loader LoaderInstance;
         public static ButtonHandler BtnHandler;
         private static Access _Access;
+        public static Client Client;
 
         public AppState state;
         public int ViewHeight, ViewWidth;
@@ -25,6 +27,7 @@ namespace ShaftesApp
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+            Client = new Client();
             // Perform any additional setup after loading the view, typically from a nib
             Console.WriteLine("ffff");
             ViewWidth = (int)View.Bounds.Width * 2;
@@ -47,5 +50,11 @@ namespace ShaftesApp
             state = s;
             LoaderInstance = new Loader(state);
         }
+
+        public override bool PrefersStatusBarHidden()
+        {
+            return true;
+        }
+
     }
 }

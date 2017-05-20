@@ -15,6 +15,8 @@ namespace ShaftesApp
         public CGRect bounds;
 
         public UIButton View;
+        private UITextView TextView;
+        private String Text;
         public Selector Select;
         UIImage Image;
 
@@ -42,6 +44,22 @@ namespace ShaftesApp
         public void Render()
         {
             Access.vc.View.AddSubview(View);
+        }
+
+        public void RenderText()
+        {
+            Access.vc.View.AddSubview(TextView);
+        }
+
+        public void SetText(String text)
+        {
+            TextView = new UITextView();
+            TextView.Frame = bounds;
+            TextView.BackgroundColor = UIColor.Clear;
+            TextView.TextColor = UIColor.White;
+            TextView.Text = text;
+            TextView.TextAlignment = UITextAlignment.Left;
+            TextView.Font = UIFont.SystemFontOfSize(12);
         }
 
     }

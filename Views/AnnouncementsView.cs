@@ -36,6 +36,7 @@ namespace ShaftesApp.Views
             Title.BackgroundColor = UIColor.Clear;
             Title.Text = "Announcements";
             Title.Font = Fonts.Settings_Title;
+            Title.Editable = false;
 
             Display = new UITextView();
             Display.Frame = new CGRect(0, 64, C.X_MAX, C.Y_MAX);
@@ -43,6 +44,8 @@ namespace ShaftesApp.Views
             Display.TextColor = UIColor.White;
             Display.Text = "This is an example Announcment\n TODO:\n - Make Announcment object so we have complete control of the overall sexiness.\n - Bold title\n - recieve announcments as json from DB";
             Display.Font = Fonts.Announcements_Text;
+            Display.UserInteractionEnabled = false;
+            Display.Editable = false;
         }
 
         private void AddToView()
