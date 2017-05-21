@@ -55,12 +55,21 @@ namespace ShaftesApp
         public void SetText(String text)
         {
             TextView = new UITextView();
+            TextView.UserInteractionEnabled = false;
             TextView.Frame = bounds;
             TextView.BackgroundColor = UIColor.Clear;
             TextView.TextColor = UIColor.White;
             TextView.Text = text;
             TextView.TextAlignment = UITextAlignment.Left;
             TextView.Font = UIFont.SystemFontOfSize(12);
+        }
+
+        public void Remove()
+        {
+            View.RemoveFromSuperview();
+
+            if (TextView != null)
+                TextView.RemoveFromSuperview();
         }
 
     }

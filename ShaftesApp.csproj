@@ -140,6 +140,12 @@
     <ImageAsset Include="Resources\UIAssets.xcassets\button_announcements.imageset\Contents.json">
       <InProject>false</InProject>
     </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\button_back.imageset\button_back.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\button_back.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
     <ImageAsset Include="Resources\UIAssets.xcassets\button_bars.imageset\barsHorizontal.png">
       <InProject>false</InProject>
     </ImageAsset>

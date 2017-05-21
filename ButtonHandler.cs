@@ -2,6 +2,8 @@
 using Mono;
 using ObjCRuntime;
 using Foundation;
+using ShaftesApp.Views;
+
 namespace ShaftesApp
 {
     public class ButtonHandler
@@ -64,7 +66,7 @@ namespace ShaftesApp
         [Export("ProfileRoomsFunc")]
         void ProfileRoomsFunc()
         {
-            Console.WriteLine("show rooms");
+            ProfileView.ShowRooms();
         }
 
         [Export("SettingsFunc")]
@@ -73,5 +75,10 @@ namespace ShaftesApp
             Loader.ShowSettings();
         }
 
+        [Export("RoomsBackToProfile")]
+        void RoomsBackToProfile()
+        {
+            ProfileView.DismissRooms();
+        }
     }
 }

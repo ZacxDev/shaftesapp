@@ -7,6 +7,5 @@ C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iP
 C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\optimized\
 C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\ShaftesApp.exe
 C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\ShaftesApp.pdb
-C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\ShaftesApp.csprojResolveAssemblyReference.cache
 C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\ShaftesApp.exe.mdb
 C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\bin\iPhoneSimulator\Debug\ShaftesApp.exe.mdb

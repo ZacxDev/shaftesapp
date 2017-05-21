@@ -13,10 +13,11 @@ namespace ShaftesApp.Views
     static class ProfileView
     {
 
-
         private static bool init = false;
-        private static List<String> announcements = new List<String>();
+        private static bool RoomsInit = false;
+        private static List<String> rooms = new List<String>();
 
+        //profile
         public static UIImageView Avatar;
         public static UIImageView AvatarFrame;
         public static UITextView Username;
@@ -24,8 +25,15 @@ namespace ShaftesApp.Views
         public static SRButton Rooms;
         public static UITextView Grade;
 
+        //rooms view
+        public static SRButton Back;
+        public static UITextView RoomsTitle;
+        public static UIScrollView RoomsViewScroll;
+
         static ProfileView()
         {
+
+            rooms.Add("TestRoom");
 
             if (!init)
                 Initialize();
@@ -84,8 +92,63 @@ namespace ShaftesApp.Views
             Rooms.Render();
             Rooms.RenderText();
             Access.vc.View.AddSubview(Grade);
+        }
+
+        public static void InitRooms()
+        {
+
+            RoomsInit = true;
+
+            RoomsTitle = new UITextView();
+            RoomsTitle.Text = "Classrooms";
+            RoomsTitle.Frame = new CGRect(Access.vc.ViewWidth + C.X_MID - 64, 32, 128, 32);
+            RoomsTitle.Font = Fonts.Settings_Title;
+            RoomsTitle.BackgroundColor = UIColor.Clear;
+
+            Back = new SRButton(0, 0, 32, 32, new Selector("RoomsBackToProfile"), "button_back");
+
+            RoomsViewScroll = new UIScrollView();
+            RoomsViewScroll.BackgroundColor = UIColor.DarkGray;
+            RoomsViewScroll.Frame = new CGRect(Access.vc.ViewWidth * 2, 32, Access.vc.ViewWidth, Access.vc.ViewHeight - 92);
+            RoomsViewScroll.DirectionalLockEnabled = true;
+            RoomsViewScroll.ContentOffset = new CGPoint(0, RoomsViewScroll.ContentOffset.Y);
+
+        }
+
+        public static void ShowRooms()
+        {
+            if (!RoomsInit)
+                InitRooms();
 
             DissmissView();
+            Access.vc.View.AddSubview(RoomsViewScroll);
+            Access.vc.View.AddSubview(RoomsTitle);
+            Back.Render();
+
+            UIView.Animate(0.5, 0, UIViewAnimationOptions.CurveEaseIn, () =>
+            {
+                RoomsViewScroll.Frame = new CGRect(0, 32, Access.vc.ViewWidth, Access.vc.ViewHeight - 92);
+                RoomsTitle.Frame = new CGRect(C.X_MID - 64, 32, 128, 32);
+            }, () => { }
+                );
+
+        }
+
+        public static void DismissRooms()
+        {
+
+            UIView.Animate(0.5, 0, UIViewAnimationOptions.CurveEaseIn, () =>
+            {
+                RoomsViewScroll.Frame = new CGRect(Access.vc.ViewWidth * 2, 32, Access.vc.ViewWidth, Access.vc.ViewHeight - 92);
+                RoomsTitle.Frame = new CGRect(Access.vc.ViewWidth + C.X_MID - 64, 32, 128, 32);
+            }, () => { }
+                );
+
+            Back.Remove();
+            RoomsTitle.RemoveFromSuperview();
+            RoomsViewScroll.RemoveFromSuperview();
+
+            ViewController.ViewDismiss.PresentProfileView();
         }
 
         public static void DissmissView()

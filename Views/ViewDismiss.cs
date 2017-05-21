@@ -30,5 +30,19 @@ namespace ShaftesApp.View
             }, () => { }
                 );
         }
+
+        public void PresentProfileView()
+        {
+            UIView.Animate(0.5, 0, UIViewAnimationOptions.CurveEaseIn, () =>
+            {
+                ProfileView.Avatar.Alpha = 1;
+                ProfileView.AvatarFrame.Alpha = 1;
+                ProfileView.Bio.Alpha = 1;
+                ProfileView.Grade.Alpha = 1;
+                ProfileView.Rooms.TextView.Alpha = 1;
+                ProfileView.Username.Alpha = 1;
+            }, () => { }
+                );
+        }
     }
 }
