@@ -34,13 +34,37 @@ namespace ShaftesApp
         [Export("AnnounceFunc")]
         void AnnounceFunc()
         {
-            Console.WriteLine("change state to announements");
+            Access.vc.changeView(AppState.ANNOUNCEMENTS);
         }
 
         [Export("TutorFunc")]
         void TutorFunc()
         {
             Console.WriteLine("change state to tutor");
+        }
+
+        [Export("ForumFunc")]
+        void ForumFunc()
+        {
+            Console.WriteLine("change state to forum");
+        }
+
+        [Export("GradesFunc")]
+        void GradesFunc()
+        {
+            Console.WriteLine("change state to grdsea");
+        }
+
+        [Export("ProfileFunc")]
+        void ProfileFunc()
+        {
+            Access.vc.changeView(AppState.PROFILE);
+        }
+
+        [Export("ProfileRoomsFunc")]
+        void ProfileRoomsFunc()
+        {
+            Console.WriteLine("show rooms");
         }
 
         [Export("SettingsFunc")]

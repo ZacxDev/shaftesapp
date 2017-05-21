@@ -47,8 +47,10 @@
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer: zug@hotmail.ca (AX3CZ3NCY7)</CodesignKey>
+    <MtouchDebug>True</MtouchDebug>
+    <IOSDebugOverWiFi>False</IOSDebugOverWiFi>
+    <IOSDebuggerPort>10000</IOSDebuggerPort>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -96,10 +98,14 @@
     <Compile Include="AppDelegate.cs" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="Info.plist" />
+    <Compile Include="Net\Client.cs" />
+    <Compile Include="Net\Room.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\ViewDismiss.cs" />
     <Compile Include="Views\AnnouncementsView.cs" />
+    <Compile Include="Views\ProfileView.cs" />
     <Compile Include="Views\SettingsView.cs" />
     <Compile Include="SRButton.cs" />
     <Compile Include="ViewController.designer.cs">
@@ -122,6 +128,12 @@
     <ImageAsset Include="Resources\UIAssets.xcassets\AppIcons.appiconset\Contents.json">
       <InProject>false</InProject>
     </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\avatar_frame.imageset\avatar_frame.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\avatar_frame.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
     <ImageAsset Include="Resources\UIAssets.xcassets\button_announcements.imageset\button_announcements.png">
       <InProject>false</InProject>
     </ImageAsset>
@@ -129,6 +141,24 @@
       <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Resources\UIAssets.xcassets\button_bars.imageset\barsHorizontal.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\button_forum.imageset\button_forum.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\button_forum.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\button_grades.imageset\button_grades.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\button_grades.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\button_profile.imageset\button_profile.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\button_profile.imageset\Contents.json">
       <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Resources\UIAssets.xcassets\button_settings.imageset\Contents.json">
@@ -141,6 +171,12 @@
       <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Resources\UIAssets.xcassets\button_tutor.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\default_avatar.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\default_avatar.imageset\default_avatar.png">
       <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Resources\UIAssets.xcassets\LaunchImages.launchimage\Contents.json">

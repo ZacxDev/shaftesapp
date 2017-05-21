@@ -66,15 +66,20 @@ namespace ShaftesApp
             //main backgroud fill rect
             render(Access.newRect(C.MOX, C.MOY, vc.ViewWidth, vc.ViewHeight, UIColor.DarkGray));
 
+            //logo background
+            UIView logoBack = Access.newRect(0, 0, vc.ViewWidth, 32, UIColor.Black);
+            render(logoBack);
+
             //shaftes logo
             UIImageView logo = new UIImageView(UIImage.FromBundle("main_logo"));
-            logo.Frame = new CGRect(0, 0, 256, 64);
-            //render(logo);
+            logo.Frame = new CGRect(C.X_MID - 64, 0, 128, 32);
+            render(logo);
 
             //bars button
             SRButton bars = new SRButton(C.MOX, C.MOY + 16, 32, 32, new Selector("BarsFunc"), "button_bars");
             bars.Render();
 
+<<<<<<< HEAD
             //announcements button
             SRButton announce = new SRButton(0, C.Y_MAX - 64, 64, 64, new Selector("AnnounceFunc"), "button_announcements");
             announce.Render();
@@ -82,19 +87,21 @@ namespace ShaftesApp
             //tutor button
             SRButton tutor = new SRButton(96, C.Y_MAX - 64, 32, 32, new Selector("TutorFunc"), "button_tutor");
             tutor.Render();
+=======
+            //little seperator line above icons
+            UIView seperator = Access.newRect(0, C.Y_MAX - 60, C.X_MAX, 2, UIColor.Gray);
+            render(seperator);
+>>>>>>> origin/master
 
             //setting button
-            SRButton settings = new SRButton(C.X_MAX - 74, 16, 32, 32, new Selector("SettingsFunc"), "button_settings");
+            SRButton settings = new SRButton(C.X_MAX - 74, 0, 32, 32, new Selector("SettingsFunc"), "button_settings");
             settings.Render();
 
             //add things based on appstate
             if (astate == AppState.ANNOUNCEMENTS)
             {
 
-                //ugly title box <- make pretty pls
-                //render(Access.newTextView(C.MOX + 50, C.MOY + 50, 256, 32, "ShaftesApp", UIColor.White));
-
-                new AnnouncementsView();
+                AnnouncementsView.AddToView();
 
                 //render sidebar thingy
                 if (ButtonHandler.BARS_OPEN)
@@ -114,7 +121,32 @@ namespace ShaftesApp
             {
 
             }
-            //var pv = new PrimeView();
+            else if (astate == AppState.PROFILE)
+            {
+                ProfileView.AddToView();
+            }
+            //render bottom bar
+
+            //announcements button 
+            SRButton announce = new SRButton(C.X_MID - 176, C.Y_MAX - 56, 64, 64, new Selector("AnnounceFunc"), "button_announcements");
+            announce.Render();
+
+            //tutor button
+            SRButton tutor = new SRButton(C.X_MID - 104, C.Y_MAX - 56, 64, 64, new Selector("TutorFunc"), "button_tutor");
+            tutor.Render();
+
+            //forum button
+            SRButton forum = new SRButton(C.X_MID - 32, C.Y_MAX - 56, 64, 64, new Selector("ForumFunc"), "button_forum");
+            forum.Render();
+
+            //grades button
+            SRButton grades = new SRButton(C.X_MID + 40, C.Y_MAX - 56, 64, 64, new Selector("GradesFunc"), "button_grades");
+            grades.Render();
+
+            //profile button
+            SRButton profile = new SRButton(C.X_MID + 112, C.Y_MAX - 56, 64, 64, new Selector("ProfileFunc"), "button_profile");
+            profile.Render();
+
         }
 
         private void render(UIView v)
