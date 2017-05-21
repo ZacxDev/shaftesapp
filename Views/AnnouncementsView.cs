@@ -6,29 +6,26 @@ using System.Text;
 using Foundation;
 using UIKit;
 using CoreGraphics;
+using ObjCRuntime;
 
 namespace ShaftesApp.Views
 {
-    class AnnouncementsView
+    static class AnnouncementsView
     {
 
-        public static CGRect Bounds;
+        private static bool init = false;
+        private static List<String> announcements = new List<String>();
 
-        private bool init = false;
-        private List<String> announcements = new List<String>();
+        public static UITextView Title;
+        public static UITextView Display;
 
-        private UITextView Title;
-        private UITextView Display;
-
-        public AnnouncementsView()
+        static AnnouncementsView()
         {
-
-            if (!init)
-                Initialize();
-            AddToView();
+          if (!init)
+           Initialize();
         }
 
-        private void Initialize()
+        private static void Initialize()
         {
 
             Title = new UITextView();
@@ -48,11 +45,10 @@ namespace ShaftesApp.Views
             Display.Editable = false;
         }
 
-        private void AddToView()
+        public static void AddToView()
         {
             Access.vc.View.AddSubview(Title);
             Access.vc.View.AddSubview(Display);
         }
-
     }
 }

@@ -90,7 +90,7 @@ namespace ShaftesApp
             if (astate == AppState.ANNOUNCEMENTS)
             {
 
-                new AnnouncementsView();
+                AnnouncementsView.AddToView();
 
                 //render sidebar thingy
                 if (ButtonHandler.BARS_OPEN)

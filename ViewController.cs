@@ -3,6 +3,7 @@ using Mono;
 using Foundation;
 using UIKit;
 using ShaftesApp.Net;
+using ShaftesApp.View;
 
 namespace ShaftesApp
 {
@@ -13,6 +14,7 @@ namespace ShaftesApp
     {
         public static Loader LoaderInstance;
         public static ButtonHandler BtnHandler;
+        public static ViewDismiss ViewDismiss;
         private static Access _Access;
         public static Client Client;
 
@@ -29,13 +31,14 @@ namespace ShaftesApp
             base.ViewDidLoad();
             Client = new Client();
             // Perform any additional setup after loading the view, typically from a nib
-            Console.WriteLine("ffff");
+            //Console.WriteLine("ffff");
             ViewWidth = (int)View.Bounds.Width * 2;
             ViewHeight = (int)View.Bounds.Height * 2;
 
             new C(this);
             _Access = new Access(this);
             BtnHandler = new ButtonHandler();
+            ViewDismiss = new ViewDismiss();
             LoaderInstance = new Loader(state);
         }
 

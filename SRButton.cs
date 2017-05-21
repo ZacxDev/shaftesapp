@@ -15,7 +15,7 @@ namespace ShaftesApp
         public CGRect bounds;
 
         public UIButton View;
-        private UITextView TextView;
+        public UITextView TextView;
         private String Text;
         public Selector Select;
         UIImage Image;

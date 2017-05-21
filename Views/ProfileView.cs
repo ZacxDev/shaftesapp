@@ -17,12 +17,12 @@ namespace ShaftesApp.Views
         private static bool init = false;
         private static List<String> announcements = new List<String>();
 
-        private static UIImageView Avatar;
-        private static UIImageView AvatarFrame;
-        private static UITextView Username;
-        private static UITextView Bio;
-        private static SRButton Rooms;
-        private static UITextView Grade;
+        public static UIImageView Avatar;
+        public static UIImageView AvatarFrame;
+        public static UITextView Username;
+        public static UITextView Bio;
+        public static SRButton Rooms;
+        public static UITextView Grade;
 
         static ProfileView()
         {
@@ -84,7 +84,13 @@ namespace ShaftesApp.Views
             Rooms.Render();
             Rooms.RenderText();
             Access.vc.View.AddSubview(Grade);
+
+            DissmissView();
         }
 
+        public static void DissmissView()
+        {
+            ViewController.ViewDismiss.DismissProfileView();
+        }
     }
 }

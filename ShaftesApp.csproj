@@ -103,6 +103,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\ViewDismiss.cs" />
     <Compile Include="Views\AnnouncementsView.cs" />
     <Compile Include="Views\ProfileView.cs" />
     <Compile Include="Views\SettingsView.cs" />
