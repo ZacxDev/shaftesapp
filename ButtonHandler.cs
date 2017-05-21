@@ -34,7 +34,7 @@ namespace ShaftesApp
         [Export("AnnounceFunc")]
         void AnnounceFunc()
         {
-            Console.WriteLine("change state to announements");
+            Access.vc.changeView(AppState.ANNOUNCEMENTS);
         }
 
         [Export("TutorFunc")]

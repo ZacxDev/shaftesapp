@@ -36,6 +36,7 @@ namespace ShaftesApp
             View = new UIButton();
             View.Frame = bounds;
             Image = UIImage.FromBundle(path);
+            //Image.Draw(new CGRect(0, 0, width, height));
             View.SetImage(Image, UIControlState.Normal);
             View.AddTarget(ViewController.BtnHandler, Select, UIControlEvent.TouchUpInside);
             buttons.Add(this);
