@@ -7,6 +7,7 @@ using Foundation;
 using UIKit;
 using CoreGraphics;
 using ObjCRuntime;
+using ShaftesApp.UI;
 
 namespace ShaftesApp.Views
 {
@@ -33,7 +34,20 @@ namespace ShaftesApp.Views
         static ProfileView()
         {
 
-            rooms.Add("TestRoom");
+            rooms.Add("TestRoom0");
+            rooms.Add("TestRoom1");
+            rooms.Add("TestRoom2");
+            rooms.Add("TestRoom3");
+            rooms.Add("TestRoom4");
+            rooms.Add("TestRoom5");
+            rooms.Add("TestRoom6");
+            rooms.Add("TestRoom7");
+            rooms.Add("TestRoom7");
+            rooms.Add("TestRoom7");
+            rooms.Add("TestRoom7");
+            rooms.Add("TestRoom7");
+            rooms.Add("TestRoom7");
+            rooms.Add("TestRoom7");
 
             if (!init)
                 Initialize();
@@ -51,7 +65,7 @@ namespace ShaftesApp.Views
             Avatar.Image = ViewController.Client.Image;
 
             AvatarFrame = new UIImageView();
-            AvatarFrame.Frame = new CGRect(0, 38, C.X_MAX - 32, 74);
+            AvatarFrame.Frame = new CGRect(0, 38, C.X_MAX - 24, 74);
             AvatarFrame.BackgroundColor = UIColor.Clear;
             AvatarFrame.Image = UIImage.FromBundle("avatar_frame");
 
@@ -64,7 +78,7 @@ namespace ShaftesApp.Views
             Username.Font = Fonts.Settings_Title;
 
             Bio = new UITextView();
-            Bio.Frame = new CGRect(C.X_MID - 128, 56, 256, 56);
+            Bio.Frame = new CGRect(C.X_MID - 104, 56, 208, 56);
             Bio.Text = ViewController.Client.Bio;
             Bio.TextAlignment = UITextAlignment.Center;
             Bio.BackgroundColor = UIColor.Clear;
@@ -109,9 +123,13 @@ namespace ShaftesApp.Views
 
             RoomsViewScroll = new UIScrollView();
             RoomsViewScroll.BackgroundColor = UIColor.DarkGray;
-            RoomsViewScroll.Frame = new CGRect(Access.vc.ViewWidth * 2, 32, Access.vc.ViewWidth, Access.vc.ViewHeight - 92);
+            RoomsViewScroll.Frame = new CGRect(Access.vc.ViewWidth * 2, 64, Access.vc.ViewWidth, Access.vc.ViewHeight - 96);
             RoomsViewScroll.DirectionalLockEnabled = true;
-            RoomsViewScroll.ContentOffset = new CGPoint(0, RoomsViewScroll.ContentOffset.Y);
+            //RoomsViewScroll.ContentOffset = new CGPoint(0, rooms.Count * 64);
+            RoomsViewScroll.ContentSize = new CGSize(Access.vc.ViewWidth, rooms.Count * 104 + 64);
+            RoomsViewScroll.ScrollEnabled = true;
+            RoomsViewScroll.Bounces = true;
+            RoomsViewScroll.AlwaysBounceVertical = true;
 
         }
 
@@ -125,9 +143,14 @@ namespace ShaftesApp.Views
             Access.vc.View.AddSubview(RoomsTitle);
             Back.Render();
 
+            for (int i = 0; i < rooms.Count; i++)
+            {
+                new RoomListNode(rooms[i], i).AddToSuperView(RoomsViewScroll);
+            }
+
             UIView.Animate(0.5, 0, UIViewAnimationOptions.CurveEaseIn, () =>
             {
-                RoomsViewScroll.Frame = new CGRect(0, 32, Access.vc.ViewWidth, Access.vc.ViewHeight - 92);
+                RoomsViewScroll.Frame = new CGRect(0, 64, Access.vc.ViewWidth, Access.vc.ViewHeight - 96);
                 RoomsTitle.Frame = new CGRect(C.X_MID - 64, 32, 128, 32);
             }, () => { }
                 );
@@ -137,9 +160,9 @@ namespace ShaftesApp.Views
         public static void DismissRooms()
         {
 
-            UIView.Animate(0.5, 0, UIViewAnimationOptions.CurveEaseIn, () =>
+            UIView.Animate(0.5, 0, UIViewAnimationOptions.CurveEaseOut, () =>
             {
-                RoomsViewScroll.Frame = new CGRect(Access.vc.ViewWidth * 2, 32, Access.vc.ViewWidth, Access.vc.ViewHeight - 92);
+                RoomsViewScroll.Frame = new CGRect(Access.vc.ViewWidth * 2, 64, Access.vc.ViewWidth, rooms.Count * 64);
                 RoomsTitle.Frame = new CGRect(Access.vc.ViewWidth + C.X_MID - 64, 32, 128, 32);
             }, () => { }
                 );
