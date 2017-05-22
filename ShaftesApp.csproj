@@ -48,11 +48,11 @@
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: zug@hotmail.ca (AX3CZ3NCY7)</CodesignKey>
     <MtouchDebug>True</MtouchDebug>
     <IOSDebugOverWiFi>False</IOSDebugOverWiFi>
     <IOSDebuggerPort>10000</IOSDebuggerPort>
-    <CodesignProvision></CodesignProvision>
+    <CodesignProvision>3578606e-8866-4925-a5e6-4c6a21b300dd</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -102,10 +102,13 @@
     <None Include="Info.plist" />
     <Compile Include="Net\Client.cs" />
     <Compile Include="Net\Room.cs" />
+    <Compile Include="Net\RoomMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="UI\RoomListNode.cs" />
+    <Compile Include="Views\RoomsScrollView.cs" />
+    <Compile Include="Views\RoomView.cs" />
     <Compile Include="Views\ViewDismiss.cs" />
     <Compile Include="Views\AnnouncementsView.cs" />
     <Compile Include="Views\ProfileView.cs" />

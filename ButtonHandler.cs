@@ -3,6 +3,7 @@ using Mono;
 using ObjCRuntime;
 using Foundation;
 using ShaftesApp.Views;
+using System.Diagnostics;
 
 namespace ShaftesApp
 {
@@ -79,6 +80,18 @@ namespace ShaftesApp
         void RoomsBackToProfile()
         {
             ProfileView.DismissRooms();
+        }
+
+        [Export("RoomBackToProfileRoomList")]
+        void RoomBackToProfileRoomList()
+        {
+            ProfileView.ShowRooms();
+        }
+
+        [Export("ShowRoom")]
+        void ShowRoom()
+        {
+            Debug.WriteLine("ffffffmatey");
         }
     }
 }

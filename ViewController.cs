@@ -8,7 +8,7 @@ using ShaftesApp.View;
 namespace ShaftesApp
 {
     public enum AppState
-    { ANNOUNCEMENTS, TUTOR, FORUMS, PROFILE }
+    { ANNOUNCEMENTS, TUTOR, FORUMS, PROFILE, ROOM }
 
     public partial class ViewController : UIViewController
     {
