@@ -5627,7 +5627,7 @@ ldr x0, [x16, #416]
 .word 0x1e220010
 .word 0x1e22c200
 .word 0xd280001e
-.word 0xf2a8381e
+.word 0xf2a8481e
 .word 0x9e6703d0
 .word 0x1e22c201
 .word 0xd280001e
@@ -5807,7 +5807,7 @@ ldr x0, [x16, #1104]
 .word 0x9e6703d0
 .word 0x1e22c200
 .word 0xd280001e
-.word 0xf2a8501e
+.word 0xf2a8561e
 .word 0x9e6703d0
 .word 0x1e22c201
 
@@ -6200,56 +6200,36 @@ adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
 ldr x0, [x16, #1152]
 .word 0xf9000001
-.loc 12 35 0
+.loc 12 21 0
 .word 0xf9400fb1
 .word 0xf940f231
 .word 0xb4000051
 .word 0xd63f0220
+.word 0xd2800000
+
+adrp x16, mono_aot_ShaftesApp_got@PAGE+0
+add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
+ldr x0, [x16, #1160]
+.word 0xb900001f
+.word 0xf9400fb1
+.word 0xf9411631
+.word 0xb4000051
+.word 0xd63f0220
+.word 0xd2800600
+
+adrp x16, mono_aot_ShaftesApp_got@PAGE+0
+add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
+ldr x0, [x16, #1168]
+.word 0xd280061e
+.word 0xb900001e
 .loc 12 37 0
 .word 0xf9400fb1
-.word 0xf9410231
-.word 0xb4000051
-.word 0xd63f0220
-
-adrp x16, mono_aot_ShaftesApp_got@PAGE+0
-add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1152]
-.word 0xf9400002
-
-adrp x16, mono_aot_ShaftesApp_got@PAGE+0
-add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1160]
-.word 0xaa0203e0
-.word 0xf940005e
-bl _p_56
-.word 0xf9400fb1
-.word 0xf9413a31
-.word 0xb4000051
-.word 0xd63f0220
-.loc 12 38 0
-.word 0xf9400fb1
-.word 0xf9414a31
-.word 0xb4000051
-.word 0xd63f0220
-
-adrp x16, mono_aot_ShaftesApp_got@PAGE+0
-add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1152]
-.word 0xf9400002
-
-adrp x16, mono_aot_ShaftesApp_got@PAGE+0
-add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1168]
-.word 0xaa0203e0
-.word 0xf940005e
-bl _p_56
-.word 0xf9400fb1
-.word 0xf9418231
+.word 0xf9413e31
 .word 0xb4000051
 .word 0xd63f0220
 .loc 12 39 0
 .word 0xf9400fb1
-.word 0xf9419231
+.word 0xf9414e31
 .word 0xb4000051
 .word 0xd63f0220
 
@@ -6265,12 +6245,12 @@ ldr x1, [x16, #1176]
 .word 0xf940005e
 bl _p_56
 .word 0xf9400fb1
-.word 0xf941ca31
+.word 0xf9418631
 .word 0xb4000051
 .word 0xd63f0220
 .loc 12 40 0
 .word 0xf9400fb1
-.word 0xf941da31
+.word 0xf9419631
 .word 0xb4000051
 .word 0xd63f0220
 
@@ -6286,12 +6266,12 @@ ldr x1, [x16, #1184]
 .word 0xf940005e
 bl _p_56
 .word 0xf9400fb1
-.word 0xf9421231
+.word 0xf941ce31
 .word 0xb4000051
 .word 0xd63f0220
 .loc 12 41 0
 .word 0xf9400fb1
-.word 0xf9422231
+.word 0xf941de31
 .word 0xb4000051
 .word 0xd63f0220
 
@@ -6307,12 +6287,12 @@ ldr x1, [x16, #1192]
 .word 0xf940005e
 bl _p_56
 .word 0xf9400fb1
-.word 0xf9425a31
+.word 0xf9421631
 .word 0xb4000051
 .word 0xd63f0220
 .loc 12 42 0
 .word 0xf9400fb1
-.word 0xf9426a31
+.word 0xf9422631
 .word 0xb4000051
 .word 0xd63f0220
 
@@ -6328,12 +6308,12 @@ ldr x1, [x16, #1200]
 .word 0xf940005e
 bl _p_56
 .word 0xf9400fb1
-.word 0xf942a231
+.word 0xf9425e31
 .word 0xb4000051
 .word 0xd63f0220
 .loc 12 43 0
 .word 0xf9400fb1
-.word 0xf942b231
+.word 0xf9426e31
 .word 0xb4000051
 .word 0xd63f0220
 
@@ -6349,12 +6329,12 @@ ldr x1, [x16, #1208]
 .word 0xf940005e
 bl _p_56
 .word 0xf9400fb1
-.word 0xf942ea31
+.word 0xf942a631
 .word 0xb4000051
 .word 0xd63f0220
 .loc 12 44 0
 .word 0xf9400fb1
-.word 0xf942fa31
+.word 0xf942b631
 .word 0xb4000051
 .word 0xd63f0220
 
@@ -6370,12 +6350,12 @@ ldr x1, [x16, #1216]
 .word 0xf940005e
 bl _p_56
 .word 0xf9400fb1
-.word 0xf9433231
+.word 0xf942ee31
 .word 0xb4000051
 .word 0xd63f0220
 .loc 12 45 0
 .word 0xf9400fb1
-.word 0xf9434231
+.word 0xf942fe31
 .word 0xb4000051
 .word 0xd63f0220
 
@@ -6386,17 +6366,17 @@ ldr x0, [x16, #1152]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1216]
+ldr x1, [x16, #1224]
 .word 0xaa0203e0
 .word 0xf940005e
 bl _p_56
 .word 0xf9400fb1
-.word 0xf9437a31
+.word 0xf9433631
 .word 0xb4000051
 .word 0xd63f0220
 .loc 12 46 0
 .word 0xf9400fb1
-.word 0xf9438a31
+.word 0xf9434631
 .word 0xb4000051
 .word 0xd63f0220
 
@@ -6407,17 +6387,17 @@ ldr x0, [x16, #1152]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1216]
+ldr x1, [x16, #1232]
 .word 0xaa0203e0
 .word 0xf940005e
 bl _p_56
 .word 0xf9400fb1
-.word 0xf943c231
+.word 0xf9437e31
 .word 0xb4000051
 .word 0xd63f0220
 .loc 12 47 0
 .word 0xf9400fb1
-.word 0xf943d231
+.word 0xf9438e31
 .word 0xb4000051
 .word 0xd63f0220
 
@@ -6428,17 +6408,17 @@ ldr x0, [x16, #1152]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1216]
+ldr x1, [x16, #1232]
 .word 0xaa0203e0
 .word 0xf940005e
 bl _p_56
 .word 0xf9400fb1
-.word 0xf9440a31
+.word 0xf943c631
 .word 0xb4000051
 .word 0xd63f0220
 .loc 12 48 0
 .word 0xf9400fb1
-.word 0xf9441a31
+.word 0xf943d631
 .word 0xb4000051
 .word 0xd63f0220
 
@@ -6449,17 +6429,17 @@ ldr x0, [x16, #1152]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1216]
+ldr x1, [x16, #1232]
 .word 0xaa0203e0
 .word 0xf940005e
 bl _p_56
 .word 0xf9400fb1
-.word 0xf9445231
+.word 0xf9440e31
 .word 0xb4000051
 .word 0xd63f0220
 .loc 12 49 0
 .word 0xf9400fb1
-.word 0xf9446231
+.word 0xf9441e31
 .word 0xb4000051
 .word 0xd63f0220
 
@@ -6470,17 +6450,17 @@ ldr x0, [x16, #1152]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1216]
+ldr x1, [x16, #1232]
 .word 0xaa0203e0
 .word 0xf940005e
 bl _p_56
 .word 0xf9400fb1
-.word 0xf9449a31
+.word 0xf9445631
 .word 0xb4000051
 .word 0xd63f0220
 .loc 12 50 0
 .word 0xf9400fb1
-.word 0xf944aa31
+.word 0xf9446631
 .word 0xb4000051
 .word 0xd63f0220
 
@@ -6491,17 +6471,59 @@ ldr x0, [x16, #1152]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1216]
+ldr x1, [x16, #1232]
 .word 0xaa0203e0
 .word 0xf940005e
 bl _p_56
 .word 0xf9400fb1
-.word 0xf944e231
+.word 0xf9449e31
+.word 0xb4000051
+.word 0xd63f0220
+.loc 12 51 0
+.word 0xf9400fb1
+.word 0xf944ae31
+.word 0xb4000051
+.word 0xd63f0220
+
+adrp x16, mono_aot_ShaftesApp_got@PAGE+0
+add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
+ldr x0, [x16, #1152]
+.word 0xf9400002
+
+adrp x16, mono_aot_ShaftesApp_got@PAGE+0
+add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
+ldr x1, [x16, #1232]
+.word 0xaa0203e0
+.word 0xf940005e
+bl _p_56
+.word 0xf9400fb1
+.word 0xf944e631
 .word 0xb4000051
 .word 0xd63f0220
 .loc 12 52 0
 .word 0xf9400fb1
-.word 0xf944f231
+.word 0xf944f631
+.word 0xb4000051
+.word 0xd63f0220
+
+adrp x16, mono_aot_ShaftesApp_got@PAGE+0
+add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
+ldr x0, [x16, #1152]
+.word 0xf9400002
+
+adrp x16, mono_aot_ShaftesApp_got@PAGE+0
+add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
+ldr x1, [x16, #1232]
+.word 0xaa0203e0
+.word 0xf940005e
+bl _p_56
+.word 0xf9400fb1
+.word 0xf9452e31
+.word 0xb4000051
+.word 0xd63f0220
+.loc 12 54 0
+.word 0xf9400fb1
+.word 0xf9453e31
 .word 0xb4000051
 .word 0xd63f0220
 
@@ -6515,27 +6537,27 @@ ldr x0, [x16, #1136]
 .word 0xaa0003fa
 .word 0xaa1a03e0
 .word 0x34000140
-.loc 12 53 0
+.loc 12 55 0
 .word 0xf9400fb1
-.word 0xf9452a31
+.word 0xf9457631
 .word 0xb4000051
 .word 0xd63f0220
 bl _p_57
 .word 0xf9400fb1
-.word 0xf9453e31
+.word 0xf9458a31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 55 0
+.loc 12 57 0
 .word 0xf94013b1
 .word 0xf9400231
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xf9400fb1
-.word 0xf9455e31
+.word 0xf945aa31
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xf9400fb1
-.word 0xf9456e31
+.word 0xf945ba31
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xf9400bba
@@ -6548,7 +6570,7 @@ Lme_34:
 	.align 4
 	.no_dead_strip ShaftesApp_Views_ProfileView_Initialize
 ShaftesApp_Views_ProfileView_Initialize:
-.loc 12 58 0 prologue_end
+.loc 12 60 0 prologue_end
 .word 0xd2805e10
 .word 0x910003f1
 .word 0xcb100231
@@ -6558,7 +6580,7 @@ ShaftesApp_Views_ProfileView_Initialize:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1224]
+ldr x16, [x16, #1240]
 .word 0xf9000bb0
 .word 0xf9400a11
 .word 0xf9000fb1
@@ -6574,7 +6596,7 @@ ldr x16, [x16, #1224]
 .word 0xf9405e31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 60 0
+.loc 12 62 0
 .word 0xf9400bb1
 .word 0xf9406e31
 .word 0xb4000051
@@ -6583,7 +6605,7 @@ ldr x16, [x16, #1224]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1232]
+ldr x0, [x16, #1248]
 .word 0x3980b410
 .word 0xb5000050
 bl _p_55
@@ -6593,7 +6615,7 @@ add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
 ldr x0, [x16, #1136]
 .word 0xd280003e
 .word 0x3900001e
-.loc 12 62 0
+.loc 12 64 0
 .word 0xf9400bb1
 .word 0xf940ae31
 .word 0xb4000051
@@ -6603,19 +6625,19 @@ adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
 ldr x0, [x16, #576]
 bl _p_1
-.word 0xf90173a0
+.word 0xf90177a0
 bl _p_58
 .word 0xf9400bb1
 .word 0xf940d631
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xf94173a1
+.word 0xf94177a1
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1240]
+ldr x0, [x16, #1256]
 .word 0xf9000001
-.loc 12 63 0
+.loc 12 65 0
 .word 0xf9400bb1
 .word 0xf940fa31
 .word 0xb4000051
@@ -6623,16 +6645,23 @@ ldr x0, [x16, #1240]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1240]
+ldr x0, [x16, #1256]
 .word 0xf9400000
-.word 0xf9016fa0
-.word 0xd280001e
-.word 0xf2a8101e
-.word 0x9e6703d0
+.word 0xf90173a0
+
+adrp x16, mono_aot_ShaftesApp_got@PAGE+0
+add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
+ldr x0, [x16, #1160]
+.word 0xb9800000
+.word 0x11001000
+.word 0x1e220010
 .word 0x1e22c200
-.word 0xd280001e
-.word 0xf2a8481e
-.word 0x9e6703d0
+
+adrp x16, mono_aot_ShaftesApp_got@PAGE+0
+add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
+ldr x0, [x16, #1168]
+.word 0xb9800000
+.word 0x1e220010
 .word 0x1e22c201
 .word 0xd280001e
 .word 0xf2a8501e
@@ -6665,10 +6694,10 @@ bl _p_3
 .word 0xf940b3a0
 .word 0xf90063a0
 .word 0xf9400bb1
-.word 0xf941b631
+.word 0xf941ca31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xf9416fa1
+.word 0xf94173a1
 .word 0xaa0103e0
 .word 0x9102a3a2
 .word 0xfd4057a0
@@ -6679,45 +6708,45 @@ bl _p_3
 .word 0xf9414830
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf941ee31
+.word 0xf9420231
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 64 0
+.loc 12 66 0
 .word 0xf9400bb1
-.word 0xf941fe31
+.word 0xf9421231
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1240]
+ldr x0, [x16, #1256]
 .word 0xf9400000
-.word 0xf9016ba0
+.word 0xf9016fa0
 bl _p_40
-.word 0xf90167a0
+.word 0xf9016ba0
 .word 0xf9400bb1
-.word 0xf9422a31
+.word 0xf9423e31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xf94167a1
-.word 0xf9416ba2
+.word 0xf9416ba1
+.word 0xf9416fa2
 .word 0xaa0203e0
 .word 0xf9400042
 .word 0xf9416050
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf9425231
+.word 0xf9426631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 65 0
+.loc 12 67 0
 .word 0xf9400bb1
-.word 0xf9426231
+.word 0xf9427631
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1240]
+ldr x0, [x16, #1256]
 .word 0xf9400002
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
@@ -6730,12 +6759,12 @@ ldr x0, [x16, #952]
 .word 0xf941a050
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf942a631
+.word 0xf942ba31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 67 0
+.loc 12 69 0
 .word 0xf9400bb1
-.word 0xf942b631
+.word 0xf942ca31
 .word 0xb4000051
 .word 0xd63f0220
 
@@ -6743,35 +6772,43 @@ adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
 ldr x0, [x16, #576]
 bl _p_1
-.word 0xf90163a0
+.word 0xf90167a0
 bl _p_58
 .word 0xf9400bb1
-.word 0xf942de31
+.word 0xf942f231
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xf94163a1
+.word 0xf94167a1
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1248]
+ldr x0, [x16, #1264]
 .word 0xf9000001
-.loc 12 68 0
+.loc 12 70 0
 .word 0xf9400bb1
-.word 0xf9430231
+.word 0xf9431631
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1248]
+ldr x0, [x16, #1264]
 .word 0xf9400000
-.word 0xf9015fa0
-.word 0xd280001e
-.word 0x9e6703d0
+.word 0xf90163a0
+
+adrp x16, mono_aot_ShaftesApp_got@PAGE+0
+add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
+ldr x0, [x16, #1160]
+.word 0xb9800000
+.word 0x1e220010
 .word 0x1e22c200
-.word 0xd280001e
-.word 0xf2a8431e
-.word 0x9e6703d0
+
+adrp x16, mono_aot_ShaftesApp_got@PAGE+0
+add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
+ldr x0, [x16, #1168]
+.word 0xb9800000
+.word 0x51002800
+.word 0x1e220010
 .word 0x1e22c201
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
@@ -6808,10 +6845,10 @@ bl _p_3
 .word 0xf940a3a0
 .word 0xf90053a0
 .word 0xf9400bb1
-.word 0xf943c631
+.word 0xf943f231
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xf9415fa1
+.word 0xf94163a1
 .word 0xaa0103e0
 .word 0x910223a2
 .word 0xfd4047a0
@@ -6822,70 +6859,70 @@ bl _p_3
 .word 0xf9414830
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf943fe31
+.word 0xf9442a31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 69 0
+.loc 12 71 0
 .word 0xf9400bb1
-.word 0xf9440e31
+.word 0xf9443a31
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1248]
+ldr x0, [x16, #1264]
 .word 0xf9400000
-.word 0xf9015ba0
+.word 0xf9015fa0
 bl _p_40
-.word 0xf90157a0
+.word 0xf9015ba0
 .word 0xf9400bb1
-.word 0xf9443a31
+.word 0xf9446631
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xf94157a1
-.word 0xf9415ba2
+.word 0xf9415ba1
+.word 0xf9415fa2
 .word 0xaa0203e0
 .word 0xf9400042
 .word 0xf9416050
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf9446231
+.word 0xf9448e31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 70 0
+.loc 12 72 0
 .word 0xf9400bb1
-.word 0xf9447231
+.word 0xf9449e31
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1248]
+ldr x0, [x16, #1264]
 .word 0xf9400000
-.word 0xf90153a0
+.word 0xf90157a0
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1256]
+ldr x0, [x16, #1272]
 bl _p_5
-.word 0xf9014fa0
+.word 0xf90153a0
 .word 0xf9400bb1
-.word 0xf944aa31
+.word 0xf944d631
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xf9414fa1
-.word 0xf94153a2
+.word 0xf94153a1
+.word 0xf94157a2
 .word 0xaa0203e0
 .word 0xf9400042
 .word 0xf941a050
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf944d231
+.word 0xf944fe31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 72 0
+.loc 12 74 0
 .word 0xf9400bb1
-.word 0xf944e231
+.word 0xf9450e31
 .word 0xb4000051
 .word 0xd63f0220
 
@@ -6893,29 +6930,29 @@ adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
 ldr x0, [x16, #232]
 bl _p_1
-.word 0xf9014ba0
+.word 0xf9014fa0
 bl _p_2
 .word 0xf9400bb1
-.word 0xf9450a31
+.word 0xf9453631
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xf9414ba1
+.word 0xf9414fa1
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1264]
+ldr x0, [x16, #1280]
 .word 0xf9000001
-.loc 12 73 0
+.loc 12 75 0
 .word 0xf9400bb1
-.word 0xf9452e31
+.word 0xf9455a31
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1264]
+ldr x0, [x16, #1280]
 .word 0xf9400000
-.word 0xf90147a0
+.word 0xf9014ba0
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
@@ -6924,9 +6961,13 @@ ldr x0, [x16, #416]
 .word 0x51010000
 .word 0x1e220010
 .word 0x1e22c200
-.word 0xd280001e
-.word 0xf2a8401e
-.word 0x9e6703d0
+
+adrp x16, mono_aot_ShaftesApp_got@PAGE+0
+add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
+ldr x0, [x16, #1168]
+.word 0xb9800000
+.word 0x51004000
+.word 0x1e220010
 .word 0x1e22c201
 .word 0xd280001e
 .word 0xf2a8601e
@@ -6959,10 +7000,10 @@ bl _p_3
 .word 0xf94093a0
 .word 0xf90043a0
 .word 0xf9400bb1
-.word 0xf945f631
+.word 0xf9462e31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xf94147a1
+.word 0xf9414ba1
 .word 0xaa0103e0
 .word 0x9101a3a2
 .word 0xfd4037a0
@@ -6973,18 +7014,18 @@ bl _p_3
 .word 0xf9414830
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf9462e31
+.word 0xf9466631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 74 0
+.loc 12 76 0
 .word 0xf9400bb1
-.word 0xf9463e31
+.word 0xf9467631
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1264]
+ldr x0, [x16, #1280]
 .word 0xf9400002
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
@@ -6997,18 +7038,18 @@ ldr x0, [x16, #952]
 .word 0xf9429050
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf9468231
+.word 0xf946ba31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 75 0
+.loc 12 77 0
 .word 0xf9400bb1
-.word 0xf9469231
+.word 0xf946ca31
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1264]
+ldr x0, [x16, #1280]
 .word 0xf9400002
 .word 0xd2800020
 .word 0xaa0203e0
@@ -7017,72 +7058,72 @@ ldr x0, [x16, #1264]
 .word 0xf9428c50
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf946ca31
+.word 0xf9470231
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 76 0
+.loc 12 78 0
 .word 0xf9400bb1
-.word 0xf946da31
+.word 0xf9471231
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1264]
+ldr x0, [x16, #1280]
 .word 0xf9400000
-.word 0xf90143a0
+.word 0xf90147a0
 bl _p_40
-.word 0xf9013fa0
+.word 0xf90143a0
 .word 0xf9400bb1
-.word 0xf9470631
+.word 0xf9473e31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xf9413fa1
-.word 0xf94143a2
+.word 0xf94143a1
+.word 0xf94147a2
 .word 0xaa0203e0
 .word 0xf9400042
 .word 0xf9416050
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf9472e31
+.word 0xf9476631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 77 0
+.loc 12 79 0
 .word 0xf9400bb1
-.word 0xf9473e31
+.word 0xf9477631
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1264]
+ldr x0, [x16, #1280]
 .word 0xf9400000
-.word 0xf9013ba0
+.word 0xf9013fa0
 bl _p_33
-.word 0xf90137a0
+.word 0xf9013ba0
 .word 0xf9400bb1
-.word 0xf9476a31
+.word 0xf947a231
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xf94137a1
-.word 0xf9413ba2
+.word 0xf9413ba1
+.word 0xf9413fa2
 .word 0xaa0203e0
 .word 0xf9400042
 .word 0xf9428850
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf9479231
+.word 0xf947ca31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 78 0
+.loc 12 80 0
 .word 0xf9400bb1
-.word 0xf947a231
+.word 0xf947da31
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1264]
+ldr x0, [x16, #1280]
 .word 0xf9400002
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
@@ -7094,12 +7135,12 @@ ldr x0, [x16, #472]
 .word 0xf942d450
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf947e231
+.word 0xf9481a31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 80 0
+.loc 12 82 0
 .word 0xf9400bb1
-.word 0xf947f231
+.word 0xf9482a31
 .word 0xb4000051
 .word 0xd63f0220
 
@@ -7107,29 +7148,29 @@ adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
 ldr x0, [x16, #232]
 bl _p_1
-.word 0xf90133a0
+.word 0xf90137a0
 bl _p_2
 .word 0xf9400bb1
-.word 0xf9481a31
+.word 0xf9485231
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xf94133a1
+.word 0xf94137a1
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1272]
+ldr x0, [x16, #1288]
 .word 0xf9000001
-.loc 12 81 0
+.loc 12 83 0
 .word 0xf9400bb1
-.word 0xf9483e31
+.word 0xf9487631
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1272]
+ldr x0, [x16, #1288]
 .word 0xf9400000
-.word 0xf9012fa0
+.word 0xf90133a0
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
@@ -7138,9 +7179,13 @@ ldr x0, [x16, #416]
 .word 0x51018000
 .word 0x1e220010
 .word 0x1e22c200
-.word 0xd280001e
-.word 0xf2a84c1e
-.word 0x9e6703d0
+
+adrp x16, mono_aot_ShaftesApp_got@PAGE+0
+add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
+ldr x0, [x16, #1168]
+.word 0xb9800000
+.word 0x11002000
+.word 0x1e220010
 .word 0x1e22c201
 .word 0xd280001e
 .word 0xf2a86a1e
@@ -7173,10 +7218,10 @@ bl _p_3
 .word 0xf94083a0
 .word 0xf90033a0
 .word 0xf9400bb1
-.word 0xf9490631
+.word 0xf9494a31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xf9412fa1
+.word 0xf94133a1
 .word 0xaa0103e0
 .word 0x910123a2
 .word 0xfd4027a0
@@ -7187,18 +7232,18 @@ bl _p_3
 .word 0xf9414830
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf9493e31
+.word 0xf9498231
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 82 0
+.loc 12 84 0
 .word 0xf9400bb1
-.word 0xf9494e31
+.word 0xf9499231
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1272]
+ldr x0, [x16, #1288]
 .word 0xf9400002
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
@@ -7211,18 +7256,18 @@ ldr x0, [x16, #952]
 .word 0xf9429050
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf9499231
+.word 0xf949d631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 83 0
+.loc 12 85 0
 .word 0xf9400bb1
-.word 0xf949a231
+.word 0xf949e631
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1272]
+ldr x0, [x16, #1288]
 .word 0xf9400002
 .word 0xd2800020
 .word 0xaa0203e0
@@ -7231,102 +7276,102 @@ ldr x0, [x16, #1272]
 .word 0xf9428c50
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf949da31
+.word 0xf94a1e31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 84 0
+.loc 12 86 0
 .word 0xf9400bb1
-.word 0xf949ea31
+.word 0xf94a2e31
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1272]
+ldr x0, [x16, #1288]
 .word 0xf9400000
-.word 0xf9012ba0
+.word 0xf9012fa0
 bl _p_40
-.word 0xf90127a0
+.word 0xf9012ba0
 .word 0xf9400bb1
-.word 0xf94a1631
+.word 0xf94a5a31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xf94127a1
-.word 0xf9412ba2
+.word 0xf9412ba1
+.word 0xf9412fa2
 .word 0xaa0203e0
 .word 0xf9400042
 .word 0xf9416050
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf94a3e31
+.word 0xf94a8231
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 85 0
+.loc 12 87 0
 .word 0xf9400bb1
-.word 0xf94a4e31
+.word 0xf94a9231
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1272]
+ldr x0, [x16, #1288]
 .word 0xf9400000
-.word 0xf90123a0
+.word 0xf90127a0
 bl _p_33
-.word 0xf9011fa0
+.word 0xf90123a0
 .word 0xf9400bb1
-.word 0xf94a7a31
+.word 0xf94abe31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xf9411fa1
-.word 0xf94123a2
+.word 0xf94123a1
+.word 0xf94127a2
 .word 0xaa0203e0
 .word 0xf9400042
 .word 0xf9428850
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf94aa231
+.word 0xf94ae631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 86 0
+.loc 12 88 0
 .word 0xf9400bb1
-.word 0xf94ab231
+.word 0xf94af631
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1272]
+ldr x0, [x16, #1288]
 .word 0xf9400000
-.word 0xf90117a0
+.word 0xf9011ba0
 .word 0xd2800100
 .word 0xd2800100
 bl _p_15
-.word 0xfd011ba0
+.word 0xfd011fa0
 .word 0xf9400bb1
-.word 0xf94ae631
+.word 0xf94b2a31
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xfd411ba0
+.word 0xfd411fa0
 bl _p_16
-.word 0xf90113a0
+.word 0xf90117a0
 .word 0xf9400bb1
-.word 0xf94b0231
+.word 0xf94b4631
 .word 0xb4000051
 .word 0xd63f0220
-.word 0xf94113a1
-.word 0xf94117a2
+.word 0xf94117a1
+.word 0xf9411ba2
 .word 0xaa0203e0
 .word 0xf9400042
 .word 0xf942d450
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf94b2a31
+.word 0xf94b6e31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 88 0
+.loc 12 90 0
 .word 0xf9400bb1
-.word 0xf94b3a31
+.word 0xf94b7e31
 .word 0xb4000051
 .word 0xd63f0220
 
@@ -7336,14 +7381,20 @@ ldr x0, [x16, #416]
 .word 0xb9800000
 .word 0x51018000
 .word 0xf90103a0
-.word 0xd2800a80
+
+adrp x16, mono_aot_ShaftesApp_got@PAGE+0
+add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
+ldr x0, [x16, #1168]
+.word 0xb9800000
+.word 0x1100b000
+.word 0xf90107a0
 .word 0xd2801000
 .word 0xd2800400
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1280]
-.word 0xf9010fa0
+ldr x0, [x16, #1296]
+.word 0xf90113a0
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
@@ -7351,18 +7402,18 @@ ldr x0, [x16, #592]
 .word 0xd2800401
 .word 0xd2800401
 bl _p_19
-.word 0xf9410fa1
-.word 0xf90107a0
+.word 0xf94113a1
+.word 0xf9010ba0
 bl _p_28
 .word 0xf9400bb1
-.word 0xf94ba231
+.word 0xf94bfa31
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1288]
-.word 0xf9010ba0
+ldr x0, [x16, #1304]
+.word 0xf9010fa0
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
@@ -7371,38 +7422,38 @@ ldr x0, [x16, #608]
 .word 0xd2800e01
 bl _p_19
 .word 0xf94103a1
-.word 0xf94107a5
-.word 0xf9410ba6
+.word 0xf94107a2
+.word 0xf9410ba5
+.word 0xf9410fa6
 .word 0xf900ffa0
-.word 0xd2800a82
 .word 0xd2801003
 .word 0xd2800404
 bl _p_29
 .word 0xf9400bb1
-.word 0xf94bfa31
+.word 0xf94c5231
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xf940ffa1
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1296]
+ldr x0, [x16, #1312]
 .word 0xf9000001
-.loc 12 89 0
+.loc 12 91 0
 .word 0xf9400bb1
-.word 0xf94c1e31
+.word 0xf94c7631
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1296]
+ldr x0, [x16, #1312]
 .word 0xf9400000
 .word 0xf900f3a0
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1304]
+ldr x0, [x16, #1320]
 .word 0xf900f7a0
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
@@ -7416,13 +7467,13 @@ bl _p_59
 .word 0x93407c00
 .word 0xf900fba0
 .word 0xf9400bb1
-.word 0xf94c7a31
+.word 0xf94cd231
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1312]
+ldr x0, [x16, #1328]
 .word 0xd2800281
 .word 0xd2800281
 bl _p_19
@@ -7433,7 +7484,7 @@ bl _p_19
 bl _p_60
 .word 0xf900efa0
 .word 0xf9400bb1
-.word 0xf94cba31
+.word 0xf94d1231
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xf940efa1
@@ -7442,12 +7493,12 @@ bl _p_60
 .word 0xf940005e
 bl _p_61
 .word 0xf9400bb1
-.word 0xf94cde31
+.word 0xf94d3631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 91 0
+.loc 12 93 0
 .word 0xf9400bb1
-.word 0xf94cee31
+.word 0xf94d4631
 .word 0xb4000051
 .word 0xd63f0220
 
@@ -7458,24 +7509,24 @@ bl _p_1
 .word 0xf900eba0
 bl _p_2
 .word 0xf9400bb1
-.word 0xf94d1631
+.word 0xf94d6e31
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xf940eba1
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1320]
+ldr x0, [x16, #1336]
 .word 0xf9000001
-.loc 12 92 0
+.loc 12 94 0
 .word 0xf9400bb1
-.word 0xf94d3a31
+.word 0xf94d9231
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1320]
+ldr x0, [x16, #1336]
 .word 0xf9400000
 .word 0xf900e7a0
 
@@ -7485,9 +7536,13 @@ ldr x0, [x16, #416]
 .word 0xb9800000
 .word 0x1e220010
 .word 0x1e22c200
-.word 0xd280001e
-.word 0xf2a8551e
-.word 0x9e6703d0
+
+adrp x16, mono_aot_ShaftesApp_got@PAGE+0
+add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
+ldr x0, [x16, #1168]
+.word 0xb9800000
+.word 0x1100b000
+.word 0x1e220010
 .word 0x1e22c201
 .word 0xd280001e
 .word 0xf2a8601e
@@ -7520,7 +7575,7 @@ bl _p_3
 .word 0xf94073a0
 .word 0xf90023a0
 .word 0xf9400bb1
-.word 0xf94dfe31
+.word 0xf94e6231
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xf940e7a1
@@ -7534,24 +7589,24 @@ bl _p_3
 .word 0xf9414830
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf94e3631
+.word 0xf94e9a31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 93 0
+.loc 12 95 0
 .word 0xf9400bb1
-.word 0xf94e4631
+.word 0xf94eaa31
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1320]
+ldr x0, [x16, #1336]
 .word 0xf9400000
 .word 0xf900dba0
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1328]
+ldr x0, [x16, #1344]
 .word 0xf900dfa0
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
@@ -7563,7 +7618,7 @@ ldr x0, [x16, #952]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1312]
+ldr x0, [x16, #1328]
 .word 0xd2800281
 .word 0xd2800281
 bl _p_19
@@ -7574,7 +7629,7 @@ bl _p_19
 bl _p_60
 .word 0xf900d7a0
 .word 0xf9400bb1
-.word 0xf94ec231
+.word 0xf94f2631
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xf940d7a1
@@ -7584,18 +7639,18 @@ bl _p_60
 .word 0xf9429050
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf94eea31
+.word 0xf94f4e31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 94 0
+.loc 12 96 0
 .word 0xf9400bb1
-.word 0xf94efa31
+.word 0xf94f5e31
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1320]
+ldr x0, [x16, #1336]
 .word 0xf9400002
 .word 0xd2800020
 .word 0xaa0203e0
@@ -7604,24 +7659,24 @@ ldr x0, [x16, #1320]
 .word 0xf9428c50
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf94f3231
+.word 0xf94f9631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 95 0
+.loc 12 97 0
 .word 0xf9400bb1
-.word 0xf94f4231
+.word 0xf94fa631
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1320]
+ldr x0, [x16, #1336]
 .word 0xf9400000
 .word 0xf900d3a0
 bl _p_40
 .word 0xf900cfa0
 .word 0xf9400bb1
-.word 0xf94f6e31
+.word 0xf94fd231
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xf940cfa1
@@ -7631,24 +7686,24 @@ bl _p_40
 .word 0xf9416050
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf94f9631
+.word 0xf94ffa31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 96 0
+.loc 12 98 0
 .word 0xf9400bb1
-.word 0xf94fa631
+.word 0xf9500a31
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1320]
+ldr x0, [x16, #1336]
 .word 0xf9400000
 .word 0xf900cba0
 bl _p_33
 .word 0xf900c7a0
 .word 0xf9400bb1
-.word 0xf94fd231
+.word 0xf9503631
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xf940c7a1
@@ -7658,18 +7713,18 @@ bl _p_33
 .word 0xf9428850
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf94ffa31
+.word 0xf9505e31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 97 0
+.loc 12 99 0
 .word 0xf9400bb1
-.word 0xf9500a31
+.word 0xf9506e31
 .word 0xb4000051
 .word 0xd63f0220
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1320]
+ldr x0, [x16, #1336]
 .word 0xf9400000
 .word 0xf900bfa0
 .word 0xd2800180
@@ -7677,14 +7732,14 @@ ldr x0, [x16, #1320]
 bl _p_15
 .word 0xfd00c3a0
 .word 0xf9400bb1
-.word 0xf9503e31
+.word 0xf950a231
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xfd40c3a0
 bl _p_16
 .word 0xf900bba0
 .word 0xf9400bb1
-.word 0xf9505a31
+.word 0xf950be31
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xf940bba1
@@ -7694,16 +7749,16 @@ bl _p_16
 .word 0xf942d450
 .word 0xd63f0200
 .word 0xf9400bb1
-.word 0xf9508231
+.word 0xf950e631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 98 0
+.loc 12 100 0
 .word 0xf9400bb1
-.word 0xf9509231
+.word 0xf950f631
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xf9400bb1
-.word 0xf950a231
+.word 0xf9510631
 .word 0xb4000051
 .word 0xd63f0220
 .word 0x910003bf
@@ -7719,13 +7774,13 @@ Lme_35:
 	.align 4
 	.no_dead_strip ShaftesApp_Views_ProfileView_AddToView
 ShaftesApp_Views_ProfileView_AddToView:
-.loc 12 101 0 prologue_end
+.loc 12 103 0 prologue_end
 .word 0xa9ba7bfd
 .word 0x910003fd
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1336]
+ldr x16, [x16, #1352]
 .word 0xf9000bb0
 .word 0xf9400a11
 .word 0xf9000fb1
@@ -7741,7 +7796,7 @@ ldr x16, [x16, #1336]
 .word 0xf9404e31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 102 0
+.loc 12 104 0
 .word 0xf9400bb1
 .word 0xf9405e31
 .word 0xb4000051
@@ -7763,7 +7818,7 @@ ldr x0, [x16, #216]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1232]
+ldr x0, [x16, #1248]
 .word 0x3980b410
 .word 0xb5000050
 bl _p_55
@@ -7771,7 +7826,7 @@ bl _p_55
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1240]
+ldr x0, [x16, #1256]
 .word 0xf9400001
 .word 0xaa0203e0
 .word 0xf9400042
@@ -7781,7 +7836,7 @@ ldr x0, [x16, #1240]
 .word 0xf940de31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 103 0
+.loc 12 105 0
 .word 0xf9400bb1
 .word 0xf940ee31
 .word 0xb4000051
@@ -7804,7 +7859,7 @@ ldr x0, [x16, #216]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1248]
+ldr x0, [x16, #1264]
 .word 0xf9400001
 .word 0xaa0203e0
 .word 0xf9400042
@@ -7814,7 +7869,7 @@ ldr x0, [x16, #1248]
 .word 0xf9415631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 104 0
+.loc 12 106 0
 .word 0xf9400bb1
 .word 0xf9416631
 .word 0xb4000051
@@ -7837,7 +7892,7 @@ ldr x0, [x16, #216]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1264]
+ldr x0, [x16, #1280]
 .word 0xf9400001
 .word 0xaa0203e0
 .word 0xf9400042
@@ -7847,7 +7902,7 @@ ldr x0, [x16, #1264]
 .word 0xf941ce31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 105 0
+.loc 12 107 0
 .word 0xf9400bb1
 .word 0xf941de31
 .word 0xb4000051
@@ -7870,7 +7925,7 @@ ldr x0, [x16, #216]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1272]
+ldr x0, [x16, #1288]
 .word 0xf9400001
 .word 0xaa0203e0
 .word 0xf9400042
@@ -7880,7 +7935,7 @@ ldr x0, [x16, #1272]
 .word 0xf9424631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 106 0
+.loc 12 108 0
 .word 0xf9400bb1
 .word 0xf9425631
 .word 0xb4000051
@@ -7888,7 +7943,7 @@ ldr x0, [x16, #1272]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1296]
+ldr x0, [x16, #1312]
 .word 0xf9400001
 .word 0xaa0103e0
 .word 0xf940003e
@@ -7897,7 +7952,7 @@ bl _p_30
 .word 0xf9428231
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 107 0
+.loc 12 109 0
 .word 0xf9400bb1
 .word 0xf9429231
 .word 0xb4000051
@@ -7905,7 +7960,7 @@ bl _p_30
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1296]
+ldr x0, [x16, #1312]
 .word 0xf9400001
 .word 0xaa0103e0
 .word 0xf940003e
@@ -7914,7 +7969,7 @@ bl _p_62
 .word 0xf942be31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 108 0
+.loc 12 110 0
 .word 0xf9400bb1
 .word 0xf942ce31
 .word 0xb4000051
@@ -7937,7 +7992,7 @@ ldr x0, [x16, #216]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1320]
+ldr x0, [x16, #1336]
 .word 0xf9400001
 .word 0xaa0203e0
 .word 0xf9400042
@@ -7947,7 +8002,7 @@ ldr x0, [x16, #1320]
 .word 0xf9433631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 109 0
+.loc 12 111 0
 .word 0xf9400bb1
 .word 0xf9434631
 .word 0xb4000051
@@ -7965,13 +8020,13 @@ Lme_36:
 	.align 4
 	.no_dead_strip ShaftesApp_Views_ProfileView_InitRooms
 ShaftesApp_Views_ProfileView_InitRooms:
-.loc 12 112 0 prologue_end
+.loc 12 114 0 prologue_end
 .word 0xa9ab7bfd
 .word 0x910003fd
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1344]
+ldr x16, [x16, #1360]
 .word 0xf9000bb0
 .word 0xf9400a11
 .word 0xf9000fb1
@@ -7987,7 +8042,7 @@ ldr x16, [x16, #1344]
 .word 0xf9404e31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 114 0
+.loc 12 116 0
 .word 0xf9400bb1
 .word 0xf9405e31
 .word 0xb4000051
@@ -7996,7 +8051,7 @@ ldr x16, [x16, #1344]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1232]
+ldr x0, [x16, #1248]
 .word 0x3980b410
 .word 0xb5000050
 bl _p_55
@@ -8006,7 +8061,7 @@ add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
 ldr x0, [x16, #1144]
 .word 0xd280003e
 .word 0x3900001e
-.loc 12 116 0
+.loc 12 118 0
 .word 0xf9400bb1
 .word 0xf9409e31
 .word 0xb4000051
@@ -8026,9 +8081,9 @@ bl _p_2
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1352]
+ldr x0, [x16, #1368]
 .word 0xf9000001
-.loc 12 117 0
+.loc 12 119 0
 .word 0xf9400bb1
 .word 0xf940ea31
 .word 0xb4000051
@@ -8036,12 +8091,12 @@ ldr x0, [x16, #1352]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1352]
+ldr x0, [x16, #1368]
 .word 0xf9400002
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1360]
+ldr x1, [x16, #1376]
 .word 0xaa0203e0
 .word 0xf9400042
 .word 0xf9429050
@@ -8050,7 +8105,7 @@ ldr x1, [x16, #1360]
 .word 0xf9412631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 118 0
+.loc 12 120 0
 .word 0xf9400bb1
 .word 0xf9413631
 .word 0xb4000051
@@ -8058,7 +8113,7 @@ ldr x1, [x16, #1360]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1352]
+ldr x0, [x16, #1368]
 .word 0xf9400000
 .word 0xf9009fa0
 
@@ -8128,7 +8183,7 @@ bl _p_3
 .word 0xf9424e31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 119 0
+.loc 12 121 0
 .word 0xf9400bb1
 .word 0xf9425e31
 .word 0xb4000051
@@ -8136,7 +8191,7 @@ bl _p_3
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1352]
+ldr x0, [x16, #1368]
 .word 0xf9400002
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
@@ -8151,7 +8206,7 @@ ldr x0, [x16, #472]
 .word 0xf9429e31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 120 0
+.loc 12 122 0
 .word 0xf9400bb1
 .word 0xf942ae31
 .word 0xb4000051
@@ -8159,7 +8214,7 @@ ldr x0, [x16, #472]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1352]
+ldr x0, [x16, #1368]
 .word 0xf9400000
 .word 0xf9009ba0
 bl _p_40
@@ -8178,7 +8233,7 @@ bl _p_40
 .word 0xf9430231
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 121 0
+.loc 12 123 0
 .word 0xf9400bb1
 .word 0xf9431231
 .word 0xb4000051
@@ -8186,7 +8241,7 @@ bl _p_40
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1352]
+ldr x0, [x16, #1368]
 .word 0xf9400002
 .word 0xd2800000
 .word 0xaa0203e0
@@ -8198,7 +8253,7 @@ ldr x0, [x16, #1352]
 .word 0xf9434a31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 123 0
+.loc 12 125 0
 .word 0xf9400bb1
 .word 0xf9435a31
 .word 0xb4000051
@@ -8210,7 +8265,7 @@ ldr x0, [x16, #1352]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1368]
+ldr x0, [x16, #1384]
 .word 0xf90093a0
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
@@ -8229,7 +8284,7 @@ bl _p_28
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1376]
+ldr x0, [x16, #1392]
 .word 0xf9008fa0
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
@@ -8254,9 +8309,9 @@ bl _p_29
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1384]
+ldr x0, [x16, #1400]
 .word 0xf9000001
-.loc 12 125 0
+.loc 12 127 0
 .word 0xf9400bb1
 .word 0xf9442a31
 .word 0xb4000051
@@ -8264,7 +8319,7 @@ ldr x0, [x16, #1384]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1392]
+ldr x0, [x16, #1408]
 bl _p_1
 .word 0xf90083a0
 bl _p_63
@@ -8276,9 +8331,9 @@ bl _p_63
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1400]
+ldr x0, [x16, #1416]
 .word 0xf9000001
-.loc 12 126 0
+.loc 12 128 0
 .word 0xf9400bb1
 .word 0xf9447631
 .word 0xb4000051
@@ -8286,7 +8341,7 @@ ldr x0, [x16, #1400]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1400]
+ldr x0, [x16, #1416]
 .word 0xf9400000
 .word 0xf9007fa0
 bl _p_23
@@ -8305,7 +8360,7 @@ bl _p_23
 .word 0xf944ca31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 127 0
+.loc 12 129 0
 .word 0xf9400bb1
 .word 0xf944da31
 .word 0xb4000051
@@ -8313,7 +8368,7 @@ bl _p_23
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1400]
+ldr x0, [x16, #1416]
 .word 0xf9400000
 .word 0xf90077a0
 
@@ -8386,7 +8441,7 @@ bl _p_3
 .word 0xf945fa31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 128 0
+.loc 12 130 0
 .word 0xf9400bb1
 .word 0xf9460a31
 .word 0xb4000051
@@ -8394,7 +8449,7 @@ bl _p_3
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1400]
+ldr x0, [x16, #1416]
 .word 0xf9400002
 .word 0xd2800020
 .word 0xaa0203e0
@@ -8406,7 +8461,7 @@ ldr x0, [x16, #1400]
 .word 0xf9464231
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 130 0
+.loc 12 132 0
 .word 0xf9400bb1
 .word 0xf9465231
 .word 0xb4000051
@@ -8414,7 +8469,7 @@ ldr x0, [x16, #1400]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1400]
+ldr x0, [x16, #1416]
 .word 0xf9400000
 .word 0xf9006ba0
 
@@ -8477,7 +8532,7 @@ bl _p_65
 .word 0xf9474e31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 131 0
+.loc 12 133 0
 .word 0xf9400bb1
 .word 0xf9475e31
 .word 0xb4000051
@@ -8485,7 +8540,7 @@ bl _p_65
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1400]
+ldr x0, [x16, #1416]
 .word 0xf9400002
 .word 0xd2800020
 .word 0xaa0203e0
@@ -8497,7 +8552,7 @@ ldr x0, [x16, #1400]
 .word 0xf9479631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 132 0
+.loc 12 134 0
 .word 0xf9400bb1
 .word 0xf947a631
 .word 0xb4000051
@@ -8505,7 +8560,7 @@ ldr x0, [x16, #1400]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1400]
+ldr x0, [x16, #1416]
 .word 0xf9400002
 .word 0xd2800020
 .word 0xaa0203e0
@@ -8517,7 +8572,7 @@ ldr x0, [x16, #1400]
 .word 0xf947de31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 133 0
+.loc 12 135 0
 .word 0xf9400bb1
 .word 0xf947ee31
 .word 0xb4000051
@@ -8525,7 +8580,7 @@ ldr x0, [x16, #1400]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1400]
+ldr x0, [x16, #1416]
 .word 0xf9400002
 .word 0xd2800020
 .word 0xaa0203e0
@@ -8537,7 +8592,7 @@ ldr x0, [x16, #1400]
 .word 0xf9482631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 135 0
+.loc 12 137 0
 .word 0xf9400bb1
 .word 0xf9483631
 .word 0xb4000051
@@ -8555,7 +8610,7 @@ Lme_37:
 	.align 4
 	.no_dead_strip ShaftesApp_Views_ProfileView_ShowRooms
 ShaftesApp_Views_ProfileView_ShowRooms:
-.loc 12 138 0 prologue_end
+.loc 12 140 0 prologue_end
 .word 0xa9b47bfd
 .word 0x910003fd
 .word 0xa90153b3
@@ -8565,7 +8620,7 @@ ShaftesApp_Views_ProfileView_ShowRooms:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1408]
+ldr x16, [x16, #1424]
 .word 0xf9002bb0
 .word 0xf9400a11
 .word 0xf9002fb1
@@ -8584,7 +8639,7 @@ ldr x16, [x16, #1408]
 .word 0xf9406a31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 139 0
+.loc 12 141 0
 .word 0xf9402bb1
 .word 0xf9407a31
 .word 0xb4000051
@@ -8592,7 +8647,7 @@ ldr x16, [x16, #1408]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1232]
+ldr x0, [x16, #1248]
 .word 0x3980b410
 .word 0xb5000050
 bl _p_55
@@ -8607,7 +8662,7 @@ ldr x0, [x16, #1144]
 .word 0xaa0003fa
 .word 0xaa1a03e0
 .word 0x34000140
-.loc 12 140 0
+.loc 12 142 0
 .word 0xf9402bb1
 .word 0xf940ca31
 .word 0xb4000051
@@ -8617,7 +8672,7 @@ bl _p_66
 .word 0xf940de31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 142 0
+.loc 12 144 0
 .word 0xf9402fb1
 .word 0xf9400231
 .word 0xb4000051
@@ -8631,7 +8686,7 @@ bl _p_67
 .word 0xf9411231
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 143 0
+.loc 12 145 0
 .word 0xf9402bb1
 .word 0xf9412231
 .word 0xb4000051
@@ -8653,7 +8708,7 @@ ldr x0, [x16, #216]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1232]
+ldr x0, [x16, #1248]
 .word 0x3980b410
 .word 0xb5000050
 bl _p_55
@@ -8661,7 +8716,7 @@ bl _p_55
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1400]
+ldr x0, [x16, #1416]
 .word 0xf9400001
 .word 0xaa0203e0
 .word 0xf9400042
@@ -8671,7 +8726,7 @@ ldr x0, [x16, #1400]
 .word 0xf941a231
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 144 0
+.loc 12 146 0
 .word 0xf9402bb1
 .word 0xf941b231
 .word 0xb4000051
@@ -8694,7 +8749,7 @@ ldr x0, [x16, #216]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1352]
+ldr x0, [x16, #1368]
 .word 0xf9400001
 .word 0xaa0203e0
 .word 0xf9400042
@@ -8704,7 +8759,7 @@ ldr x0, [x16, #1352]
 .word 0xf9421a31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 145 0
+.loc 12 147 0
 .word 0xf9402bb1
 .word 0xf9422a31
 .word 0xb4000051
@@ -8712,7 +8767,7 @@ ldr x0, [x16, #1352]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1384]
+ldr x0, [x16, #1400]
 .word 0xf9400001
 .word 0xaa0103e0
 .word 0xf940003e
@@ -8721,19 +8776,19 @@ bl _p_30
 .word 0xf9425631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 147 0
+.loc 12 149 0
 .word 0xf9402bb1
 .word 0xf9426631
 .word 0xb4000051
 .word 0xd63f0220
 .word 0xd2800019
 .word 0x14000041
-.loc 12 148 0
+.loc 12 150 0
 .word 0xf9402bb1
 .word 0xf9427e31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 149 0
+.loc 12 151 0
 .word 0xf9402bb1
 .word 0xf9428e31
 .word 0xb4000051
@@ -8741,7 +8796,7 @@ bl _p_30
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1232]
+ldr x0, [x16, #1248]
 .word 0x3980b410
 .word 0xb5000050
 bl _p_55
@@ -8764,7 +8819,7 @@ bl _p_68
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1416]
+ldr x0, [x16, #1432]
 .word 0xd2800501
 .word 0xd2800501
 bl _p_19
@@ -8780,19 +8835,19 @@ bl _p_69
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1400]
+ldr x1, [x16, #1416]
 .word 0xf9400021
 bl _p_70
 .word 0xf9402bb1
 .word 0xf9434231
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 150 0
+.loc 12 152 0
 .word 0xf9402bb1
 .word 0xf9435231
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 147 0
+.loc 12 149 0
 .word 0xf9402bb1
 .word 0xf9436231
 .word 0xb4000051
@@ -8812,7 +8867,7 @@ bl _p_70
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1232]
+ldr x0, [x16, #1248]
 .word 0x3980b410
 .word 0xb5000050
 bl _p_55
@@ -8836,7 +8891,7 @@ bl _p_64
 .word 0xaa0003f8
 .word 0xaa1803e0
 .word 0x35fff3e0
-.loc 12 152 0
+.loc 12 154 0
 .word 0xf9402bb1
 .word 0xf9440631
 .word 0xb4000051
@@ -8850,7 +8905,7 @@ bl _p_64
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1424]
+ldr x0, [x16, #1440]
 .word 0xf9400000
 .word 0xaa0003f7
 .word 0xaa1703e0
@@ -8870,7 +8925,7 @@ ldr x0, [x16, #1424]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1432]
+ldr x0, [x16, #1448]
 .word 0xf9400000
 .word 0xf9005ba0
 .word 0xeb1f001f
@@ -8879,7 +8934,7 @@ ldr x0, [x16, #1432]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1440]
+ldr x0, [x16, #1456]
 .word 0xd2800e01
 .word 0xd2800e01
 bl _p_19
@@ -8896,17 +8951,17 @@ bl _p_21
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1448]
+ldr x1, [x16, #1464]
 .word 0xf9001401
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1456]
+ldr x1, [x16, #1472]
 .word 0xf9002001
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1464]
+ldr x1, [x16, #1480]
 .word 0xf9401422
 .word 0xf9000c02
 .word 0xf9401021
@@ -8919,7 +8974,7 @@ ldr x1, [x16, #1464]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1424]
+ldr x1, [x16, #1440]
 .word 0xf9000022
 .word 0xfd0037a1
 .word 0xfd003ba0
@@ -8931,7 +8986,7 @@ ldr x1, [x16, #1424]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1472]
+ldr x0, [x16, #1488]
 .word 0xf9400000
 .word 0xaa0003f4
 .word 0xaa1403e0
@@ -8950,7 +9005,7 @@ ldr x0, [x16, #1472]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1432]
+ldr x0, [x16, #1448]
 .word 0xf9400000
 .word 0xf9005ba0
 .word 0xeb1f001f
@@ -8959,7 +9014,7 @@ ldr x0, [x16, #1432]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1440]
+ldr x0, [x16, #1456]
 .word 0xd2800e01
 .word 0xd2800e01
 bl _p_19
@@ -8976,17 +9031,17 @@ bl _p_21
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1480]
+ldr x1, [x16, #1496]
 .word 0xf9001401
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1488]
+ldr x1, [x16, #1504]
 .word 0xf9002001
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1496]
+ldr x1, [x16, #1512]
 .word 0xf9401422
 .word 0xf9000c02
 .word 0xf9401021
@@ -8999,7 +9054,7 @@ ldr x1, [x16, #1496]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1472]
+ldr x1, [x16, #1488]
 .word 0xf9000022
 .word 0xfd0037a1
 .word 0xfd003ba0
@@ -9017,7 +9072,7 @@ bl _p_71
 .word 0xf9468e31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 159 0
+.loc 12 161 0
 .word 0xf9402bb1
 .word 0xf9469e31
 .word 0xb4000051
@@ -9042,7 +9097,7 @@ Lme_38:
 	.align 4
 	.no_dead_strip ShaftesApp_Views_ProfileView_DismissRooms
 ShaftesApp_Views_ProfileView_DismissRooms:
-.loc 12 162 0 prologue_end
+.loc 12 164 0 prologue_end
 .word 0xa9b67bfd
 .word 0x910003fd
 .word 0xa90157b4
@@ -9052,7 +9107,7 @@ ShaftesApp_Views_ProfileView_DismissRooms:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1504]
+ldr x16, [x16, #1520]
 .word 0xf90027b0
 .word 0xf9400a11
 .word 0xf9002bb1
@@ -9068,7 +9123,7 @@ ldr x16, [x16, #1504]
 .word 0xf9405e31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 164 0
+.loc 12 166 0
 .word 0xf94027b1
 .word 0xf9406e31
 .word 0xb4000051
@@ -9082,7 +9137,7 @@ ldr x16, [x16, #1504]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1512]
+ldr x0, [x16, #1528]
 .word 0xf9400000
 .word 0xaa0003fa
 .word 0xaa1a03e0
@@ -9102,7 +9157,7 @@ ldr x0, [x16, #1512]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1432]
+ldr x0, [x16, #1448]
 .word 0xf9400000
 .word 0xf9004ba0
 .word 0xeb1f001f
@@ -9111,7 +9166,7 @@ ldr x0, [x16, #1432]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1440]
+ldr x0, [x16, #1456]
 .word 0xd2800e01
 .word 0xd2800e01
 bl _p_19
@@ -9128,17 +9183,17 @@ bl _p_21
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1520]
+ldr x1, [x16, #1536]
 .word 0xf9001401
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1528]
+ldr x1, [x16, #1544]
 .word 0xf9002001
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1536]
+ldr x1, [x16, #1552]
 .word 0xf9401422
 .word 0xf9000c02
 .word 0xf9401021
@@ -9151,7 +9206,7 @@ ldr x1, [x16, #1536]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1512]
+ldr x1, [x16, #1528]
 .word 0xf9000034
 .word 0xfd0033a1
 .word 0xfd0037a0
@@ -9163,7 +9218,7 @@ ldr x1, [x16, #1512]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1544]
+ldr x0, [x16, #1560]
 .word 0xf9400000
 .word 0xaa0003f7
 .word 0xaa1703e0
@@ -9182,7 +9237,7 @@ ldr x0, [x16, #1544]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1432]
+ldr x0, [x16, #1448]
 .word 0xf9400000
 .word 0xf9004ba0
 .word 0xeb1f001f
@@ -9191,7 +9246,7 @@ ldr x0, [x16, #1432]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1440]
+ldr x0, [x16, #1456]
 .word 0xd2800e01
 .word 0xd2800e01
 bl _p_19
@@ -9208,17 +9263,17 @@ bl _p_21
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1552]
+ldr x1, [x16, #1568]
 .word 0xf9001401
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1560]
+ldr x1, [x16, #1576]
 .word 0xf9002001
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1568]
+ldr x1, [x16, #1584]
 .word 0xf9401422
 .word 0xf9000c02
 .word 0xf9401021
@@ -9231,7 +9286,7 @@ ldr x1, [x16, #1568]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1544]
+ldr x1, [x16, #1560]
 .word 0xf9000035
 .word 0xfd0033a1
 .word 0xfd0037a0
@@ -9249,7 +9304,7 @@ bl _p_71
 .word 0xf942f631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 171 0
+.loc 12 173 0
 .word 0xf94027b1
 .word 0xf9430631
 .word 0xb4000051
@@ -9257,14 +9312,14 @@ bl _p_71
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1232]
+ldr x0, [x16, #1248]
 .word 0x3980b410
 .word 0xb5000050
 bl _p_55
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1384]
+ldr x0, [x16, #1400]
 .word 0xf9400001
 .word 0xaa0103e0
 .word 0xf940003e
@@ -9273,7 +9328,7 @@ bl _p_72
 .word 0xf9434a31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 172 0
+.loc 12 174 0
 .word 0xf94027b1
 .word 0xf9435a31
 .word 0xb4000051
@@ -9281,7 +9336,7 @@ bl _p_72
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1352]
+ldr x0, [x16, #1368]
 .word 0xf9400001
 .word 0xaa0103e0
 .word 0xf9400021
@@ -9291,7 +9346,7 @@ ldr x0, [x16, #1352]
 .word 0xf9438a31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 173 0
+.loc 12 175 0
 .word 0xf94027b1
 .word 0xf9439a31
 .word 0xb4000051
@@ -9299,7 +9354,7 @@ ldr x0, [x16, #1352]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1400]
+ldr x0, [x16, #1416]
 .word 0xf9400001
 .word 0xaa0103e0
 .word 0xf9400021
@@ -9309,7 +9364,7 @@ ldr x0, [x16, #1400]
 .word 0xf943ca31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 175 0
+.loc 12 177 0
 .word 0xf94027b1
 .word 0xf943da31
 .word 0xb4000051
@@ -9326,7 +9381,7 @@ bl _p_73
 .word 0xf9440631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 176 0
+.loc 12 178 0
 .word 0xf94027b1
 .word 0xf9441631
 .word 0xb4000051
@@ -9351,13 +9406,13 @@ Lme_39:
 	.align 4
 	.no_dead_strip ShaftesApp_Views_ProfileView_DissmissView
 ShaftesApp_Views_ProfileView_DissmissView:
-.loc 12 179 0 prologue_end
+.loc 12 181 0 prologue_end
 .word 0xa9bd7bfd
 .word 0x910003fd
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1576]
+ldr x16, [x16, #1592]
 .word 0xf9000bb0
 .word 0xf9400a11
 .word 0xf9000fb1
@@ -9373,7 +9428,7 @@ ldr x16, [x16, #1576]
 .word 0xf9404e31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 180 0
+.loc 12 182 0
 .word 0xf9400bb1
 .word 0xf9405e31
 .word 0xb4000051
@@ -9390,7 +9445,7 @@ bl _p_74
 .word 0xf9408a31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 181 0
+.loc 12 183 0
 .word 0xf9400bb1
 .word 0xf9409a31
 .word 0xb4000051
@@ -9417,7 +9472,7 @@ ShaftesApp_Views_SettingsView__ctor:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1584]
+ldr x16, [x16, #1600]
 .word 0xf90013b0
 .word 0xf9400a11
 .word 0xf90017b1
@@ -9489,7 +9544,7 @@ bl _p_75
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1592]
+ldr x0, [x16, #1608]
 bl _p_1
 bl _p_76
 .word 0xf94013b1
@@ -9535,7 +9590,7 @@ ShaftesApp_Views_SettingsView_Initialize:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1600]
+ldr x16, [x16, #1616]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -9691,7 +9746,7 @@ bl _p_31
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1608]
+ldr x0, [x16, #1624]
 .word 0x910243a1
 .word 0xaa0003e1
 .word 0xf9404ba1
@@ -9827,7 +9882,7 @@ bl _p_31
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1616]
+ldr x1, [x16, #1632]
 .word 0xaa0203e0
 .word 0xf9400042
 .word 0xf9429050
@@ -9883,7 +9938,7 @@ ShaftesApp_Views_SettingsView_AddToView:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1624]
+ldr x16, [x16, #1640]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -9990,7 +10045,7 @@ ShaftesApp_View_ViewDismiss_DismissProfileView:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1632]
+ldr x16, [x16, #1648]
 .word 0xf9002bb0
 .word 0xf9400a11
 .word 0xf9002fb1
@@ -10020,7 +10075,7 @@ ldr x16, [x16, #1632]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1640]
+ldr x0, [x16, #1656]
 .word 0xf9400000
 .word 0xaa0003fa
 .word 0xaa1a03e0
@@ -10040,7 +10095,7 @@ ldr x0, [x16, #1640]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1648]
+ldr x0, [x16, #1664]
 .word 0xf9400000
 .word 0xf90053a0
 .word 0xeb1f001f
@@ -10049,7 +10104,7 @@ ldr x0, [x16, #1648]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1440]
+ldr x0, [x16, #1456]
 .word 0xd2800e01
 .word 0xd2800e01
 bl _p_19
@@ -10066,17 +10121,17 @@ bl _p_21
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1656]
+ldr x1, [x16, #1672]
 .word 0xf9001401
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1664]
+ldr x1, [x16, #1680]
 .word 0xf9002001
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1672]
+ldr x1, [x16, #1688]
 .word 0xf9401422
 .word 0xf9000c02
 .word 0xf9401021
@@ -10089,7 +10144,7 @@ ldr x1, [x16, #1672]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1640]
+ldr x1, [x16, #1656]
 .word 0xf9000034
 .word 0xfd0037a1
 .word 0xfd003ba0
@@ -10101,7 +10156,7 @@ ldr x1, [x16, #1640]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1680]
+ldr x0, [x16, #1696]
 .word 0xf9400000
 .word 0xaa0003f7
 .word 0xaa1703e0
@@ -10120,7 +10175,7 @@ ldr x0, [x16, #1680]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1648]
+ldr x0, [x16, #1664]
 .word 0xf9400000
 .word 0xf90053a0
 .word 0xeb1f001f
@@ -10129,7 +10184,7 @@ ldr x0, [x16, #1648]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1440]
+ldr x0, [x16, #1456]
 .word 0xd2800e01
 .word 0xd2800e01
 bl _p_19
@@ -10146,17 +10201,17 @@ bl _p_21
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1688]
+ldr x1, [x16, #1704]
 .word 0xf9001401
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1696]
+ldr x1, [x16, #1712]
 .word 0xf9002001
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1704]
+ldr x1, [x16, #1720]
 .word 0xf9401422
 .word 0xf9000c02
 .word 0xf9401021
@@ -10169,7 +10224,7 @@ ldr x1, [x16, #1704]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1680]
+ldr x1, [x16, #1696]
 .word 0xf9000035
 .word 0xfd0037a1
 .word 0xfd003ba0
@@ -10223,7 +10278,7 @@ ShaftesApp_View_ViewDismiss_PresentProfileView:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1712]
+ldr x16, [x16, #1728]
 .word 0xf9002bb0
 .word 0xf9400a11
 .word 0xf9002fb1
@@ -10253,7 +10308,7 @@ ldr x16, [x16, #1712]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1720]
+ldr x0, [x16, #1736]
 .word 0xf9400000
 .word 0xaa0003fa
 .word 0xaa1a03e0
@@ -10273,7 +10328,7 @@ ldr x0, [x16, #1720]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1648]
+ldr x0, [x16, #1664]
 .word 0xf9400000
 .word 0xf90053a0
 .word 0xeb1f001f
@@ -10282,7 +10337,7 @@ ldr x0, [x16, #1648]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1440]
+ldr x0, [x16, #1456]
 .word 0xd2800e01
 .word 0xd2800e01
 bl _p_19
@@ -10299,17 +10354,17 @@ bl _p_21
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1728]
+ldr x1, [x16, #1744]
 .word 0xf9001401
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1736]
+ldr x1, [x16, #1752]
 .word 0xf9002001
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1744]
+ldr x1, [x16, #1760]
 .word 0xf9401422
 .word 0xf9000c02
 .word 0xf9401021
@@ -10322,7 +10377,7 @@ ldr x1, [x16, #1744]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1720]
+ldr x1, [x16, #1736]
 .word 0xf9000034
 .word 0xfd0037a1
 .word 0xfd003ba0
@@ -10334,7 +10389,7 @@ ldr x1, [x16, #1720]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1752]
+ldr x0, [x16, #1768]
 .word 0xf9400000
 .word 0xaa0003f7
 .word 0xaa1703e0
@@ -10353,7 +10408,7 @@ ldr x0, [x16, #1752]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1648]
+ldr x0, [x16, #1664]
 .word 0xf9400000
 .word 0xf90053a0
 .word 0xeb1f001f
@@ -10362,7 +10417,7 @@ ldr x0, [x16, #1648]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1440]
+ldr x0, [x16, #1456]
 .word 0xd2800e01
 .word 0xd2800e01
 bl _p_19
@@ -10379,17 +10434,17 @@ bl _p_21
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1760]
+ldr x1, [x16, #1776]
 .word 0xf9001401
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1768]
+ldr x1, [x16, #1784]
 .word 0xf9002001
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1776]
+ldr x1, [x16, #1792]
 .word 0xf9401422
 .word 0xf9000c02
 .word 0xf9401021
@@ -10402,7 +10457,7 @@ ldr x1, [x16, #1776]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #1752]
+ldr x1, [x16, #1768]
 .word 0xf9000035
 .word 0xfd0037a1
 .word 0xfd003ba0
@@ -10451,7 +10506,7 @@ ShaftesApp_View_ViewDismiss__ctor:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1784]
+ldr x16, [x16, #1800]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -10489,7 +10544,7 @@ ShaftesApp_UI_RoomListNode__ctor_string_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1792]
+ldr x16, [x16, #1808]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -10911,7 +10966,7 @@ ShaftesApp_UI_RoomListNode_AddToSuperView_UIKit_UIView:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1800]
+ldr x16, [x16, #1816]
 .word 0xf90013b0
 .word 0xf9400a11
 .word 0xf90017b1
@@ -10985,7 +11040,7 @@ ShaftesApp_Net_Client__ctor:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1808]
+ldr x16, [x16, #1824]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -11005,7 +11060,7 @@ ldr x16, [x16, #1808]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1816]
+ldr x0, [x16, #1832]
 .word 0xf9002ba0
 .word 0xf9000b40
 .word 0x91004340
@@ -11020,7 +11075,7 @@ bl _p_21
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1824]
+ldr x0, [x16, #1840]
 .word 0xf90027a0
 .word 0xf9000f40
 .word 0x91006340
@@ -11035,7 +11090,7 @@ bl _p_21
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1832]
+ldr x0, [x16, #1848]
 .word 0xf90023a0
 .word 0xf9001340
 .word 0x91008340
@@ -11059,7 +11114,7 @@ bl _p_21
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1840]
+ldr x0, [x16, #1856]
 .word 0xd2800401
 .word 0xd2800401
 bl _p_19
@@ -11128,7 +11183,7 @@ ShaftesApp_Net_Client_DownloadClient:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1848]
+ldr x16, [x16, #1864]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -11154,7 +11209,7 @@ ldr x16, [x16, #1848]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1856]
+ldr x0, [x16, #1872]
 bl _p_5
 .word 0xf90023a0
 .word 0xf9400fb1
@@ -11195,7 +11250,7 @@ ShaftesApp_Net_Room__ctor:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1864]
+ldr x16, [x16, #1880]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -11215,7 +11270,7 @@ ldr x16, [x16, #1864]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1840]
+ldr x0, [x16, #1856]
 .word 0xd2800401
 .word 0xd2800401
 bl _p_19
@@ -11240,7 +11295,7 @@ bl _p_21
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1872]
+ldr x0, [x16, #1888]
 .word 0xf9001ba0
 .word 0xf9000f40
 .word 0x91006340
@@ -11279,7 +11334,7 @@ ShaftesApp_Views_ProfileView__c__cctor:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1880]
+ldr x16, [x16, #1896]
 .word 0xf9000bb0
 .word 0xf9400a11
 .word 0xf9000fb1
@@ -11290,7 +11345,7 @@ ldr x16, [x16, #1880]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1888]
+ldr x0, [x16, #1904]
 .word 0xd2800201
 .word 0xd2800201
 bl _p_19
@@ -11304,7 +11359,7 @@ bl _p_81
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1432]
+ldr x0, [x16, #1448]
 .word 0xf9000001
 .word 0xf9400bb1
 .word 0xf9408231
@@ -11325,7 +11380,7 @@ ShaftesApp_Views_ProfileView__c__ctor:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1896]
+ldr x16, [x16, #1912]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -11349,16 +11404,16 @@ ldr x16, [x16, #1896]
 Lme_47:
 .text
 	.align 4
-	.no_dead_strip ShaftesApp_Views_ProfileView__c__ShowRoomsb__16_0
-ShaftesApp_Views_ProfileView__c__ShowRoomsb__16_0:
-.loc 12 153 0 prologue_end
+	.no_dead_strip ShaftesApp_Views_ProfileView__c__ShowRoomsb__18_0
+ShaftesApp_Views_ProfileView__c__ShowRoomsb__18_0:
+.loc 12 155 0 prologue_end
 .word 0xa9b47bfd
 .word 0x910003fd
 .word 0xf9000ba0
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1904]
+ldr x16, [x16, #1920]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -11374,7 +11429,7 @@ ldr x16, [x16, #1904]
 .word 0xf9405231
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 154 0
+.loc 12 156 0
 .word 0xf9400fb1
 .word 0xf9406231
 .word 0xb4000051
@@ -11382,14 +11437,14 @@ ldr x16, [x16, #1904]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1232]
+ldr x0, [x16, #1248]
 .word 0x3980b410
 .word 0xb5000050
 bl _p_55
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1400]
+ldr x0, [x16, #1416]
 .word 0xf9400000
 .word 0xf9005fa0
 .word 0xd280001e
@@ -11456,7 +11511,7 @@ bl _p_3
 .word 0xf9418631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 155 0
+.loc 12 157 0
 .word 0xf9400fb1
 .word 0xf9419631
 .word 0xb4000051
@@ -11464,7 +11519,7 @@ bl _p_3
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1352]
+ldr x0, [x16, #1368]
 .word 0xf9400000
 .word 0xf9005ba0
 
@@ -11527,7 +11582,7 @@ bl _p_3
 .word 0xf9429631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 156 0
+.loc 12 158 0
 .word 0xf9400fb1
 .word 0xf942a631
 .word 0xb4000051
@@ -11543,16 +11598,16 @@ bl _p_3
 Lme_48:
 .text
 	.align 4
-	.no_dead_strip ShaftesApp_Views_ProfileView__c__ShowRoomsb__16_1
-ShaftesApp_Views_ProfileView__c__ShowRoomsb__16_1:
-.loc 12 156 0 prologue_end
+	.no_dead_strip ShaftesApp_Views_ProfileView__c__ShowRoomsb__18_1
+ShaftesApp_Views_ProfileView__c__ShowRoomsb__18_1:
+.loc 12 158 0 prologue_end
 .word 0xa9bd7bfd
 .word 0x910003fd
 .word 0xf9000ba0
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1912]
+ldr x16, [x16, #1928]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -11583,16 +11638,16 @@ ldr x16, [x16, #1912]
 Lme_49:
 .text
 	.align 4
-	.no_dead_strip ShaftesApp_Views_ProfileView__c__DismissRoomsb__17_0
-ShaftesApp_Views_ProfileView__c__DismissRoomsb__17_0:
-.loc 12 165 0 prologue_end
+	.no_dead_strip ShaftesApp_Views_ProfileView__c__DismissRoomsb__19_0
+ShaftesApp_Views_ProfileView__c__DismissRoomsb__19_0:
+.loc 12 167 0 prologue_end
 .word 0xa9b27bfd
 .word 0x910003fd
 .word 0xf9000ba0
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1920]
+ldr x16, [x16, #1936]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -11608,7 +11663,7 @@ ldr x16, [x16, #1920]
 .word 0xf9405231
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 166 0
+.loc 12 168 0
 .word 0xf9400fb1
 .word 0xf9406231
 .word 0xb4000051
@@ -11616,14 +11671,14 @@ ldr x16, [x16, #1920]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1232]
+ldr x0, [x16, #1248]
 .word 0x3980b410
 .word 0xb5000050
 bl _p_55
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1400]
+ldr x0, [x16, #1416]
 .word 0xf9400000
 .word 0xf9005fa0
 
@@ -11711,7 +11766,7 @@ bl _p_3
 .word 0xf941d631
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 167 0
+.loc 12 169 0
 .word 0xf9400fb1
 .word 0xf941e631
 .word 0xb4000051
@@ -11719,7 +11774,7 @@ bl _p_3
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1352]
+ldr x0, [x16, #1368]
 .word 0xf9400000
 .word 0xf9005ba0
 
@@ -11789,7 +11844,7 @@ bl _p_3
 .word 0xf942fe31
 .word 0xb4000051
 .word 0xd63f0220
-.loc 12 168 0
+.loc 12 170 0
 .word 0xf9400fb1
 .word 0xf9430e31
 .word 0xb4000051
@@ -11805,16 +11860,16 @@ bl _p_3
 Lme_4a:
 .text
 	.align 4
-	.no_dead_strip ShaftesApp_Views_ProfileView__c__DismissRoomsb__17_1
-ShaftesApp_Views_ProfileView__c__DismissRoomsb__17_1:
-.loc 12 168 0 prologue_end
+	.no_dead_strip ShaftesApp_Views_ProfileView__c__DismissRoomsb__19_1
+ShaftesApp_Views_ProfileView__c__DismissRoomsb__19_1:
+.loc 12 170 0 prologue_end
 .word 0xa9bd7bfd
 .word 0x910003fd
 .word 0xf9000ba0
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1928]
+ldr x16, [x16, #1944]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -11852,7 +11907,7 @@ ShaftesApp_View_ViewDismiss__c__cctor:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1936]
+ldr x16, [x16, #1952]
 .word 0xf9000bb0
 .word 0xf9400a11
 .word 0xf9000fb1
@@ -11863,7 +11918,7 @@ ldr x16, [x16, #1936]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1944]
+ldr x0, [x16, #1960]
 .word 0xd2800201
 .word 0xd2800201
 bl _p_19
@@ -11877,7 +11932,7 @@ bl _p_82
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1648]
+ldr x0, [x16, #1664]
 .word 0xf9000001
 .word 0xf9400bb1
 .word 0xf9408231
@@ -11898,7 +11953,7 @@ ShaftesApp_View_ViewDismiss__c__ctor:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1952]
+ldr x16, [x16, #1968]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -11931,7 +11986,7 @@ ShaftesApp_View_ViewDismiss__c__DismissProfileViewb__1_0:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1960]
+ldr x16, [x16, #1976]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -11955,14 +12010,14 @@ ldr x16, [x16, #1960]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1232]
+ldr x0, [x16, #1248]
 .word 0x3980b410
 .word 0xb5000050
 bl _p_55
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1240]
+ldr x0, [x16, #1256]
 .word 0xf9400000
 .word 0xf90043a0
 .word 0xd2800000
@@ -11991,7 +12046,7 @@ bl _p_15
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1248]
+ldr x0, [x16, #1264]
 .word 0xf9400000
 .word 0xf9003ba0
 .word 0xd2800000
@@ -12020,7 +12075,7 @@ bl _p_15
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1272]
+ldr x0, [x16, #1288]
 .word 0xf9400000
 .word 0xf90033a0
 .word 0xd2800000
@@ -12049,7 +12104,7 @@ bl _p_15
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1320]
+ldr x0, [x16, #1336]
 .word 0xf9400000
 .word 0xf9002ba0
 .word 0xd2800000
@@ -12078,7 +12133,7 @@ bl _p_15
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1296]
+ldr x0, [x16, #1312]
 .word 0xf9400000
 .word 0xf9400c00
 .word 0xf90023a0
@@ -12108,7 +12163,7 @@ bl _p_15
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1264]
+ldr x0, [x16, #1280]
 .word 0xf9400000
 .word 0xf9001ba0
 .word 0xd2800000
@@ -12154,7 +12209,7 @@ ShaftesApp_View_ViewDismiss__c__DismissProfileViewb__1_1:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1968]
+ldr x16, [x16, #1984]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -12194,7 +12249,7 @@ ShaftesApp_View_ViewDismiss__c__PresentProfileViewb__2_0:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1976]
+ldr x16, [x16, #1992]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -12218,14 +12273,14 @@ ldr x16, [x16, #1976]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1232]
+ldr x0, [x16, #1248]
 .word 0x3980b410
 .word 0xb5000050
 bl _p_55
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1240]
+ldr x0, [x16, #1256]
 .word 0xf9400000
 .word 0xf90043a0
 .word 0xd2800020
@@ -12254,7 +12309,7 @@ bl _p_15
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1248]
+ldr x0, [x16, #1264]
 .word 0xf9400000
 .word 0xf9003ba0
 .word 0xd2800020
@@ -12283,7 +12338,7 @@ bl _p_15
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1272]
+ldr x0, [x16, #1288]
 .word 0xf9400000
 .word 0xf90033a0
 .word 0xd2800020
@@ -12312,7 +12367,7 @@ bl _p_15
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1320]
+ldr x0, [x16, #1336]
 .word 0xf9400000
 .word 0xf9002ba0
 .word 0xd2800020
@@ -12341,7 +12396,7 @@ bl _p_15
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1296]
+ldr x0, [x16, #1312]
 .word 0xf9400000
 .word 0xf9400c00
 .word 0xf90023a0
@@ -12371,7 +12426,7 @@ bl _p_15
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #1264]
+ldr x0, [x16, #1280]
 .word 0xf9400000
 .word 0xf9001ba0
 .word 0xd2800020
@@ -12417,7 +12472,7 @@ ShaftesApp_View_ViewDismiss__c__PresentProfileViewb__2_1:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1984]
+ldr x16, [x16, #2000]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -12459,7 +12514,7 @@ System_Array_InternalArray__IEnumerable_GetEnumerator_T_REF:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1992]
+ldr x16, [x16, #2008]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -12539,7 +12594,7 @@ System_Array_InternalArray__ICollection_get_Count:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2000]
+ldr x16, [x16, #2016]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -12583,7 +12638,7 @@ System_Array_InternalArray__ICollection_get_IsReadOnly:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2008]
+ldr x16, [x16, #2024]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -12621,7 +12676,7 @@ System_Array_InternalArray__ICollection_Clear:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2016]
+ldr x16, [x16, #2032]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -12669,7 +12724,7 @@ System_Array_InternalArray__ICollection_Add_T_REF_T_REF:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2024]
+ldr x16, [x16, #2040]
 .word 0xf90013b0
 .word 0xf9400a11
 .word 0xf90017b1
@@ -12717,7 +12772,7 @@ System_Array_InternalArray__ICollection_Remove_T_REF_T_REF:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2032]
+ldr x16, [x16, #2048]
 .word 0xf90013b0
 .word 0xf9400a11
 .word 0xf90017b1
@@ -12767,7 +12822,7 @@ System_Array_InternalArray__ICollection_Contains_T_REF_T_REF:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2040]
+ldr x16, [x16, #2056]
 .word 0xf9001bb0
 .word 0xf9400a11
 .word 0xf9001fb1
@@ -12967,7 +13022,7 @@ System_Array_InternalArray__ICollection_CopyTo_T_REF_T_REF___int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2048]
+ldr x16, [x16, #2064]
 .word 0xf90027b0
 .word 0xf9400a11
 .word 0xf9002bb1
@@ -13274,7 +13329,7 @@ wrapper_delegate_invoke_System_Predicate_1_ShaftesApp_SRButton_invoke_bool_T_Sha
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2056]
+ldr x16, [x16, #2072]
 .word 0xf9002bb0
 .word 0xf9400a11
 .word 0xf9002fb1
@@ -13291,7 +13346,7 @@ ldr x16, [x16, #2056]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2064]
+ldr x0, [x16, #2080]
 .word 0xb9400000
 .word 0x34000140
 bl _p_90
@@ -13418,7 +13473,7 @@ wrapper_delegate_invoke_System_Comparison_1_ShaftesApp_SRButton_invoke_int_T_T_S
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2072]
+ldr x16, [x16, #2088]
 .word 0xf9002bb0
 .word 0xf9400a11
 .word 0xf9002fb1
@@ -13435,7 +13490,7 @@ ldr x16, [x16, #2072]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2064]
+ldr x0, [x16, #2080]
 .word 0xb9400000
 .word 0x34000140
 bl _p_90
@@ -13567,7 +13622,7 @@ wrapper_delegate_invoke_System_Predicate_1_string_invoke_bool_T_string:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2080]
+ldr x16, [x16, #2096]
 .word 0xf9002bb0
 .word 0xf9400a11
 .word 0xf9002fb1
@@ -13584,7 +13639,7 @@ ldr x16, [x16, #2080]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2064]
+ldr x0, [x16, #2080]
 .word 0xb9400000
 .word 0x34000140
 bl _p_90
@@ -13711,7 +13766,7 @@ wrapper_delegate_invoke_System_Comparison_1_string_invoke_int_T_T_string_string:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2088]
+ldr x16, [x16, #2104]
 .word 0xf9002bb0
 .word 0xf9400a11
 .word 0xf9002fb1
@@ -13728,7 +13783,7 @@ ldr x16, [x16, #2088]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2064]
+ldr x0, [x16, #2080]
 .word 0xb9400000
 .word 0x34000140
 bl _p_90
@@ -13857,7 +13912,7 @@ System_Collections_Generic_List_1_T_INT__ctor:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2096]
+ldr x16, [x16, #2112]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -13925,7 +13980,7 @@ System_Collections_Generic_List_1_T_INT__ctor_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2104]
+ldr x16, [x16, #2120]
 .word 0xf90013b0
 .word 0xf9400a11
 .word 0xf90017b1
@@ -14045,7 +14100,7 @@ System_Collections_Generic_List_1_T_INT__ctor_System_Collections_Generic_IEnumer
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2112]
+ldr x16, [x16, #2128]
 .word 0xf9001bb0
 .word 0xf9400a11
 .word 0xf9001fb1
@@ -14355,7 +14410,7 @@ bl _p_108
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2120]
+ldr x15, [x16, #2136]
 .word 0x92800ef0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -14388,7 +14443,7 @@ ldr x15, [x16, #2120]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2128]
+ldr x15, [x16, #2144]
 .word 0x928004f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -14430,7 +14485,7 @@ System_Collections_Generic_List_1_T_INT_get_Capacity:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2136]
+ldr x16, [x16, #2152]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -14471,7 +14526,7 @@ System_Collections_Generic_List_1_T_INT_set_Capacity_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2144]
+ldr x16, [x16, #2160]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -14639,7 +14694,7 @@ System_Collections_Generic_List_1_T_INT_get_Count:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2152]
+ldr x16, [x16, #2168]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -14677,7 +14732,7 @@ System_Collections_Generic_List_1_T_INT_System_Collections_Generic_ICollection_T
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2160]
+ldr x16, [x16, #2176]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -14717,7 +14772,7 @@ System_Collections_Generic_List_1_T_INT_get_Item_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2168]
+ldr x16, [x16, #2184]
 .word 0xf90013b0
 .word 0xf9400a11
 .word 0xf90017b1
@@ -14791,7 +14846,7 @@ System_Collections_Generic_List_1_T_INT_set_Item_int_T_INT:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2176]
+ldr x16, [x16, #2192]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -14881,7 +14936,7 @@ System_Collections_Generic_List_1_T_INT_Add_T_INT:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2184]
+ldr x16, [x16, #2200]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -14992,7 +15047,7 @@ System_Collections_Generic_List_1_T_INT_AddRange_System_Collections_Generic_IEnu
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2192]
+ldr x16, [x16, #2208]
 .word 0xf90013b0
 .word 0xf9400a11
 .word 0xf90017b1
@@ -15049,7 +15104,7 @@ System_Collections_Generic_List_1_T_INT_Clear:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2200]
+ldr x16, [x16, #2216]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -15132,7 +15187,7 @@ System_Collections_Generic_List_1_T_INT_Contains_T_INT:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2208]
+ldr x16, [x16, #2224]
 .word 0xf9001fb0
 .word 0xf9400a11
 .word 0xf90023b1
@@ -15337,7 +15392,7 @@ System_Collections_Generic_List_1_T_INT_CopyTo_T_INT___int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2216]
+ldr x16, [x16, #2232]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -15390,7 +15445,7 @@ System_Collections_Generic_List_1_T_INT_EnsureCapacity_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2224]
+ldr x16, [x16, #2240]
 .word 0xf9001bb0
 .word 0xf9400a11
 .word 0xf9001fb1
@@ -15521,7 +15576,7 @@ System_Collections_Generic_List_1_T_INT_GetEnumerator:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2232]
+ldr x16, [x16, #2248]
 .word 0xf90013b0
 .word 0xf9400a11
 .word 0xf90017b1
@@ -15607,7 +15662,7 @@ System_Collections_Generic_List_1_T_INT_System_Collections_Generic_IEnumerable_T
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2240]
+ldr x16, [x16, #2256]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -15700,7 +15755,7 @@ System_Collections_Generic_List_1_T_INT_System_Collections_IEnumerable_GetEnumer
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2248]
+ldr x16, [x16, #2264]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -15794,7 +15849,7 @@ System_Collections_Generic_List_1_T_INT_IndexOf_T_INT:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2256]
+ldr x16, [x16, #2272]
 .word 0xf90013b0
 .word 0xf9400a11
 .word 0xf90017b1
@@ -15863,7 +15918,7 @@ System_Collections_Generic_List_1_T_INT_Insert_int_T_INT:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2264]
+ldr x16, [x16, #2280]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -16037,7 +16092,7 @@ System_Collections_Generic_List_1_T_INT_InsertRange_int_System_Collections_Gener
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2272]
+ldr x16, [x16, #2288]
 .word 0xf90027b0
 .word 0xf9400a11
 .word 0xf9002bb1
@@ -16440,7 +16495,7 @@ bl _p_136
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2120]
+ldr x15, [x16, #2136]
 .word 0x92800ef0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -16473,7 +16528,7 @@ ldr x15, [x16, #2120]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2128]
+ldr x15, [x16, #2144]
 .word 0x928004f0
 .word 0xf2bffff0
 .word 0xf8706830
@@ -16529,7 +16584,7 @@ System_Collections_Generic_List_1_T_INT_Remove_T_INT:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2280]
+ldr x16, [x16, #2296]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -16633,7 +16688,7 @@ System_Collections_Generic_List_1_T_INT_RemoveAll_System_Predicate_1_T_INT:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2288]
+ldr x16, [x16, #2304]
 .word 0xf90023b0
 .word 0xf9400a11
 .word 0xf90027b1
@@ -16935,7 +16990,7 @@ System_Collections_Generic_List_1_T_INT_RemoveAt_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2296]
+ldr x16, [x16, #2312]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -17068,7 +17123,7 @@ System_Collections_Generic_List_1_T_INT_Reverse:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2304]
+ldr x16, [x16, #2320]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -17141,7 +17196,7 @@ System_Collections_Generic_List_1_T_INT_Reverse_int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2312]
+ldr x16, [x16, #2328]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -17271,7 +17326,7 @@ System_Collections_Generic_List_1_T_INT_Sort_System_Collections_Generic_ICompare
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2320]
+ldr x16, [x16, #2336]
 .word 0xf90013b0
 .word 0xf9400a11
 .word 0xf90017b1
@@ -17348,7 +17403,7 @@ System_Collections_Generic_List_1_T_INT_Sort_int_int_System_Collections_Generic_
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2328]
+ldr x16, [x16, #2344]
 .word 0xf9001bb0
 .word 0xf9400a11
 .word 0xf9001fb1
@@ -17493,7 +17548,7 @@ System_Collections_Generic_List_1_T_INT_Sort_System_Comparison_1_T_INT:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2336]
+ldr x16, [x16, #2352]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -17620,7 +17675,7 @@ System_Collections_Generic_List_1_T_INT_ToArray:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2344]
+ldr x16, [x16, #2360]
 .word 0xf90013b0
 .word 0xf9400a11
 .word 0xf90017b1
@@ -17689,7 +17744,7 @@ System_Collections_Generic_List_1_T_INT__cctor:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2352]
+ldr x16, [x16, #2368]
 .word 0xf9000bb0
 .word 0xf9400a11
 .word 0xf9000fb1
@@ -17749,7 +17804,7 @@ System_Array_InternalEnumerator_1_T_REF__ctor_System_Array:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2360]
+ldr x16, [x16, #2376]
 .word 0xf90013b0
 .word 0xf9400a11
 .word 0xf90017b1
@@ -17812,7 +17867,7 @@ System_Collections_Generic_EqualityComparer_1_T_INT_get_Default:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2368]
+ldr x16, [x16, #2384]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -17913,7 +17968,7 @@ System_Collections_Generic_List_1_Enumerator_T_INT__ctor_System_Collections_Gene
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2376]
+ldr x16, [x16, #2392]
 .word 0xf90013b0
 .word 0xf9400a11
 .word 0xf90017b1
@@ -17993,7 +18048,7 @@ System_Array_IndexOf_T_INT_T_INT___T_INT_int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2384]
+ldr x16, [x16, #2400]
 .word 0xf90023b0
 .word 0xf9400a11
 .word 0xf90027b1
@@ -18152,7 +18207,7 @@ System_Array_Sort_T_INT_T_INT___int_int_System_Collections_Generic_IComparer_1_T
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2392]
+ldr x16, [x16, #2408]
 .word 0xf9001bb0
 .word 0xf9400a11
 .word 0xf9001fb1
@@ -18317,7 +18372,7 @@ System_Array_FunctorComparer_1_T_INT__ctor_System_Comparison_1_T_INT:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2400]
+ldr x16, [x16, #2416]
 .word 0xf90013b0
 .word 0xf9400a11
 .word 0xf90017b1
@@ -18375,7 +18430,7 @@ System_Collections_Generic_EqualityComparer_1_T_INT_CreateComparer:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2408]
+ldr x16, [x16, #2424]
 .word 0xf90027b0
 .word 0xf9400a11
 .word 0xf9002bb1
@@ -18407,7 +18462,7 @@ bl _p_162
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2416]
+ldr x1, [x16, #2432]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x54004261
@@ -18422,7 +18477,7 @@ ldr x1, [x16, #2416]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2424]
+ldr x0, [x16, #2440]
 .word 0xeb00035f
 .word 0x9a9f17e0
 .word 0xf9007ba0
@@ -18440,7 +18495,7 @@ ldr x0, [x16, #2424]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2432]
+ldr x0, [x16, #2448]
 .word 0xd2800201
 .word 0xd2800201
 bl _p_19
@@ -18476,7 +18531,7 @@ bl _p_164
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2440]
+ldr x0, [x16, #2456]
 .word 0xeb00035f
 .word 0x9a9f17e0
 .word 0xf9007ba0
@@ -18494,7 +18549,7 @@ ldr x0, [x16, #2440]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2448]
+ldr x0, [x16, #2464]
 .word 0xd2800201
 .word 0xd2800201
 bl _p_19
@@ -18550,7 +18605,7 @@ bl _p_166
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2456]
+ldr x0, [x16, #2472]
 .word 0xaa1a03e1
 .word 0xaa1a03e1
 bl _p_167
@@ -18607,7 +18662,7 @@ bl _p_164
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2464]
+ldr x1, [x16, #2480]
 .word 0xeb01001f
 .word 0x9a9f17e0
 .word 0xf9007ba0
@@ -18649,7 +18704,7 @@ ldr x1, [x16, #2464]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2416]
+ldr x1, [x16, #2432]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x54002601
@@ -18663,13 +18718,13 @@ ldr x1, [x16, #2416]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2472]
+ldr x0, [x16, #2488]
 .word 0xf90087a0
 .word 0xd2800020
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2480]
+ldr x0, [x16, #2496]
 .word 0xd2800021
 bl _p_97
 .word 0xf90057a0
@@ -18716,7 +18771,7 @@ bl _p_97
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2488]
+ldr x0, [x16, #2504]
 .word 0xaa1903e1
 .word 0xaa1903e1
 bl _p_167
@@ -18803,7 +18858,7 @@ bl _p_169
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2496]
+ldr x0, [x16, #2512]
 .word 0x8b010000
 .word 0xf9400000
 .word 0xd61f0000
@@ -18815,7 +18870,7 @@ ldr x0, [x16, #2496]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2504]
+ldr x0, [x16, #2520]
 .word 0xaa1a03e1
 .word 0xaa1a03e1
 bl _p_167
@@ -18848,7 +18903,7 @@ bl _p_164
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2512]
+ldr x0, [x16, #2528]
 .word 0xaa1a03e1
 .word 0xaa1a03e1
 bl _p_167
@@ -18880,7 +18935,7 @@ bl _p_164
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2520]
+ldr x0, [x16, #2536]
 .word 0xaa1a03e1
 .word 0xaa1a03e1
 bl _p_167
@@ -18912,7 +18967,7 @@ bl _p_164
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2528]
+ldr x0, [x16, #2544]
 .word 0xaa1a03e1
 .word 0xaa1a03e1
 bl _p_167
@@ -19005,7 +19060,7 @@ System_Array_SortImpl_TKey_INT_TKey_INT___int_int_System_Collections_Generic_ICo
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2536]
+ldr x16, [x16, #2552]
 .word 0xf9002bb0
 .word 0xf9400a11
 .word 0xf9002fb1
@@ -19086,7 +19141,7 @@ bl _p_169
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2544]
+ldr x0, [x16, #2560]
 .word 0x8b010000
 .word 0xf9400000
 .word 0xd61f0000
@@ -19121,7 +19176,7 @@ ldr x0, [x16, #2544]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2552]
+ldr x1, [x16, #2568]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xf9008fbf
@@ -19131,7 +19186,7 @@ ldr x1, [x16, #2552]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2560]
+ldr x15, [x16, #2576]
 .word 0xaa1603e1
 .word 0xaa1503e2
 bl _p_173
@@ -19172,7 +19227,7 @@ bl _p_173
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2568]
+ldr x1, [x16, #2584]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xf900afbf
@@ -19182,7 +19237,7 @@ ldr x1, [x16, #2568]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2576]
+ldr x15, [x16, #2592]
 .word 0xaa1603e1
 .word 0xaa1503e2
 bl _p_174
@@ -19223,7 +19278,7 @@ bl _p_174
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2584]
+ldr x1, [x16, #2600]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xf9005fbf
@@ -19233,7 +19288,7 @@ ldr x1, [x16, #2584]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2592]
+ldr x15, [x16, #2608]
 .word 0xaa1603e1
 .word 0xaa1503e2
 bl _p_175
@@ -19274,7 +19329,7 @@ bl _p_175
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2600]
+ldr x1, [x16, #2616]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xf9003fbf
@@ -19284,7 +19339,7 @@ ldr x1, [x16, #2600]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2608]
+ldr x15, [x16, #2624]
 .word 0xaa1603e1
 .word 0xaa1503e2
 bl _p_176
@@ -19325,7 +19380,7 @@ bl _p_176
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2616]
+ldr x1, [x16, #2632]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xf900ffbf
@@ -19335,7 +19390,7 @@ ldr x1, [x16, #2616]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2624]
+ldr x15, [x16, #2640]
 .word 0xaa1603e1
 .word 0xaa1503e2
 bl _p_177
@@ -19376,7 +19431,7 @@ bl _p_177
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2632]
+ldr x1, [x16, #2648]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xf900efbf
@@ -19386,7 +19441,7 @@ ldr x1, [x16, #2632]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2640]
+ldr x15, [x16, #2656]
 .word 0xaa1603e1
 .word 0xaa1503e2
 bl _p_178
@@ -19427,7 +19482,7 @@ bl _p_178
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2648]
+ldr x1, [x16, #2664]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xf900dfbf
@@ -19437,7 +19492,7 @@ ldr x1, [x16, #2648]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2656]
+ldr x15, [x16, #2672]
 .word 0xaa1603e1
 .word 0xaa1503e2
 bl _p_179
@@ -19478,7 +19533,7 @@ bl _p_179
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2664]
+ldr x1, [x16, #2680]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xf9006fbf
@@ -19488,7 +19543,7 @@ ldr x1, [x16, #2664]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2672]
+ldr x15, [x16, #2688]
 .word 0xaa1603e1
 .word 0xaa1503e2
 bl _p_180
@@ -19529,7 +19584,7 @@ bl _p_180
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2584]
+ldr x1, [x16, #2600]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xf9004fbf
@@ -19539,7 +19594,7 @@ ldr x1, [x16, #2584]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2680]
+ldr x15, [x16, #2696]
 .word 0xaa1603e1
 .word 0xaa1503e2
 bl _p_181
@@ -19580,7 +19635,7 @@ bl _p_181
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2688]
+ldr x1, [x16, #2704]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xf900cfbf
@@ -19590,7 +19645,7 @@ ldr x1, [x16, #2688]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2696]
+ldr x15, [x16, #2712]
 .word 0xaa1603e1
 .word 0xaa1503e2
 bl _p_182
@@ -19631,7 +19686,7 @@ bl _p_182
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2664]
+ldr x1, [x16, #2680]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xf9007fbf
@@ -19641,7 +19696,7 @@ ldr x1, [x16, #2664]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2704]
+ldr x15, [x16, #2720]
 .word 0xaa1603e1
 .word 0xaa1503e2
 bl _p_183
@@ -19682,7 +19737,7 @@ bl _p_183
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2552]
+ldr x1, [x16, #2568]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xf9009fbf
@@ -19692,7 +19747,7 @@ ldr x1, [x16, #2552]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2712]
+ldr x15, [x16, #2728]
 .word 0xaa1603e1
 .word 0xaa1503e2
 bl _p_184
@@ -19733,7 +19788,7 @@ bl _p_184
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2568]
+ldr x1, [x16, #2584]
 .word 0xeb01001f
 .word 0x54000040
 .word 0xf900bfbf
@@ -19743,7 +19798,7 @@ ldr x1, [x16, #2568]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2720]
+ldr x15, [x16, #2736]
 .word 0xaa1603e1
 .word 0xaa1503e2
 bl _p_185
@@ -19894,7 +19949,7 @@ System_Collections_Generic_ObjectEqualityComparer_1_T_INT__ctor:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2728]
+ldr x16, [x16, #2744]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -19943,7 +19998,7 @@ System_Array_qsort_K_INT_K_INT___int_int_System_Collections_Generic_IComparer_1_
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2736]
+ldr x16, [x16, #2752]
 .word 0xf90037b0
 .word 0xf9400a11
 .word 0xf9003bb1
@@ -20256,7 +20311,7 @@ bl _p_19
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2744]
+ldr x1, [x16, #2760]
 .word 0xeb01001f
 .word 0x540001e3
 .word 0xf94077a0
@@ -20264,7 +20319,7 @@ ldr x1, [x16, #2744]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2744]
+ldr x1, [x16, #2760]
 .word 0x9343fc22
 .word 0x8b020000
 .word 0x39400000
@@ -20363,7 +20418,7 @@ bl _p_19
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2752]
+ldr x15, [x16, #2768]
 .word 0x928003f0
 .word 0xf2bffff0
 .word 0xf8706850
@@ -20623,7 +20678,7 @@ bl _p_19
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2744]
+ldr x1, [x16, #2760]
 .word 0xeb01001f
 .word 0x540001e3
 .word 0xf94067a0
@@ -20631,7 +20686,7 @@ ldr x1, [x16, #2744]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2744]
+ldr x1, [x16, #2760]
 .word 0x9343fc22
 .word 0x8b020000
 .word 0x39400000
@@ -20976,7 +21031,7 @@ bl _p_19
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2752]
+ldr x15, [x16, #2768]
 .word 0x928003f0
 .word 0xf2bffff0
 .word 0xf8706850
@@ -21041,7 +21096,7 @@ bl _p_19
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2752]
+ldr x15, [x16, #2768]
 .word 0x928003f0
 .word 0xf2bffff0
 .word 0xf8706850
@@ -21437,7 +21492,7 @@ System_Array_CheckComparerAvailable_K_INT_K_INT___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2760]
+ldr x16, [x16, #2776]
 .word 0xf9002bb0
 .word 0xf9400a11
 .word 0xf9002fb1
@@ -21522,14 +21577,14 @@ bl _p_19
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2744]
+ldr x1, [x16, #2760]
 .word 0xeb01001f
 .word 0x540001c3
 .word 0xf9401260
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2744]
+ldr x1, [x16, #2760]
 .word 0x9343fc22
 .word 0x8b020000
 .word 0x39400000
@@ -21647,7 +21702,7 @@ System_Collections_Generic_Comparer_1_T_INT_get_Default:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2768]
+ldr x16, [x16, #2784]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -21748,7 +21803,7 @@ System_Array_qsort_T_ULONG_T_ULONG___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2776]
+ldr x16, [x16, #2792]
 .word 0xf90033b0
 .word 0xf9400a11
 .word 0xf90037b1
@@ -22660,7 +22715,7 @@ System_Array_qsort_T_UINT_T_UINT___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2784]
+ldr x16, [x16, #2800]
 .word 0xf90033b0
 .word 0xf9400a11
 .word 0xf90037b1
@@ -23572,7 +23627,7 @@ System_Array_qsort_T_UINT16_T_UINT16___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2792]
+ldr x16, [x16, #2808]
 .word 0xf90033b0
 .word 0xf9400a11
 .word 0xf90037b1
@@ -24484,7 +24539,7 @@ System_Array_qsort_T_SINGLE_T_SINGLE___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2800]
+ldr x16, [x16, #2816]
 .word 0xf90033b0
 .word 0xf9400a11
 .word 0xf90037b1
@@ -25411,7 +25466,7 @@ System_Array_qsort_T_SBYTE_T_SBYTE___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2808]
+ldr x16, [x16, #2824]
 .word 0xf90033b0
 .word 0xf9400a11
 .word 0xf90037b1
@@ -26323,7 +26378,7 @@ System_Array_qsort_T_INT16_T_INT16___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2816]
+ldr x16, [x16, #2832]
 .word 0xf90033b0
 .word 0xf9400a11
 .word 0xf90037b1
@@ -27235,7 +27290,7 @@ System_Array_qsort_T_DOUBLE_T_DOUBLE___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2824]
+ldr x16, [x16, #2840]
 .word 0xf90033b0
 .word 0xf9400a11
 .word 0xf90037b1
@@ -28147,7 +28202,7 @@ System_Array_qsort_System_Decimal_System_Decimal___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2832]
+ldr x16, [x16, #2848]
 .word 0xf90033b0
 .word 0xf9400a11
 .word 0xf90037b1
@@ -28388,7 +28443,7 @@ bl _p_244
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2840]
+ldr x15, [x16, #2856]
 .word 0xaa1803e0
 .word 0xaa1a03e2
 bl _p_245
@@ -28467,7 +28522,7 @@ bl _p_245
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2848]
+ldr x15, [x16, #2864]
 .word 0xaa1803e0
 .word 0xaa1503e1
 .word 0xaa1403e2
@@ -28488,7 +28543,7 @@ bl _p_246
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2848]
+ldr x15, [x16, #2864]
 .word 0xaa1803e0
 .word 0xaa1603e2
 bl _p_246
@@ -28511,7 +28566,7 @@ bl _p_246
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2848]
+ldr x15, [x16, #2864]
 .word 0xaa1803e0
 .word 0xaa1503e1
 .word 0xaa1403e2
@@ -28790,7 +28845,7 @@ bl _p_244
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2840]
+ldr x15, [x16, #2856]
 .word 0xaa1803e0
 .word 0xaa1303e1
 .word 0xaa1a03e2
@@ -29071,7 +29126,7 @@ System_Array_qsort_System_DateTime_System_DateTime___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2856]
+ldr x16, [x16, #2872]
 .word 0xf90033b0
 .word 0xf9400a11
 .word 0xf90037b1
@@ -29303,7 +29358,7 @@ bl _p_247
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2864]
+ldr x15, [x16, #2880]
 .word 0xaa1803e0
 .word 0xaa1a03e2
 bl _p_248
@@ -29382,7 +29437,7 @@ bl _p_248
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2872]
+ldr x15, [x16, #2888]
 .word 0xaa1803e0
 .word 0xaa1503e1
 .word 0xaa1403e2
@@ -29403,7 +29458,7 @@ bl _p_249
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2872]
+ldr x15, [x16, #2888]
 .word 0xaa1803e0
 .word 0xaa1603e2
 bl _p_249
@@ -29426,7 +29481,7 @@ bl _p_249
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2872]
+ldr x15, [x16, #2888]
 .word 0xaa1803e0
 .word 0xaa1503e1
 .word 0xaa1403e2
@@ -29689,7 +29744,7 @@ bl _p_247
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2864]
+ldr x15, [x16, #2880]
 .word 0xaa1803e0
 .word 0xaa1303e1
 .word 0xaa1a03e2
@@ -29971,7 +30026,7 @@ System_Array_qsort_T_CHAR_T_CHAR___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2880]
+ldr x16, [x16, #2896]
 .word 0xf90033b0
 .word 0xf9400a11
 .word 0xf90037b1
@@ -30883,7 +30938,7 @@ System_Array_qsort_T_BYTE_T_BYTE___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2888]
+ldr x16, [x16, #2904]
 .word 0xf90033b0
 .word 0xf9400a11
 .word 0xf90037b1
@@ -31795,7 +31850,7 @@ System_Array_qsort_T_LONG_T_LONG___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2896]
+ldr x16, [x16, #2912]
 .word 0xf90033b0
 .word 0xf9400a11
 .word 0xf90037b1
@@ -32707,7 +32762,7 @@ System_Array_qsort_T_INT_T_INT___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2904]
+ldr x16, [x16, #2920]
 .word 0xf90033b0
 .word 0xf9400a11
 .word 0xf90037b1
@@ -33611,7 +33666,7 @@ System_Collections_Generic_EqualityComparer_1_T_INT__ctor:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2912]
+ldr x16, [x16, #2928]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -33649,7 +33704,7 @@ System_Array_swap_T_INT_T_INT___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2920]
+ldr x16, [x16, #2936]
 .word 0xf9001bb0
 .word 0xf9400a11
 .word 0xf9001fb1
@@ -33760,7 +33815,7 @@ System_Array_QSortArrange_K_INT_K_INT___int_int_System_Collections_Generic_IComp
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2928]
+ldr x16, [x16, #2944]
 .word 0xf9002bb0
 .word 0xf9400a11
 .word 0xf9002fb1
@@ -34065,7 +34120,7 @@ bl _p_19
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2744]
+ldr x1, [x16, #2760]
 .word 0xeb01001f
 .word 0x540001e3
 .word 0xf9403fa0
@@ -34073,7 +34128,7 @@ ldr x1, [x16, #2744]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2744]
+ldr x1, [x16, #2760]
 .word 0x9343fc22
 .word 0x8b020000
 .word 0x39400000
@@ -34124,7 +34179,7 @@ bl _p_19
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2752]
+ldr x15, [x16, #2768]
 .word 0x928003f0
 .word 0xf2bffff0
 .word 0xf8706850
@@ -34216,7 +34271,7 @@ System_Collections_Generic_Comparer_1_T_INT_CreateComparer:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2936]
+ldr x16, [x16, #2952]
 .word 0xf90027b0
 .word 0xf9400a11
 .word 0xf9002bb1
@@ -34245,7 +34300,7 @@ bl _p_276
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2416]
+ldr x1, [x16, #2432]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x54001ec1
@@ -34281,7 +34336,7 @@ bl _p_277
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2944]
+ldr x0, [x16, #2960]
 .word 0xaa1a03e1
 .word 0xaa1a03e1
 bl _p_167
@@ -34337,7 +34392,7 @@ bl _p_278
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2952]
+ldr x1, [x16, #2968]
 .word 0xeb01001f
 .word 0x9a9f17e0
 .word 0xf90043a0
@@ -34377,7 +34432,7 @@ ldr x1, [x16, #2952]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x1, [x16, #2416]
+ldr x1, [x16, #2432]
 .word 0xeb01001f
 .word 0x10000011
 .word 0x54000f21
@@ -34391,13 +34446,13 @@ ldr x1, [x16, #2416]
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2960]
+ldr x0, [x16, #2976]
 .word 0xf9004fa0
 .word 0xd2800020
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2480]
+ldr x0, [x16, #2496]
 .word 0xd2800021
 bl _p_97
 .word 0xaa0003f6
@@ -34446,7 +34501,7 @@ bl _p_97
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x0, [x16, #2968]
+ldr x0, [x16, #2984]
 .word 0xaa1903e1
 .word 0xaa1903e1
 bl _p_167
@@ -34531,7 +34586,7 @@ System_Array_swap_T_ULONG_T_ULONG___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2976]
+ldr x16, [x16, #2992]
 .word 0xf9001bb0
 .word 0xf9400a11
 .word 0xf9001fb1
@@ -34639,7 +34694,7 @@ System_Array_QSortArrange_T_ULONG_T_ULONG___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2984]
+ldr x16, [x16, #3000]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -34795,7 +34850,7 @@ System_Array_swap_T_UINT_T_UINT___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #2992]
+ldr x16, [x16, #3008]
 .word 0xf9001bb0
 .word 0xf9400a11
 .word 0xf9001fb1
@@ -34903,7 +34958,7 @@ System_Array_QSortArrange_T_UINT_T_UINT___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3000]
+ldr x16, [x16, #3016]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -35059,7 +35114,7 @@ System_Array_swap_T_UINT16_T_UINT16___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3008]
+ldr x16, [x16, #3024]
 .word 0xf9001bb0
 .word 0xf9400a11
 .word 0xf9001fb1
@@ -35167,7 +35222,7 @@ System_Array_QSortArrange_T_UINT16_T_UINT16___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3016]
+ldr x16, [x16, #3032]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -35323,7 +35378,7 @@ System_Array_swap_T_SINGLE_T_SINGLE___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3024]
+ldr x16, [x16, #3040]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -35439,7 +35494,7 @@ System_Array_QSortArrange_T_SINGLE_T_SINGLE___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3032]
+ldr x16, [x16, #3048]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -35599,7 +35654,7 @@ System_Array_swap_T_SBYTE_T_SBYTE___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3040]
+ldr x16, [x16, #3056]
 .word 0xf9001bb0
 .word 0xf9400a11
 .word 0xf9001fb1
@@ -35707,7 +35762,7 @@ System_Array_QSortArrange_T_SBYTE_T_SBYTE___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3048]
+ldr x16, [x16, #3064]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -35863,7 +35918,7 @@ System_Array_swap_T_INT16_T_INT16___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3056]
+ldr x16, [x16, #3072]
 .word 0xf9001bb0
 .word 0xf9400a11
 .word 0xf9001fb1
@@ -35971,7 +36026,7 @@ System_Array_QSortArrange_T_INT16_T_INT16___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3064]
+ldr x16, [x16, #3080]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -36127,7 +36182,7 @@ System_Array_swap_T_DOUBLE_T_DOUBLE___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3072]
+ldr x16, [x16, #3088]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -36236,7 +36291,7 @@ System_Array_QSortArrange_T_DOUBLE_T_DOUBLE___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3080]
+ldr x16, [x16, #3096]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -36391,7 +36446,7 @@ System_Array_swap_System_Decimal_System_Decimal___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3088]
+ldr x16, [x16, #3104]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -36529,7 +36584,7 @@ System_Array_QSortArrange_System_Decimal_System_Decimal___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3096]
+ldr x16, [x16, #3112]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -36636,7 +36691,7 @@ bl _p_244
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2840]
+ldr x15, [x16, #2856]
 .word 0xaa1803e0
 .word 0xaa1903e1
 .word 0xaa1a03e2
@@ -36689,7 +36744,7 @@ System_Array_swap_System_DateTime_System_DateTime___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3104]
+ldr x16, [x16, #3120]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -36813,7 +36868,7 @@ System_Array_QSortArrange_System_DateTime_System_DateTime___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3112]
+ldr x16, [x16, #3128]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -36913,7 +36968,7 @@ bl _p_247
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x15, [x16, #2864]
+ldr x15, [x16, #2880]
 .word 0xaa1803e0
 .word 0xaa1903e1
 .word 0xaa1a03e2
@@ -36967,7 +37022,7 @@ System_Array_swap_T_CHAR_T_CHAR___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3120]
+ldr x16, [x16, #3136]
 .word 0xf9001bb0
 .word 0xf9400a11
 .word 0xf9001fb1
@@ -37075,7 +37130,7 @@ System_Array_QSortArrange_T_CHAR_T_CHAR___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3128]
+ldr x16, [x16, #3144]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -37231,7 +37286,7 @@ System_Array_swap_T_BYTE_T_BYTE___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3136]
+ldr x16, [x16, #3152]
 .word 0xf9001bb0
 .word 0xf9400a11
 .word 0xf9001fb1
@@ -37339,7 +37394,7 @@ System_Array_QSortArrange_T_BYTE_T_BYTE___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3144]
+ldr x16, [x16, #3160]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -37495,7 +37550,7 @@ System_Array_swap_T_LONG_T_LONG___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3152]
+ldr x16, [x16, #3168]
 .word 0xf9001bb0
 .word 0xf9400a11
 .word 0xf9001fb1
@@ -37603,7 +37658,7 @@ System_Array_QSortArrange_T_LONG_T_LONG___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3160]
+ldr x16, [x16, #3176]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -37759,7 +37814,7 @@ System_Array_QSortArrange_T_INT_T_INT___int_int:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3168]
+ldr x16, [x16, #3184]
 .word 0xf90017b0
 .word 0xf9400a11
 .word 0xf9001bb1
@@ -37909,7 +37964,7 @@ System_Collections_Generic_ObjectComparer_1_T_INT__ctor:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3176]
+ldr x16, [x16, #3192]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -37949,7 +38004,7 @@ System_Collections_Generic_Comparer_1_T_INT__ctor:
 
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3184]
+ldr x16, [x16, #3200]
 .word 0xf9000fb0
 .word 0xf9400a11
 .word 0xf90013b1
@@ -38052,10 +38107,10 @@ bl ShaftesApp_Net_Client_DownloadClient
 bl ShaftesApp_Net_Room__ctor
 bl ShaftesApp_Views_ProfileView__c__cctor
 bl ShaftesApp_Views_ProfileView__c__ctor
-bl ShaftesApp_Views_ProfileView__c__ShowRoomsb__16_0
-bl ShaftesApp_Views_ProfileView__c__ShowRoomsb__16_1
-bl ShaftesApp_Views_ProfileView__c__DismissRoomsb__17_0
-bl ShaftesApp_Views_ProfileView__c__DismissRoomsb__17_1
+bl ShaftesApp_Views_ProfileView__c__ShowRoomsb__18_0
+bl ShaftesApp_Views_ProfileView__c__ShowRoomsb__18_1
+bl ShaftesApp_Views_ProfileView__c__DismissRoomsb__19_0
+bl ShaftesApp_Views_ProfileView__c__DismissRoomsb__19_1
 bl ShaftesApp_View_ViewDismiss__c__cctor
 bl ShaftesApp_View_ViewDismiss__c__ctor
 bl ShaftesApp_View_ViewDismiss__c__DismissProfileViewb__1_0
@@ -38236,2517 +38291,2517 @@ plt__jit_icall_ves_icall_object_new_specific:
 _p_1:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3200]
+ldr x16, [x16, #3216]
 br x16
-.word 5741
+.word 5769
 	.no_dead_strip plt_UIKit_UITextView__ctor
 plt_UIKit_UITextView__ctor:
 _p_2:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3208]
+ldr x16, [x16, #3224]
 br x16
-.word 5773
+.word 5801
 	.no_dead_strip plt_CoreGraphics_CGRect__ctor_single_single_single_single
 plt_CoreGraphics_CGRect__ctor_single_single_single_single:
 _p_3:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3216]
+ldr x16, [x16, #3232]
 br x16
-.word 5778
+.word 5806
 	.no_dead_strip plt_UIKit_UIButton__ctor
 plt_UIKit_UIButton__ctor:
 _p_4:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3224]
+ldr x16, [x16, #3240]
 br x16
-.word 5783
+.word 5811
 	.no_dead_strip plt_UIKit_UIImage_FromBundle_string
 plt_UIKit_UIImage_FromBundle_string:
 _p_5:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3232]
+ldr x16, [x16, #3248]
 br x16
-.word 5788
+.word 5816
 	.no_dead_strip plt_UIKit_UIView__ctor
 plt_UIKit_UIView__ctor:
 _p_6:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3240]
+ldr x16, [x16, #3256]
 br x16
-.word 5793
+.word 5821
 	.no_dead_strip plt_CoreGraphics_RectangleFExtensions_GetMinY_CoreGraphics_CGRect
 plt_CoreGraphics_RectangleFExtensions_GetMinY_CoreGraphics_CGRect:
 _p_7:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3248]
+ldr x16, [x16, #3264]
 br x16
-.word 5798
+.word 5826
 	.no_dead_strip plt_System_Console_WriteLine_double
 plt_System_Console_WriteLine_double:
 _p_8:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3256]
+ldr x16, [x16, #3272]
 br x16
-.word 5803
+.word 5831
 	.no_dead_strip plt_Foundation_NSObject__ctor
 plt_Foundation_NSObject__ctor:
 _p_9:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3264]
+ldr x16, [x16, #3280]
 br x16
-.word 5808
+.word 5836
 	.no_dead_strip plt_ShaftesApp_ViewController_changeView_ShaftesApp_AppState
 plt_ShaftesApp_ViewController_changeView_ShaftesApp_AppState:
 _p_10:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3272]
+ldr x16, [x16, #3288]
 br x16
-.word 5813
+.word 5841
 	.no_dead_strip plt_System_Console_WriteLine_string
 plt_System_Console_WriteLine_string:
 _p_11:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3280]
+ldr x16, [x16, #3296]
 br x16
-.word 5815
+.word 5843
 	.no_dead_strip plt_ShaftesApp_Views_ProfileView_ShowRooms
 plt_ShaftesApp_Views_ProfileView_ShowRooms:
 _p_12:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3288]
+ldr x16, [x16, #3304]
 br x16
-.word 5820
+.word 5848
 	.no_dead_strip plt_ShaftesApp_Loader_ShowSettings
 plt_ShaftesApp_Loader_ShowSettings:
 _p_13:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3296]
+ldr x16, [x16, #3312]
 br x16
-.word 5822
+.word 5850
 	.no_dead_strip plt_ShaftesApp_Views_ProfileView_DismissRooms
 plt_ShaftesApp_Views_ProfileView_DismissRooms:
 _p_14:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3304]
+ldr x16, [x16, #3320]
 br x16
-.word 5824
+.word 5852
 	.no_dead_strip plt_System_nfloat_op_Implicit_int
 plt_System_nfloat_op_Implicit_int:
 _p_15:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3312]
+ldr x16, [x16, #3328]
 br x16
-.word 5826
+.word 5854
 	.no_dead_strip plt_UIKit_UIFont_SystemFontOfSize_System_nfloat
 plt_UIKit_UIFont_SystemFontOfSize_System_nfloat:
 _p_16:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3320]
+ldr x16, [x16, #3336]
 br x16
-.word 5831
+.word 5859
 	.no_dead_strip plt_ShaftesApp_PrimeView__ctor_int_int_int_int
 plt_ShaftesApp_PrimeView__ctor_int_int_int_int:
 _p_17:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3328]
+ldr x16, [x16, #3344]
 br x16
-.word 5836
+.word 5864
 	.no_dead_strip plt_UIKit_UIResponder_TouchesBegan_Foundation_NSSet_UIKit_UIEvent
 plt_UIKit_UIResponder_TouchesBegan_Foundation_NSSet_UIKit_UIEvent:
 _p_18:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3336]
+ldr x16, [x16, #3352]
 br x16
-.word 5838
+.word 5866
 	.no_dead_strip plt_wrapper_alloc_object_AllocSmall_intptr_intptr
 plt_wrapper_alloc_object_AllocSmall_intptr_intptr:
 _p_19:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3344]
+ldr x16, [x16, #3360]
 br x16
-.word 5843
+.word 5871
 	.no_dead_strip plt_ShaftesApp_Loader__ctor_ShaftesApp_AppState
 plt_ShaftesApp_Loader__ctor_ShaftesApp_AppState:
 _p_20:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3352]
+ldr x16, [x16, #3368]
 br x16
-.word 5851
+.word 5879
 	.no_dead_strip plt_wrapper_write_barrier_object_wbarrier_conc_intptr
 plt_wrapper_write_barrier_object_wbarrier_conc_intptr:
 _p_21:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3360]
+ldr x16, [x16, #3376]
 br x16
-.word 5853
+.word 5881
 	.no_dead_strip plt_ShaftesApp_Loader_clearSubviews
 plt_ShaftesApp_Loader_clearSubviews:
 _p_22:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3368]
+ldr x16, [x16, #3384]
 br x16
-.word 5860
+.word 5888
 	.no_dead_strip plt_UIKit_UIColor_get_DarkGray
 plt_UIKit_UIColor_get_DarkGray:
 _p_23:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3376]
+ldr x16, [x16, #3392]
 br x16
-.word 5862
+.word 5890
 	.no_dead_strip plt_ShaftesApp_Access_newRect_int_int_int_int_UIKit_UIColor
 plt_ShaftesApp_Access_newRect_int_int_int_int_UIKit_UIColor:
 _p_24:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3384]
+ldr x16, [x16, #3400]
 br x16
-.word 5867
+.word 5895
 	.no_dead_strip plt_ShaftesApp_Loader_render_UIKit_UIView
 plt_ShaftesApp_Loader_render_UIKit_UIView:
 _p_25:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3392]
+ldr x16, [x16, #3408]
 br x16
-.word 5869
+.word 5897
 	.no_dead_strip plt_UIKit_UIColor_get_Black
 plt_UIKit_UIColor_get_Black:
 _p_26:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3400]
+ldr x16, [x16, #3416]
 br x16
-.word 5871
+.word 5899
 	.no_dead_strip plt_UIKit_UIImageView__ctor_UIKit_UIImage
 plt_UIKit_UIImageView__ctor_UIKit_UIImage:
 _p_27:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3408]
+ldr x16, [x16, #3424]
 br x16
-.word 5876
+.word 5904
 	.no_dead_strip plt_ObjCRuntime_Selector__ctor_string
 plt_ObjCRuntime_Selector__ctor_string:
 _p_28:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3416]
+ldr x16, [x16, #3432]
 br x16
-.word 5881
+.word 5909
 	.no_dead_strip plt_ShaftesApp_SRButton__ctor_int_int_int_int_ObjCRuntime_Selector_string
 plt_ShaftesApp_SRButton__ctor_int_int_int_int_ObjCRuntime_Selector_string:
 _p_29:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3424]
+ldr x16, [x16, #3440]
 br x16
-.word 5886
+.word 5914
 	.no_dead_strip plt_ShaftesApp_SRButton_Render
 plt_ShaftesApp_SRButton_Render:
 _p_30:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3432]
+ldr x16, [x16, #3448]
 br x16
-.word 5888
+.word 5916
 	.no_dead_strip plt_UIKit_UIColor_get_Gray
 plt_UIKit_UIColor_get_Gray:
 _p_31:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3440]
+ldr x16, [x16, #3456]
 br x16
-.word 5890
+.word 5918
 	.no_dead_strip plt_ShaftesApp_Views_AnnouncementsView_AddToView
 plt_ShaftesApp_Views_AnnouncementsView_AddToView:
 _p_32:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3448]
+ldr x16, [x16, #3464]
 br x16
-.word 5895
+.word 5923
 	.no_dead_strip plt_UIKit_UIColor_get_White
 plt_UIKit_UIColor_get_White:
 _p_33:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3456]
+ldr x16, [x16, #3472]
 br x16
-.word 5897
+.word 5925
 	.no_dead_strip plt_ShaftesApp_Views_ProfileView_AddToView
 plt_ShaftesApp_Views_ProfileView_AddToView:
 _p_34:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3464]
+ldr x16, [x16, #3480]
 br x16
-.word 5902
+.word 5930
 	.no_dead_strip plt__jit_icall_mono_arch_throw_corlib_exception
 plt__jit_icall_mono_arch_throw_corlib_exception:
 _p_35:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3472]
+ldr x16, [x16, #3488]
 br x16
-.word 5904
+.word 5932
 	.no_dead_strip plt_ShaftesApp_Views_SettingsView__ctor
 plt_ShaftesApp_Views_SettingsView__ctor:
 _p_36:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3480]
+ldr x16, [x16, #3496]
 br x16
-.word 5939
+.word 5967
 	.no_dead_strip plt_UIKit_UIApplication_Main_string___string_string
 plt_UIKit_UIApplication_Main_string___string_string:
 _p_37:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3488]
+ldr x16, [x16, #3504]
 br x16
-.word 5941
+.word 5969
 	.no_dead_strip plt_UIKit_UIApplicationDelegate__ctor
 plt_UIKit_UIApplicationDelegate__ctor:
 _p_38:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3496]
+ldr x16, [x16, #3512]
 br x16
-.word 5946
+.word 5974
 	.no_dead_strip plt_System_Collections_Generic_List_1_ShaftesApp_SRButton_Add_ShaftesApp_SRButton
 plt_System_Collections_Generic_List_1_ShaftesApp_SRButton_Add_ShaftesApp_SRButton:
 _p_39:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3504]
+ldr x16, [x16, #3520]
 br x16
-.word 5951
+.word 5979
 	.no_dead_strip plt_UIKit_UIColor_get_Clear
 plt_UIKit_UIColor_get_Clear:
 _p_40:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3512]
+ldr x16, [x16, #3528]
 br x16
-.word 5962
+.word 5990
 	.no_dead_strip plt_System_Collections_Generic_List_1_ShaftesApp_SRButton__ctor
 plt_System_Collections_Generic_List_1_ShaftesApp_SRButton__ctor:
 _p_41:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3520]
+ldr x16, [x16, #3536]
 br x16
-.word 5967
+.word 5995
 	.no_dead_strip plt_UIKit_UIViewController__ctor_intptr
 plt_UIKit_UIViewController__ctor_intptr:
 _p_42:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3528]
+ldr x16, [x16, #3544]
 br x16
-.word 5978
+.word 6006
 	.no_dead_strip plt_UIKit_UIViewController_ViewDidLoad
 plt_UIKit_UIViewController_ViewDidLoad:
 _p_43:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3536]
+ldr x16, [x16, #3552]
 br x16
-.word 5983
+.word 6011
 	.no_dead_strip plt_ShaftesApp_Net_Client__ctor
 plt_ShaftesApp_Net_Client__ctor:
 _p_44:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3544]
+ldr x16, [x16, #3560]
 br x16
-.word 5988
+.word 6016
 	.no_dead_strip plt_CoreGraphics_CGRect_get_Width
 plt_CoreGraphics_CGRect_get_Width:
 _p_45:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3552]
+ldr x16, [x16, #3568]
 br x16
-.word 5990
+.word 6018
 	.no_dead_strip plt_System_nfloat_op_Explicit_System_nfloat
 plt_System_nfloat_op_Explicit_System_nfloat:
 _p_46:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3560]
+ldr x16, [x16, #3576]
 br x16
-.word 5995
+.word 6023
 	.no_dead_strip plt_CoreGraphics_CGRect_get_Height
 plt_CoreGraphics_CGRect_get_Height:
 _p_47:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3568]
+ldr x16, [x16, #3584]
 br x16
-.word 6000
+.word 6028
 	.no_dead_strip plt_ShaftesApp_C__ctor_ShaftesApp_ViewController
 plt_ShaftesApp_C__ctor_ShaftesApp_ViewController:
 _p_48:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3576]
+ldr x16, [x16, #3592]
 br x16
-.word 6005
+.word 6033
 	.no_dead_strip plt_ShaftesApp_Access__ctor_ShaftesApp_ViewController
 plt_ShaftesApp_Access__ctor_ShaftesApp_ViewController:
 _p_49:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3584]
+ldr x16, [x16, #3600]
 br x16
-.word 6007
+.word 6035
 	.no_dead_strip plt_ShaftesApp_ButtonHandler__ctor
 plt_ShaftesApp_ButtonHandler__ctor:
 _p_50:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3592]
+ldr x16, [x16, #3608]
 br x16
-.word 6009
+.word 6037
 	.no_dead_strip plt_ShaftesApp_View_ViewDismiss__ctor
 plt_ShaftesApp_View_ViewDismiss__ctor:
 _p_51:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3600]
+ldr x16, [x16, #3616]
 br x16
-.word 6011
+.word 6039
 	.no_dead_strip plt_UIKit_UIViewController_DidReceiveMemoryWarning
 plt_UIKit_UIViewController_DidReceiveMemoryWarning:
 _p_52:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3608]
+ldr x16, [x16, #3624]
 br x16
-.word 6013
+.word 6041
 	.no_dead_strip plt_System_Collections_Generic_List_1_string__ctor
 plt_System_Collections_Generic_List_1_string__ctor:
 _p_53:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3616]
+ldr x16, [x16, #3632]
 br x16
-.word 6018
+.word 6046
 	.no_dead_strip plt_ShaftesApp_Views_AnnouncementsView_Initialize
 plt_ShaftesApp_Views_AnnouncementsView_Initialize:
 _p_54:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3624]
+ldr x16, [x16, #3640]
 br x16
-.word 6029
+.word 6057
 	.no_dead_strip plt__jit_icall_mono_generic_class_init
 plt__jit_icall_mono_generic_class_init:
 _p_55:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3632]
+ldr x16, [x16, #3648]
 br x16
-.word 6031
+.word 6059
 	.no_dead_strip plt_System_Collections_Generic_List_1_string_Add_string
 plt_System_Collections_Generic_List_1_string_Add_string:
 _p_56:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3640]
+ldr x16, [x16, #3656]
 br x16
-.word 6057
+.word 6085
 	.no_dead_strip plt_ShaftesApp_Views_ProfileView_Initialize
 plt_ShaftesApp_Views_ProfileView_Initialize:
 _p_57:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3648]
+ldr x16, [x16, #3664]
 br x16
-.word 6068
+.word 6096
 	.no_dead_strip plt_UIKit_UIImageView__ctor
 plt_UIKit_UIImageView__ctor:
 _p_58:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3656]
+ldr x16, [x16, #3672]
 br x16
-.word 6070
+.word 6098
 	.no_dead_strip plt_System_Collections_Generic_List_1_int_get_Count
 plt_System_Collections_Generic_List_1_int_get_Count:
 _p_59:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3664]
+ldr x16, [x16, #3680]
 br x16
-.word 6075
+.word 6103
 	.no_dead_strip plt_string_Format_string_object
 plt_string_Format_string_object:
 _p_60:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3672]
+ldr x16, [x16, #3688]
 br x16
-.word 6086
+.word 6114
 	.no_dead_strip plt_ShaftesApp_SRButton_SetText_string
 plt_ShaftesApp_SRButton_SetText_string:
 _p_61:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3680]
+ldr x16, [x16, #3696]
 br x16
-.word 6091
+.word 6119
 	.no_dead_strip plt_ShaftesApp_SRButton_RenderText
 plt_ShaftesApp_SRButton_RenderText:
 _p_62:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3688]
+ldr x16, [x16, #3704]
 br x16
-.word 6093
+.word 6121
 	.no_dead_strip plt_UIKit_UIScrollView__ctor
 plt_UIKit_UIScrollView__ctor:
 _p_63:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3696]
+ldr x16, [x16, #3712]
 br x16
-.word 6095
+.word 6123
 	.no_dead_strip plt_System_Collections_Generic_List_1_string_get_Count
 plt_System_Collections_Generic_List_1_string_get_Count:
 _p_64:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3704]
+ldr x16, [x16, #3720]
 br x16
-.word 6100
+.word 6128
 	.no_dead_strip plt_CoreGraphics_CGSize__ctor_single_single
 plt_CoreGraphics_CGSize__ctor_single_single:
 _p_65:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3712]
+ldr x16, [x16, #3728]
 br x16
-.word 6111
+.word 6139
 	.no_dead_strip plt_ShaftesApp_Views_ProfileView_InitRooms
 plt_ShaftesApp_Views_ProfileView_InitRooms:
 _p_66:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3720]
+ldr x16, [x16, #3736]
 br x16
-.word 6116
+.word 6144
 	.no_dead_strip plt_ShaftesApp_Views_ProfileView_DissmissView
 plt_ShaftesApp_Views_ProfileView_DissmissView:
 _p_67:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3728]
+ldr x16, [x16, #3744]
 br x16
-.word 6118
+.word 6146
 	.no_dead_strip plt_System_Collections_Generic_List_1_string_get_Item_int
 plt_System_Collections_Generic_List_1_string_get_Item_int:
 _p_68:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3736]
+ldr x16, [x16, #3752]
 br x16
-.word 6120
+.word 6148
 	.no_dead_strip plt_ShaftesApp_UI_RoomListNode__ctor_string_int
 plt_ShaftesApp_UI_RoomListNode__ctor_string_int:
 _p_69:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3744]
+ldr x16, [x16, #3760]
 br x16
-.word 6131
+.word 6159
 	.no_dead_strip plt_ShaftesApp_UI_RoomListNode_AddToSuperView_UIKit_UIView
 plt_ShaftesApp_UI_RoomListNode_AddToSuperView_UIKit_UIView:
 _p_70:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3752]
+ldr x16, [x16, #3768]
 br x16
-.word 6133
+.word 6161
 	.no_dead_strip plt_UIKit_UIView_Animate_double_double_UIKit_UIViewAnimationOptions_System_Action_System_Action
 plt_UIKit_UIView_Animate_double_double_UIKit_UIViewAnimationOptions_System_Action_System_Action:
 _p_71:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3760]
+ldr x16, [x16, #3776]
 br x16
-.word 6135
+.word 6163
 	.no_dead_strip plt_ShaftesApp_SRButton_Remove
 plt_ShaftesApp_SRButton_Remove:
 _p_72:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3768]
+ldr x16, [x16, #3784]
 br x16
-.word 6140
+.word 6168
 	.no_dead_strip plt_ShaftesApp_View_ViewDismiss_PresentProfileView
 plt_ShaftesApp_View_ViewDismiss_PresentProfileView:
 _p_73:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3776]
+ldr x16, [x16, #3792]
 br x16
-.word 6142
+.word 6170
 	.no_dead_strip plt_ShaftesApp_View_ViewDismiss_DismissProfileView
 plt_ShaftesApp_View_ViewDismiss_DismissProfileView:
 _p_74:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3784]
+ldr x16, [x16, #3800]
 br x16
-.word 6144
+.word 6172
 	.no_dead_strip plt_ShaftesApp_Views_SettingsView_Initialize
 plt_ShaftesApp_Views_SettingsView_Initialize:
 _p_75:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3792]
+ldr x16, [x16, #3808]
 br x16
-.word 6146
+.word 6174
 	.no_dead_strip plt_ShaftesApp_PrimeView__ctor
 plt_ShaftesApp_PrimeView__ctor:
 _p_76:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3800]
+ldr x16, [x16, #3816]
 br x16
-.word 6148
+.word 6176
 	.no_dead_strip plt_ShaftesApp_Views_SettingsView_AddToView
 plt_ShaftesApp_Views_SettingsView_AddToView:
 _p_77:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3808]
+ldr x16, [x16, #3824]
 br x16
-.word 6150
+.word 6178
 	.no_dead_strip plt_UIKit_UIView_Add_UIKit_UIView
 plt_UIKit_UIView_Add_UIKit_UIView:
 _p_78:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3816]
+ldr x16, [x16, #3832]
 br x16
-.word 6152
+.word 6180
 	.no_dead_strip plt_System_Collections_Generic_List_1_int__ctor
 plt_System_Collections_Generic_List_1_int__ctor:
 _p_79:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3824]
+ldr x16, [x16, #3840]
 br x16
-.word 6157
+.word 6185
 	.no_dead_strip plt_ShaftesApp_Net_Client_DownloadClient
 plt_ShaftesApp_Net_Client_DownloadClient:
 _p_80:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3832]
+ldr x16, [x16, #3848]
 br x16
-.word 6168
+.word 6196
 	.no_dead_strip plt_ShaftesApp_Views_ProfileView__c__ctor
 plt_ShaftesApp_Views_ProfileView__c__ctor:
 _p_81:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3840]
+ldr x16, [x16, #3856]
 br x16
-.word 6170
+.word 6198
 	.no_dead_strip plt_ShaftesApp_View_ViewDismiss__c__ctor
 plt_ShaftesApp_View_ViewDismiss__c__ctor:
 _p_82:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3848]
+ldr x16, [x16, #3864]
 br x16
-.word 6172
+.word 6200
 	.no_dead_strip plt__rgctx_fetch_0
 plt__rgctx_fetch_0:
 _p_83:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3856]
+ldr x16, [x16, #3872]
 br x16
-.word 6202
+.word 6230
 	.no_dead_strip plt_System_Array_InternalEnumerator_1_T_REF__ctor_System_Array
 plt_System_Array_InternalEnumerator_1_T_REF__ctor_System_Array:
 _p_84:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3864]
+ldr x16, [x16, #3880]
 br x16
-.word 6210
+.word 6238
 	.no_dead_strip plt__jit_icall_mono_helper_ldstr_mscorlib
 plt__jit_icall_mono_helper_ldstr_mscorlib:
 _p_85:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3872]
+ldr x16, [x16, #3888]
 br x16
-.word 6229
+.word 6257
 	.no_dead_strip plt__jit_icall_mono_arch_throw_exception
 plt__jit_icall_mono_arch_throw_exception:
 _p_86:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3880]
+ldr x16, [x16, #3896]
 br x16
-.word 6258
+.word 6286
 	.no_dead_strip plt_Locale_GetText_string
 plt_Locale_GetText_string:
 _p_87:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3888]
+ldr x16, [x16, #3904]
 br x16
-.word 6286
+.word 6314
 	.no_dead_strip plt__rgctx_fetch_1
 plt__rgctx_fetch_1:
 _p_88:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3896]
+ldr x16, [x16, #3912]
 br x16
-.word 6310
+.word 6338
 	.no_dead_strip plt_System_Array_Copy_System_Array_int_System_Array_int_int
 plt_System_Array_Copy_System_Array_int_System_Array_int_int:
 _p_89:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3904]
+ldr x16, [x16, #3920]
 br x16
-.word 6334
+.word 6362
 	.no_dead_strip plt__jit_icall_mono_thread_interruption_checkpoint
 plt__jit_icall_mono_thread_interruption_checkpoint:
 _p_90:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3912]
+ldr x16, [x16, #3928]
 br x16
-.word 6339
+.word 6367
 	.no_dead_strip plt__rgctx_fetch_2
 plt__rgctx_fetch_2:
 _p_91:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3920]
+ldr x16, [x16, #3936]
 br x16
-.word 6395
+.word 6423
 	.no_dead_strip plt__rgctx_fetch_3
 plt__rgctx_fetch_3:
 _p_92:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3928]
+ldr x16, [x16, #3944]
 br x16
-.word 6403
+.word 6431
 	.no_dead_strip plt_System_ThrowHelper_ThrowArgumentOutOfRangeException_System_ExceptionArgument_System_ExceptionResource
 plt_System_ThrowHelper_ThrowArgumentOutOfRangeException_System_ExceptionArgument_System_ExceptionResource:
 _p_93:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3936]
+ldr x16, [x16, #3952]
 br x16
-.word 6411
+.word 6439
 	.no_dead_strip plt__rgctx_fetch_4
 plt__rgctx_fetch_4:
 _p_94:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3944]
+ldr x16, [x16, #3960]
 br x16
-.word 6434
+.word 6462
 	.no_dead_strip plt__rgctx_fetch_5
 plt__rgctx_fetch_5:
 _p_95:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3952]
+ldr x16, [x16, #3968]
 br x16
-.word 6442
+.word 6470
 	.no_dead_strip plt__rgctx_fetch_6
 plt__rgctx_fetch_6:
 _p_96:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3960]
+ldr x16, [x16, #3976]
 br x16
-.word 6450
+.word 6478
 	.no_dead_strip plt_wrapper_alloc_object_AllocVector_intptr_intptr
 plt_wrapper_alloc_object_AllocVector_intptr_intptr:
 _p_97:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3968]
+ldr x16, [x16, #3984]
 br x16
-.word 6460
+.word 6488
 	.no_dead_strip plt_System_ThrowHelper_ThrowArgumentNullException_System_ExceptionArgument
 plt_System_ThrowHelper_ThrowArgumentNullException_System_ExceptionArgument:
 _p_98:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3976]
+ldr x16, [x16, #3992]
 br x16
-.word 6468
+.word 6496
 	.no_dead_strip plt__rgctx_fetch_7
 plt__rgctx_fetch_7:
 _p_99:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3984]
+ldr x16, [x16, #4000]
 br x16
-.word 6500
+.word 6528
 	.no_dead_strip plt_wrapper_castclass_object___isinst_with_cache_object_intptr_intptr
 plt_wrapper_castclass_object___isinst_with_cache_object_intptr_intptr:
 _p_100:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #3992]
+ldr x16, [x16, #4008]
 br x16
-.word 6508
+.word 6536
 	.no_dead_strip plt__rgctx_fetch_8
 plt__rgctx_fetch_8:
 _p_101:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #4000]
+ldr x16, [x16, #4016]
 br x16
-.word 6516
+.word 6544
 	.no_dead_strip plt__rgctx_fetch_9
 plt__rgctx_fetch_9:
 _p_102:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #4008]
+ldr x16, [x16, #4024]
 br x16
-.word 6539
+.word 6567
 	.no_dead_strip plt__rgctx_fetch_10
 plt__rgctx_fetch_10:
 _p_103:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #4016]
+ldr x16, [x16, #4032]
 br x16
-.word 6547
+.word 6575
 	.no_dead_strip plt__rgctx_fetch_11
 plt__rgctx_fetch_11:
 _p_104:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #4024]
+ldr x16, [x16, #4040]
 br x16
-.word 6555
+.word 6583
 	.no_dead_strip plt__rgctx_fetch_12
 plt__rgctx_fetch_12:
 _p_105:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #4032]
+ldr x16, [x16, #4048]
 br x16
-.word 6565
+.word 6593
 	.no_dead_strip plt__rgctx_fetch_13
 plt__rgctx_fetch_13:
 _p_106:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #4040]
+ldr x16, [x16, #4056]
 br x16
-.word 6597
+.word 6625
 	.no_dead_strip plt__rgctx_fetch_14
 plt__rgctx_fetch_14:
 _p_107:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #4048]
+ldr x16, [x16, #4064]
 br x16
-.word 6629
+.word 6657
 	.no_dead_strip plt__rgctx_fetch_15
 plt__rgctx_fetch_15:
 _p_108:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #4056]
+ldr x16, [x16, #4072]
 br x16
-.word 6652
+.word 6680
 	.no_dead_strip plt__rgctx_fetch_16
 plt__rgctx_fetch_16:
 _p_109:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #4064]
+ldr x16, [x16, #4080]
 br x16
-.word 6693
+.word 6721
 	.no_dead_strip plt__rgctx_fetch_17
 plt__rgctx_fetch_17:
 _p_110:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+0
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #4072]
+ldr x16, [x16, #4088]
 br x16
-.word 6703
+.word 6731
 	.no_dead_strip plt__rgctx_fetch_18
 plt__rgctx_fetch_18:
 _p_111:
-adrp x16, mono_aot_ShaftesApp_got@PAGE+0
+adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #4080]
+ldr x16, [x16, #0]
 br x16
-.word 6711
+.word 6739
 	.no_dead_strip plt_System_ThrowHelper_ThrowArgumentOutOfRangeException
 plt_System_ThrowHelper_ThrowArgumentOutOfRangeException:
 _p_112:
-adrp x16, mono_aot_ShaftesApp_got@PAGE+0
+adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #4088]
+ldr x16, [x16, #8]
 br x16
-.word 6719
+.word 6747
 	.no_dead_strip plt__rgctx_fetch_19
 plt__rgctx_fetch_19:
 _p_113:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #0]
+ldr x16, [x16, #16]
 br x16
-.word 6742
+.word 6770
 	.no_dead_strip plt__rgctx_fetch_20
 plt__rgctx_fetch_20:
 _p_114:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #8]
+ldr x16, [x16, #24]
 br x16
-.word 6783
+.word 6811
 	.no_dead_strip plt_System_Array_Clear_System_Array_int_int
 plt_System_Array_Clear_System_Array_int_int:
 _p_115:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #16]
+ldr x16, [x16, #32]
 br x16
-.word 6806
+.word 6834
 	.no_dead_strip plt__rgctx_fetch_21
 plt__rgctx_fetch_21:
 _p_116:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #24]
+ldr x16, [x16, #40]
 br x16
-.word 6838
+.word 6866
 	.no_dead_strip plt__rgctx_fetch_22
 plt__rgctx_fetch_22:
 _p_117:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #32]
+ldr x16, [x16, #48]
 br x16
-.word 6846
+.word 6874
 	.no_dead_strip plt__rgctx_fetch_23
 plt__rgctx_fetch_23:
 _p_118:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #40]
+ldr x16, [x16, #56]
 br x16
-.word 6887
+.word 6915
 	.no_dead_strip plt__rgctx_fetch_24
 plt__rgctx_fetch_24:
 _p_119:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #48]
+ldr x16, [x16, #64]
 br x16
-.word 6937
+.word 6965
 	.no_dead_strip plt__rgctx_fetch_25
 plt__rgctx_fetch_25:
 _p_120:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #56]
+ldr x16, [x16, #72]
 br x16
-.word 6945
+.word 6973
 	.no_dead_strip plt__rgctx_fetch_26
 plt__rgctx_fetch_26:
 _p_121:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #64]
+ldr x16, [x16, #80]
 br x16
-.word 6986
+.word 7014
 	.no_dead_strip plt__rgctx_fetch_27
 plt__rgctx_fetch_27:
 _p_122:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #72]
+ldr x16, [x16, #88]
 br x16
-.word 6994
+.word 7022
 	.no_dead_strip plt__rgctx_fetch_28
 plt__rgctx_fetch_28:
 _p_123:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #80]
+ldr x16, [x16, #96]
 br x16
-.word 7035
+.word 7063
 	.no_dead_strip plt__rgctx_fetch_29
 plt__rgctx_fetch_29:
 _p_124:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #88]
+ldr x16, [x16, #104]
 br x16
-.word 7043
+.word 7071
 	.no_dead_strip plt__rgctx_fetch_30
 plt__rgctx_fetch_30:
 _p_125:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #96]
+ldr x16, [x16, #112]
 br x16
-.word 7084
+.word 7112
 	.no_dead_strip plt__rgctx_fetch_31
 plt__rgctx_fetch_31:
 _p_126:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #104]
+ldr x16, [x16, #120]
 br x16
-.word 7108
+.word 7136
 	.no_dead_strip plt__rgctx_fetch_32
 plt__rgctx_fetch_32:
 _p_127:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #112]
+ldr x16, [x16, #128]
 br x16
-.word 7150
+.word 7178
 	.no_dead_strip plt__rgctx_fetch_33
 plt__rgctx_fetch_33:
 _p_128:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #120]
+ldr x16, [x16, #136]
 br x16
-.word 7191
+.word 7219
 	.no_dead_strip plt__rgctx_fetch_34
 plt__rgctx_fetch_34:
 _p_129:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #128]
+ldr x16, [x16, #144]
 br x16
-.word 7199
+.word 7227
 	.no_dead_strip plt__rgctx_fetch_35
 plt__rgctx_fetch_35:
 _p_130:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #136]
+ldr x16, [x16, #152]
 br x16
-.word 7222
+.word 7250
 	.no_dead_strip plt__rgctx_fetch_36
 plt__rgctx_fetch_36:
 _p_131:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #144]
+ldr x16, [x16, #160]
 br x16
-.word 7245
+.word 7273
 	.no_dead_strip plt__rgctx_fetch_37
 plt__rgctx_fetch_37:
 _p_132:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #152]
+ldr x16, [x16, #168]
 br x16
-.word 7255
+.word 7283
 	.no_dead_strip plt_System_Array_CopyTo_System_Array_int
 plt_System_Array_CopyTo_System_Array_int:
 _p_133:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #160]
+ldr x16, [x16, #176]
 br x16
-.word 7278
+.word 7306
 	.no_dead_strip plt__rgctx_fetch_38
 plt__rgctx_fetch_38:
 _p_134:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #168]
+ldr x16, [x16, #184]
 br x16
-.word 7283
+.word 7311
 	.no_dead_strip plt__rgctx_fetch_39
 plt__rgctx_fetch_39:
 _p_135:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #176]
+ldr x16, [x16, #192]
 br x16
-.word 7306
+.word 7334
 	.no_dead_strip plt__rgctx_fetch_40
 plt__rgctx_fetch_40:
 _p_136:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #184]
+ldr x16, [x16, #200]
 br x16
-.word 7329
+.word 7357
 	.no_dead_strip plt__rgctx_fetch_41
 plt__rgctx_fetch_41:
 _p_137:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #192]
+ldr x16, [x16, #208]
 br x16
-.word 7370
+.word 7398
 	.no_dead_strip plt__rgctx_fetch_42
 plt__rgctx_fetch_42:
 _p_138:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #200]
+ldr x16, [x16, #216]
 br x16
-.word 7393
+.word 7421
 	.no_dead_strip plt__rgctx_fetch_43
 plt__rgctx_fetch_43:
 _p_139:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #208]
+ldr x16, [x16, #224]
 br x16
-.word 7434
+.word 7462
 	.no_dead_strip plt__rgctx_fetch_44
 plt__rgctx_fetch_44:
 _p_140:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #216]
+ldr x16, [x16, #232]
 br x16
-.word 7457
+.word 7485
 	.no_dead_strip plt_System_ThrowHelper_ThrowArgumentException_System_ExceptionResource
 plt_System_ThrowHelper_ThrowArgumentException_System_ExceptionResource:
 _p_141:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #224]
+ldr x16, [x16, #240]
 br x16
-.word 7480
+.word 7508
 	.no_dead_strip plt_System_Array_Reverse_System_Array_int_int
 plt_System_Array_Reverse_System_Array_int_int:
 _p_142:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #232]
+ldr x16, [x16, #248]
 br x16
-.word 7485
+.word 7513
 	.no_dead_strip plt__rgctx_fetch_45
 plt__rgctx_fetch_45:
 _p_143:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #240]
+ldr x16, [x16, #256]
 br x16
-.word 7508
+.word 7536
 	.no_dead_strip plt__rgctx_fetch_46
 plt__rgctx_fetch_46:
 _p_144:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #248]
+ldr x16, [x16, #264]
 br x16
-.word 7531
+.word 7559
 	.no_dead_strip plt__rgctx_fetch_47
 plt__rgctx_fetch_47:
 _p_145:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #256]
+ldr x16, [x16, #272]
 br x16
-.word 7572
+.word 7600
 	.no_dead_strip plt__rgctx_fetch_48
 plt__rgctx_fetch_48:
 _p_146:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #264]
+ldr x16, [x16, #280]
 br x16
-.word 7596
+.word 7624
 	.no_dead_strip plt__rgctx_fetch_49
 plt__rgctx_fetch_49:
 _p_147:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #272]
+ldr x16, [x16, #288]
 br x16
-.word 7647
+.word 7675
 	.no_dead_strip plt__rgctx_fetch_50
 plt__rgctx_fetch_50:
 _p_148:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #280]
+ldr x16, [x16, #296]
 br x16
-.word 7655
+.word 7683
 	.no_dead_strip plt__rgctx_fetch_51
 plt__rgctx_fetch_51:
 _p_149:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #288]
+ldr x16, [x16, #304]
 br x16
-.word 7678
+.word 7706
 	.no_dead_strip plt__rgctx_fetch_52
 plt__rgctx_fetch_52:
 _p_150:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #296]
+ldr x16, [x16, #312]
 br x16
-.word 7702
+.word 7730
 	.no_dead_strip plt__rgctx_fetch_53
 plt__rgctx_fetch_53:
 _p_151:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #304]
+ldr x16, [x16, #320]
 br x16
-.word 7744
+.word 7772
 	.no_dead_strip plt__rgctx_fetch_54
 plt__rgctx_fetch_54:
 _p_152:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #312]
+ldr x16, [x16, #328]
 br x16
-.word 7772
+.word 7800
 	.no_dead_strip plt__rgctx_fetch_55
 plt__rgctx_fetch_55:
 _p_153:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #320]
+ldr x16, [x16, #336]
 br x16
-.word 7782
+.word 7810
 	.no_dead_strip plt__rgctx_fetch_56
 plt__rgctx_fetch_56:
 _p_154:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #328]
+ldr x16, [x16, #344]
 br x16
-.word 7808
+.word 7836
 	.no_dead_strip plt__rgctx_fetch_57
 plt__rgctx_fetch_57:
 _p_155:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #336]
+ldr x16, [x16, #352]
 br x16
-.word 7816
+.word 7844
 	.no_dead_strip plt__rgctx_fetch_58
 plt__rgctx_fetch_58:
 _p_156:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #344]
+ldr x16, [x16, #360]
 br x16
-.word 7824
+.word 7852
 	.no_dead_strip plt_System_Array_GetUpperBound_int
 plt_System_Array_GetUpperBound_int:
 _p_157:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #352]
+ldr x16, [x16, #368]
 br x16
-.word 7847
+.word 7875
 	.no_dead_strip plt__rgctx_fetch_59
 plt__rgctx_fetch_59:
 _p_158:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #360]
+ldr x16, [x16, #376]
 br x16
-.word 7880
+.word 7908
 	.no_dead_strip plt__rgctx_fetch_60
 plt__rgctx_fetch_60:
 _p_159:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #368]
+ldr x16, [x16, #384]
 br x16
-.word 7888
+.word 7916
 	.no_dead_strip plt__rgctx_fetch_61
 plt__rgctx_fetch_61:
 _p_160:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #376]
+ldr x16, [x16, #392]
 br x16
-.word 7930
+.word 7958
 	.no_dead_strip plt__rgctx_fetch_62
 plt__rgctx_fetch_62:
 _p_161:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #384]
+ldr x16, [x16, #400]
 br x16
-.word 7954
+.word 7982
 	.no_dead_strip plt__rgctx_fetch_63
 plt__rgctx_fetch_63:
 _p_162:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #392]
+ldr x16, [x16, #408]
 br x16
-.word 7996
+.word 8024
 	.no_dead_strip plt_System_Collections_Generic_ByteEqualityComparer__ctor
 plt_System_Collections_Generic_ByteEqualityComparer__ctor:
 _p_163:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #400]
+ldr x16, [x16, #416]
 br x16
-.word 8004
+.word 8032
 	.no_dead_strip plt__rgctx_fetch_64
 plt__rgctx_fetch_64:
 _p_164:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #408]
+ldr x16, [x16, #424]
 br x16
-.word 8009
+.word 8037
 	.no_dead_strip plt_System_Collections_Generic_InternalStringComparer__ctor
 plt_System_Collections_Generic_InternalStringComparer__ctor:
 _p_165:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #416]
+ldr x16, [x16, #432]
 br x16
-.word 8017
+.word 8045
 	.no_dead_strip plt__rgctx_fetch_65
 plt__rgctx_fetch_65:
 _p_166:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #424]
+ldr x16, [x16, #440]
 br x16
-.word 8031
+.word 8059
 	.no_dead_strip plt_System_RuntimeType_CreateInstanceForAnotherGenericParameter_System_Type_System_RuntimeType
 plt_System_RuntimeType_CreateInstanceForAnotherGenericParameter_System_Type_System_RuntimeType:
 _p_167:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #432]
+ldr x16, [x16, #448]
 br x16
-.word 8039
+.word 8067
 	.no_dead_strip plt_System_Enum_GetUnderlyingType_System_Type
 plt_System_Enum_GetUnderlyingType_System_Type:
 _p_168:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #440]
+ldr x16, [x16, #456]
 br x16
-.word 8044
+.word 8072
 	.no_dead_strip plt_System_Type_GetTypeCode_System_Type
 plt_System_Type_GetTypeCode_System_Type:
 _p_169:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #448]
+ldr x16, [x16, #464]
 br x16
-.word 8049
+.word 8077
 	.no_dead_strip plt__rgctx_fetch_66
 plt__rgctx_fetch_66:
 _p_170:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #456]
+ldr x16, [x16, #472]
 br x16
-.word 8063
+.word 8091
 	.no_dead_strip plt__rgctx_fetch_67
 plt__rgctx_fetch_67:
 _p_171:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #464]
+ldr x16, [x16, #480]
 br x16
-.word 8071
+.word 8099
 	.no_dead_strip plt__rgctx_fetch_68
 plt__rgctx_fetch_68:
 _p_172:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #472]
+ldr x16, [x16, #488]
 br x16
-.word 8113
+.word 8141
 	.no_dead_strip plt_System_Array_qsort_int_int___int_int
 plt_System_Array_qsort_int_int___int_int:
 _p_173:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #480]
+ldr x16, [x16, #496]
 br x16
-.word 8121
+.word 8149
 	.no_dead_strip plt_System_Array_qsort_long_long___int_int
 plt_System_Array_qsort_long_long___int_int:
 _p_174:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #488]
+ldr x16, [x16, #504]
 br x16
-.word 8142
+.word 8170
 	.no_dead_strip plt_System_Array_qsort_byte_byte___int_int
 plt_System_Array_qsort_byte_byte___int_int:
 _p_175:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #496]
+ldr x16, [x16, #512]
 br x16
-.word 8163
+.word 8191
 	.no_dead_strip plt_System_Array_qsort_char_char___int_int
 plt_System_Array_qsort_char_char___int_int:
 _p_176:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #504]
+ldr x16, [x16, #520]
 br x16
-.word 8183
+.word 8211
 	.no_dead_strip plt_System_Array_qsort_System_DateTime_System_DateTime___int_int
 plt_System_Array_qsort_System_DateTime_System_DateTime___int_int:
 _p_177:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #512]
+ldr x16, [x16, #528]
 br x16
-.word 8203
+.word 8231
 	.no_dead_strip plt_System_Array_qsort_System_Decimal_System_Decimal___int_int
 plt_System_Array_qsort_System_Decimal_System_Decimal___int_int:
 _p_178:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #520]
+ldr x16, [x16, #536]
 br x16
-.word 8223
+.word 8251
 	.no_dead_strip plt_System_Array_qsort_double_double___int_int
 plt_System_Array_qsort_double_double___int_int:
 _p_179:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #528]
+ldr x16, [x16, #544]
 br x16
-.word 8243
+.word 8271
 	.no_dead_strip plt_System_Array_qsort_int16_int16___int_int
 plt_System_Array_qsort_int16_int16___int_int:
 _p_180:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #536]
+ldr x16, [x16, #552]
 br x16
-.word 8263
+.word 8291
 	.no_dead_strip plt_System_Array_qsort_sbyte_sbyte___int_int
 plt_System_Array_qsort_sbyte_sbyte___int_int:
 _p_181:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #544]
+ldr x16, [x16, #560]
 br x16
-.word 8284
+.word 8312
 	.no_dead_strip plt_System_Array_qsort_single_single___int_int
 plt_System_Array_qsort_single_single___int_int:
 _p_182:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #552]
+ldr x16, [x16, #568]
 br x16
-.word 8305
+.word 8333
 	.no_dead_strip plt_System_Array_qsort_uint16_uint16___int_int
 plt_System_Array_qsort_uint16_uint16___int_int:
 _p_183:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #560]
+ldr x16, [x16, #576]
 br x16
-.word 8326
+.word 8354
 	.no_dead_strip plt_System_Array_qsort_uint_uint___int_int
 plt_System_Array_qsort_uint_uint___int_int:
 _p_184:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #568]
+ldr x16, [x16, #584]
 br x16
-.word 8347
+.word 8375
 	.no_dead_strip plt_System_Array_qsort_ulong_ulong___int_int
 plt_System_Array_qsort_ulong_ulong___int_int:
 _p_185:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #576]
+ldr x16, [x16, #592]
 br x16
-.word 8368
+.word 8396
 	.no_dead_strip plt__rgctx_fetch_69
 plt__rgctx_fetch_69:
 _p_186:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #584]
+ldr x16, [x16, #600]
 br x16
-.word 8398
+.word 8426
 	.no_dead_strip plt_System_Type_get_IsValueType
 plt_System_Type_get_IsValueType:
 _p_187:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #592]
+ldr x16, [x16, #608]
 br x16
-.word 8406
+.word 8434
 	.no_dead_strip plt__rgctx_fetch_70
 plt__rgctx_fetch_70:
 _p_188:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #600]
+ldr x16, [x16, #616]
 br x16
-.word 8420
+.word 8448
 	.no_dead_strip plt__rgctx_fetch_71
 plt__rgctx_fetch_71:
 _p_189:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #608]
+ldr x16, [x16, #624]
 br x16
-.word 8428
+.word 8456
 	.no_dead_strip plt__rgctx_fetch_72
 plt__rgctx_fetch_72:
 _p_190:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #616]
+ldr x16, [x16, #632]
 br x16
-.word 8451
+.word 8479
 	.no_dead_strip plt__rgctx_fetch_73
 plt__rgctx_fetch_73:
 _p_191:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #624]
+ldr x16, [x16, #640]
 br x16
-.word 8475
+.word 8503
 	.no_dead_strip plt__rgctx_fetch_74
 plt__rgctx_fetch_74:
 _p_192:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #632]
+ldr x16, [x16, #648]
 br x16
-.word 8499
+.word 8527
 	.no_dead_strip plt__rgctx_fetch_75
 plt__rgctx_fetch_75:
 _p_193:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #640]
+ldr x16, [x16, #656]
 br x16
-.word 8523
+.word 8551
 	.no_dead_strip plt__rgctx_fetch_76
 plt__rgctx_fetch_76:
 _p_194:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #648]
+ldr x16, [x16, #664]
 br x16
-.word 8574
+.word 8602
 	.no_dead_strip plt__jit_icall___emul_lmul_ovf_un
 plt__jit_icall___emul_lmul_ovf_un:
 _p_195:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #656]
+ldr x16, [x16, #672]
 br x16
-.word 8597
+.word 8625
 	.no_dead_strip plt__rgctx_fetch_77
 plt__rgctx_fetch_77:
 _p_196:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #664]
+ldr x16, [x16, #680]
 br x16
-.word 8646
+.word 8674
 	.no_dead_strip plt__rgctx_fetch_78
 plt__rgctx_fetch_78:
 _p_197:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #672]
+ldr x16, [x16, #688]
 br x16
-.word 8669
+.word 8697
 	.no_dead_strip plt__rgctx_fetch_79
 plt__rgctx_fetch_79:
 _p_198:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #680]
+ldr x16, [x16, #696]
 br x16
-.word 8686
+.word 8714
 	.no_dead_strip plt__rgctx_fetch_80
 plt__rgctx_fetch_80:
 _p_199:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #688]
+ldr x16, [x16, #704]
 br x16
-.word 8694
+.word 8722
 	.no_dead_strip plt__rgctx_fetch_81
 plt__rgctx_fetch_81:
 _p_200:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #696]
+ldr x16, [x16, #712]
 br x16
-.word 8717
+.word 8745
 	.no_dead_strip plt__rgctx_fetch_82
 plt__rgctx_fetch_82:
 _p_201:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #704]
+ldr x16, [x16, #720]
 br x16
-.word 8741
+.word 8769
 	.no_dead_strip plt__rgctx_fetch_83
 plt__rgctx_fetch_83:
 _p_202:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #712]
+ldr x16, [x16, #728]
 br x16
-.word 8765
+.word 8793
 	.no_dead_strip plt__rgctx_fetch_84
 plt__rgctx_fetch_84:
 _p_203:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #720]
+ldr x16, [x16, #736]
 br x16
-.word 8789
+.word 8817
 	.no_dead_strip plt__rgctx_fetch_85
 plt__rgctx_fetch_85:
 _p_204:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #728]
+ldr x16, [x16, #744]
 br x16
-.word 8832
+.word 8860
 	.no_dead_strip plt__rgctx_fetch_86
 plt__rgctx_fetch_86:
 _p_205:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #736]
+ldr x16, [x16, #752]
 br x16
-.word 8849
+.word 8877
 	.no_dead_strip plt__rgctx_fetch_87
 plt__rgctx_fetch_87:
 _p_206:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #744]
+ldr x16, [x16, #760]
 br x16
-.word 8875
+.word 8903
 	.no_dead_strip plt__rgctx_fetch_88
 plt__rgctx_fetch_88:
 _p_207:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #752]
+ldr x16, [x16, #768]
 br x16
-.word 8883
+.word 8911
 	.no_dead_strip plt__rgctx_fetch_89
 plt__rgctx_fetch_89:
 _p_208:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #760]
+ldr x16, [x16, #776]
 br x16
-.word 8891
+.word 8919
 	.no_dead_strip plt__rgctx_fetch_90
 plt__rgctx_fetch_90:
 _p_209:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #768]
+ldr x16, [x16, #784]
 br x16
-.word 8942
+.word 8970
 	.no_dead_strip plt__rgctx_fetch_91
 plt__rgctx_fetch_91:
 _p_210:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #776]
+ldr x16, [x16, #792]
 br x16
-.word 8970
+.word 8998
 	.no_dead_strip plt__rgctx_fetch_92
 plt__rgctx_fetch_92:
 _p_211:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #784]
+ldr x16, [x16, #800]
 br x16
-.word 8994
+.word 9022
 	.no_dead_strip plt__rgctx_fetch_93
 plt__rgctx_fetch_93:
 _p_212:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #792]
+ldr x16, [x16, #808]
 br x16
-.word 9018
+.word 9046
 	.no_dead_strip plt__rgctx_fetch_94
 plt__rgctx_fetch_94:
 _p_213:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #800]
+ldr x16, [x16, #816]
 br x16
-.word 9042
+.word 9070
 	.no_dead_strip plt__rgctx_fetch_95
 plt__rgctx_fetch_95:
 _p_214:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #808]
+ldr x16, [x16, #824]
 br x16
-.word 9094
+.word 9122
 	.no_dead_strip plt__rgctx_fetch_96
 plt__rgctx_fetch_96:
 _p_215:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #816]
+ldr x16, [x16, #832]
 br x16
-.word 9122
+.word 9150
 	.no_dead_strip plt__rgctx_fetch_97
 plt__rgctx_fetch_97:
 _p_216:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #824]
+ldr x16, [x16, #840]
 br x16
-.word 9146
+.word 9174
 	.no_dead_strip plt__rgctx_fetch_98
 plt__rgctx_fetch_98:
 _p_217:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #832]
+ldr x16, [x16, #848]
 br x16
-.word 9170
+.word 9198
 	.no_dead_strip plt__rgctx_fetch_99
 plt__rgctx_fetch_99:
 _p_218:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #840]
+ldr x16, [x16, #856]
 br x16
-.word 9194
+.word 9222
 	.no_dead_strip plt__rgctx_fetch_100
 plt__rgctx_fetch_100:
 _p_219:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #848]
+ldr x16, [x16, #864]
 br x16
-.word 9246
+.word 9274
 	.no_dead_strip plt__rgctx_fetch_101
 plt__rgctx_fetch_101:
 _p_220:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #856]
+ldr x16, [x16, #872]
 br x16
-.word 9274
+.word 9302
 	.no_dead_strip plt__rgctx_fetch_102
 plt__rgctx_fetch_102:
 _p_221:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #864]
+ldr x16, [x16, #880]
 br x16
-.word 9298
+.word 9326
 	.no_dead_strip plt__rgctx_fetch_103
 plt__rgctx_fetch_103:
 _p_222:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #872]
+ldr x16, [x16, #888]
 br x16
-.word 9322
+.word 9350
 	.no_dead_strip plt__rgctx_fetch_104
 plt__rgctx_fetch_104:
 _p_223:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #880]
+ldr x16, [x16, #896]
 br x16
-.word 9346
+.word 9374
 	.no_dead_strip plt__rgctx_fetch_105
 plt__rgctx_fetch_105:
 _p_224:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #888]
+ldr x16, [x16, #904]
 br x16
-.word 9398
+.word 9426
 	.no_dead_strip plt__rgctx_fetch_106
 plt__rgctx_fetch_106:
 _p_225:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #896]
+ldr x16, [x16, #912]
 br x16
-.word 9426
+.word 9454
 	.no_dead_strip plt__rgctx_fetch_107
 plt__rgctx_fetch_107:
 _p_226:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #904]
+ldr x16, [x16, #920]
 br x16
-.word 9450
+.word 9478
 	.no_dead_strip plt__rgctx_fetch_108
 plt__rgctx_fetch_108:
 _p_227:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #912]
+ldr x16, [x16, #928]
 br x16
-.word 9474
+.word 9502
 	.no_dead_strip plt__rgctx_fetch_109
 plt__rgctx_fetch_109:
 _p_228:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #920]
+ldr x16, [x16, #936]
 br x16
-.word 9498
+.word 9526
 	.no_dead_strip plt__rgctx_fetch_110
 plt__rgctx_fetch_110:
 _p_229:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #928]
+ldr x16, [x16, #944]
 br x16
-.word 9550
+.word 9578
 	.no_dead_strip plt__rgctx_fetch_111
 plt__rgctx_fetch_111:
 _p_230:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #936]
+ldr x16, [x16, #952]
 br x16
-.word 9578
+.word 9606
 	.no_dead_strip plt__rgctx_fetch_112
 plt__rgctx_fetch_112:
 _p_231:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #944]
+ldr x16, [x16, #960]
 br x16
-.word 9602
+.word 9630
 	.no_dead_strip plt__rgctx_fetch_113
 plt__rgctx_fetch_113:
 _p_232:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #952]
+ldr x16, [x16, #968]
 br x16
-.word 9626
+.word 9654
 	.no_dead_strip plt__rgctx_fetch_114
 plt__rgctx_fetch_114:
 _p_233:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #960]
+ldr x16, [x16, #976]
 br x16
-.word 9650
+.word 9678
 	.no_dead_strip plt__rgctx_fetch_115
 plt__rgctx_fetch_115:
 _p_234:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #968]
+ldr x16, [x16, #984]
 br x16
-.word 9702
+.word 9730
 	.no_dead_strip plt__rgctx_fetch_116
 plt__rgctx_fetch_116:
 _p_235:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #976]
+ldr x16, [x16, #992]
 br x16
-.word 9730
+.word 9758
 	.no_dead_strip plt__rgctx_fetch_117
 plt__rgctx_fetch_117:
 _p_236:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #984]
+ldr x16, [x16, #1000]
 br x16
-.word 9754
+.word 9782
 	.no_dead_strip plt__rgctx_fetch_118
 plt__rgctx_fetch_118:
 _p_237:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #992]
+ldr x16, [x16, #1008]
 br x16
-.word 9778
+.word 9806
 	.no_dead_strip plt__rgctx_fetch_119
 plt__rgctx_fetch_119:
 _p_238:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1000]
+ldr x16, [x16, #1016]
 br x16
-.word 9802
+.word 9830
 	.no_dead_strip plt__rgctx_fetch_120
 plt__rgctx_fetch_120:
 _p_239:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1008]
+ldr x16, [x16, #1024]
 br x16
-.word 9854
+.word 9882
 	.no_dead_strip plt__rgctx_fetch_121
 plt__rgctx_fetch_121:
 _p_240:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1016]
+ldr x16, [x16, #1032]
 br x16
-.word 9882
+.word 9910
 	.no_dead_strip plt__rgctx_fetch_122
 plt__rgctx_fetch_122:
 _p_241:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1024]
+ldr x16, [x16, #1040]
 br x16
-.word 9906
+.word 9934
 	.no_dead_strip plt__rgctx_fetch_123
 plt__rgctx_fetch_123:
 _p_242:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1032]
+ldr x16, [x16, #1048]
 br x16
-.word 9930
+.word 9958
 	.no_dead_strip plt__rgctx_fetch_124
 plt__rgctx_fetch_124:
 _p_243:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1040]
+ldr x16, [x16, #1056]
 br x16
-.word 9954
+.word 9982
 	.no_dead_strip plt_System_Decimal_CompareTo_System_Decimal
 plt_System_Decimal_CompareTo_System_Decimal:
 _p_244:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1048]
+ldr x16, [x16, #1064]
 br x16
-.word 9978
+.word 10006
 	.no_dead_strip plt_System_Array_swap_System_Decimal_System_Decimal___int_int
 plt_System_Array_swap_System_Decimal_System_Decimal___int_int:
 _p_245:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1056]
+ldr x16, [x16, #1072]
 br x16
-.word 9983
+.word 10011
 	.no_dead_strip plt_System_Array_QSortArrange_System_Decimal_System_Decimal___int_int
 plt_System_Array_QSortArrange_System_Decimal_System_Decimal___int_int:
 _p_246:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1064]
+ldr x16, [x16, #1080]
 br x16
-.word 10003
+.word 10031
 	.no_dead_strip plt_System_DateTime_CompareTo_System_DateTime
 plt_System_DateTime_CompareTo_System_DateTime:
 _p_247:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1072]
+ldr x16, [x16, #1088]
 br x16
-.word 10023
+.word 10051
 	.no_dead_strip plt_System_Array_swap_System_DateTime_System_DateTime___int_int
 plt_System_Array_swap_System_DateTime_System_DateTime___int_int:
 _p_248:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1080]
+ldr x16, [x16, #1096]
 br x16
-.word 10028
+.word 10056
 	.no_dead_strip plt_System_Array_QSortArrange_System_DateTime_System_DateTime___int_int
 plt_System_Array_QSortArrange_System_DateTime_System_DateTime___int_int:
 _p_249:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1088]
+ldr x16, [x16, #1104]
 br x16
-.word 10048
+.word 10076
 	.no_dead_strip plt__rgctx_fetch_125
 plt__rgctx_fetch_125:
 _p_250:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1096]
+ldr x16, [x16, #1112]
 br x16
-.word 10096
+.word 10124
 	.no_dead_strip plt__rgctx_fetch_126
 plt__rgctx_fetch_126:
 _p_251:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1104]
+ldr x16, [x16, #1120]
 br x16
-.word 10124
+.word 10152
 	.no_dead_strip plt__rgctx_fetch_127
 plt__rgctx_fetch_127:
 _p_252:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1112]
+ldr x16, [x16, #1128]
 br x16
-.word 10148
+.word 10176
 	.no_dead_strip plt__rgctx_fetch_128
 plt__rgctx_fetch_128:
 _p_253:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1120]
+ldr x16, [x16, #1136]
 br x16
-.word 10172
+.word 10200
 	.no_dead_strip plt__rgctx_fetch_129
 plt__rgctx_fetch_129:
 _p_254:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1128]
+ldr x16, [x16, #1144]
 br x16
-.word 10196
+.word 10224
 	.no_dead_strip plt__rgctx_fetch_130
 plt__rgctx_fetch_130:
 _p_255:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1136]
+ldr x16, [x16, #1152]
 br x16
-.word 10248
+.word 10276
 	.no_dead_strip plt__rgctx_fetch_131
 plt__rgctx_fetch_131:
 _p_256:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1144]
+ldr x16, [x16, #1160]
 br x16
-.word 10276
+.word 10304
 	.no_dead_strip plt__rgctx_fetch_132
 plt__rgctx_fetch_132:
 _p_257:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1152]
+ldr x16, [x16, #1168]
 br x16
-.word 10300
+.word 10328
 	.no_dead_strip plt__rgctx_fetch_133
 plt__rgctx_fetch_133:
 _p_258:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1160]
+ldr x16, [x16, #1176]
 br x16
-.word 10324
+.word 10352
 	.no_dead_strip plt__rgctx_fetch_134
 plt__rgctx_fetch_134:
 _p_259:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1168]
+ldr x16, [x16, #1184]
 br x16
-.word 10348
+.word 10376
 	.no_dead_strip plt__rgctx_fetch_135
 plt__rgctx_fetch_135:
 _p_260:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1176]
+ldr x16, [x16, #1192]
 br x16
-.word 10400
+.word 10428
 	.no_dead_strip plt__rgctx_fetch_136
 plt__rgctx_fetch_136:
 _p_261:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1184]
+ldr x16, [x16, #1200]
 br x16
-.word 10428
+.word 10456
 	.no_dead_strip plt__rgctx_fetch_137
 plt__rgctx_fetch_137:
 _p_262:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1192]
+ldr x16, [x16, #1208]
 br x16
-.word 10452
+.word 10480
 	.no_dead_strip plt__rgctx_fetch_138
 plt__rgctx_fetch_138:
 _p_263:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1200]
+ldr x16, [x16, #1216]
 br x16
-.word 10476
+.word 10504
 	.no_dead_strip plt__rgctx_fetch_139
 plt__rgctx_fetch_139:
 _p_264:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1208]
+ldr x16, [x16, #1224]
 br x16
-.word 10500
+.word 10528
 	.no_dead_strip plt__rgctx_fetch_140
 plt__rgctx_fetch_140:
 _p_265:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1216]
+ldr x16, [x16, #1232]
 br x16
-.word 10552
+.word 10580
 	.no_dead_strip plt__rgctx_fetch_141
 plt__rgctx_fetch_141:
 _p_266:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1224]
+ldr x16, [x16, #1240]
 br x16
-.word 10580
+.word 10608
 	.no_dead_strip plt__rgctx_fetch_142
 plt__rgctx_fetch_142:
 _p_267:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1232]
+ldr x16, [x16, #1248]
 br x16
-.word 10604
+.word 10632
 	.no_dead_strip plt__rgctx_fetch_143
 plt__rgctx_fetch_143:
 _p_268:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1240]
+ldr x16, [x16, #1256]
 br x16
-.word 10628
+.word 10656
 	.no_dead_strip plt__rgctx_fetch_144
 plt__rgctx_fetch_144:
 _p_269:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1248]
+ldr x16, [x16, #1264]
 br x16
-.word 10652
+.word 10680
 	.no_dead_strip plt__rgctx_fetch_145
 plt__rgctx_fetch_145:
 _p_270:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1256]
+ldr x16, [x16, #1272]
 br x16
-.word 10704
+.word 10732
 	.no_dead_strip plt__rgctx_fetch_146
 plt__rgctx_fetch_146:
 _p_271:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1264]
+ldr x16, [x16, #1280]
 br x16
-.word 10727
+.word 10755
 	.no_dead_strip plt__rgctx_fetch_147
 plt__rgctx_fetch_147:
 _p_272:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1272]
+ldr x16, [x16, #1288]
 br x16
-.word 10751
+.word 10779
 	.no_dead_strip plt__rgctx_fetch_148
 plt__rgctx_fetch_148:
 _p_273:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1280]
+ldr x16, [x16, #1296]
 br x16
-.word 10775
+.word 10803
 	.no_dead_strip plt__rgctx_fetch_149
 plt__rgctx_fetch_149:
 _p_274:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1288]
+ldr x16, [x16, #1304]
 br x16
-.word 10792
+.word 10820
 	.no_dead_strip plt__rgctx_fetch_150
 plt__rgctx_fetch_150:
 _p_275:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1296]
+ldr x16, [x16, #1312]
 br x16
-.word 10800
+.word 10828
 	.no_dead_strip plt__rgctx_fetch_151
 plt__rgctx_fetch_151:
 _p_276:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1304]
+ldr x16, [x16, #1320]
 br x16
-.word 10841
+.word 10869
 	.no_dead_strip plt__rgctx_fetch_152
 plt__rgctx_fetch_152:
 _p_277:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1312]
+ldr x16, [x16, #1328]
 br x16
-.word 10858
+.word 10886
 	.no_dead_strip plt__rgctx_fetch_153
 plt__rgctx_fetch_153:
 _p_278:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1320]
+ldr x16, [x16, #1336]
 br x16
-.word 10866
+.word 10894
 	.no_dead_strip plt__rgctx_fetch_154
 plt__rgctx_fetch_154:
 _p_279:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1328]
+ldr x16, [x16, #1344]
 br x16
-.word 10883
+.word 10911
 	.no_dead_strip plt__rgctx_fetch_155
 plt__rgctx_fetch_155:
 _p_280:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1336]
+ldr x16, [x16, #1352]
 br x16
-.word 10891
+.word 10919
 	.no_dead_strip plt__rgctx_fetch_156
 plt__rgctx_fetch_156:
 _p_281:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1344]
+ldr x16, [x16, #1360]
 br x16
-.word 10942
+.word 10970
 	.no_dead_strip plt__rgctx_fetch_157
 plt__rgctx_fetch_157:
 _p_282:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1352]
+ldr x16, [x16, #1368]
 br x16
-.word 10970
+.word 10998
 	.no_dead_strip plt__rgctx_fetch_158
 plt__rgctx_fetch_158:
 _p_283:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1360]
+ldr x16, [x16, #1376]
 br x16
-.word 10994
+.word 11022
 	.no_dead_strip plt__rgctx_fetch_159
 plt__rgctx_fetch_159:
 _p_284:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1368]
+ldr x16, [x16, #1384]
 br x16
-.word 11046
+.word 11074
 	.no_dead_strip plt__rgctx_fetch_160
 plt__rgctx_fetch_160:
 _p_285:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1376]
+ldr x16, [x16, #1392]
 br x16
-.word 11074
+.word 11102
 	.no_dead_strip plt__rgctx_fetch_161
 plt__rgctx_fetch_161:
 _p_286:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1384]
+ldr x16, [x16, #1400]
 br x16
-.word 11098
+.word 11126
 	.no_dead_strip plt__rgctx_fetch_162
 plt__rgctx_fetch_162:
 _p_287:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1392]
+ldr x16, [x16, #1408]
 br x16
-.word 11150
+.word 11178
 	.no_dead_strip plt__rgctx_fetch_163
 plt__rgctx_fetch_163:
 _p_288:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1400]
+ldr x16, [x16, #1416]
 br x16
-.word 11178
+.word 11206
 	.no_dead_strip plt__rgctx_fetch_164
 plt__rgctx_fetch_164:
 _p_289:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1408]
+ldr x16, [x16, #1424]
 br x16
-.word 11202
+.word 11230
 	.no_dead_strip plt__rgctx_fetch_165
 plt__rgctx_fetch_165:
 _p_290:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1416]
+ldr x16, [x16, #1432]
 br x16
-.word 11254
+.word 11282
 	.no_dead_strip plt__rgctx_fetch_166
 plt__rgctx_fetch_166:
 _p_291:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1424]
+ldr x16, [x16, #1440]
 br x16
-.word 11282
+.word 11310
 	.no_dead_strip plt__rgctx_fetch_167
 plt__rgctx_fetch_167:
 _p_292:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1432]
+ldr x16, [x16, #1448]
 br x16
-.word 11306
+.word 11334
 	.no_dead_strip plt__rgctx_fetch_168
 plt__rgctx_fetch_168:
 _p_293:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1440]
+ldr x16, [x16, #1456]
 br x16
-.word 11358
+.word 11386
 	.no_dead_strip plt__rgctx_fetch_169
 plt__rgctx_fetch_169:
 _p_294:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1448]
+ldr x16, [x16, #1464]
 br x16
-.word 11386
+.word 11414
 	.no_dead_strip plt__rgctx_fetch_170
 plt__rgctx_fetch_170:
 _p_295:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1456]
+ldr x16, [x16, #1472]
 br x16
-.word 11410
+.word 11438
 	.no_dead_strip plt__rgctx_fetch_171
 plt__rgctx_fetch_171:
 _p_296:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1464]
+ldr x16, [x16, #1480]
 br x16
-.word 11462
+.word 11490
 	.no_dead_strip plt__rgctx_fetch_172
 plt__rgctx_fetch_172:
 _p_297:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1472]
+ldr x16, [x16, #1488]
 br x16
-.word 11490
+.word 11518
 	.no_dead_strip plt__rgctx_fetch_173
 plt__rgctx_fetch_173:
 _p_298:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1480]
+ldr x16, [x16, #1496]
 br x16
-.word 11514
+.word 11542
 	.no_dead_strip plt__rgctx_fetch_174
 plt__rgctx_fetch_174:
 _p_299:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1488]
+ldr x16, [x16, #1504]
 br x16
-.word 11566
+.word 11594
 	.no_dead_strip plt__rgctx_fetch_175
 plt__rgctx_fetch_175:
 _p_300:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1496]
+ldr x16, [x16, #1512]
 br x16
-.word 11594
+.word 11622
 	.no_dead_strip plt__rgctx_fetch_176
 plt__rgctx_fetch_176:
 _p_301:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1504]
+ldr x16, [x16, #1520]
 br x16
-.word 11618
+.word 11646
 	.no_dead_strip plt__rgctx_fetch_177
 plt__rgctx_fetch_177:
 _p_302:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1512]
+ldr x16, [x16, #1528]
 br x16
-.word 11670
+.word 11698
 	.no_dead_strip plt__rgctx_fetch_178
 plt__rgctx_fetch_178:
 _p_303:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1520]
+ldr x16, [x16, #1536]
 br x16
-.word 11698
+.word 11726
 	.no_dead_strip plt__rgctx_fetch_179
 plt__rgctx_fetch_179:
 _p_304:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1528]
+ldr x16, [x16, #1544]
 br x16
-.word 11722
+.word 11750
 	.no_dead_strip plt__rgctx_fetch_180
 plt__rgctx_fetch_180:
 _p_305:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1536]
+ldr x16, [x16, #1552]
 br x16
-.word 11774
+.word 11802
 	.no_dead_strip plt__rgctx_fetch_181
 plt__rgctx_fetch_181:
 _p_306:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1544]
+ldr x16, [x16, #1560]
 br x16
-.word 11802
+.word 11830
 	.no_dead_strip plt__rgctx_fetch_182
 plt__rgctx_fetch_182:
 _p_307:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1552]
+ldr x16, [x16, #1568]
 br x16
-.word 11826
+.word 11854
 	.no_dead_strip plt__rgctx_fetch_183
 plt__rgctx_fetch_183:
 _p_308:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1560]
+ldr x16, [x16, #1576]
 br x16
-.word 11878
+.word 11906
 	.no_dead_strip plt__rgctx_fetch_184
 plt__rgctx_fetch_184:
 _p_309:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1568]
+ldr x16, [x16, #1584]
 br x16
-.word 11906
+.word 11934
 	.no_dead_strip plt__rgctx_fetch_185
 plt__rgctx_fetch_185:
 _p_310:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1576]
+ldr x16, [x16, #1592]
 br x16
-.word 11930
+.word 11958
 	.no_dead_strip plt__rgctx_fetch_186
 plt__rgctx_fetch_186:
 _p_311:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1584]
+ldr x16, [x16, #1600]
 br x16
-.word 11982
+.word 12010
 	.no_dead_strip plt__rgctx_fetch_187
 plt__rgctx_fetch_187:
 _p_312:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1592]
+ldr x16, [x16, #1608]
 br x16
-.word 12010
+.word 12038
 	.no_dead_strip plt__rgctx_fetch_188
 plt__rgctx_fetch_188:
 _p_313:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1600]
+ldr x16, [x16, #1616]
 br x16
-.word 12034
+.word 12062
 	.no_dead_strip plt__rgctx_fetch_189
 plt__rgctx_fetch_189:
 _p_314:
 adrp x16, mono_aot_ShaftesApp_got@PAGE+4096
 add x16, x16, mono_aot_ShaftesApp_got@PAGEOFF
-ldr x16, [x16, #1608]
+ldr x16, [x16, #1624]
 br x16
-.word 12085
+.word 12113
 plt_end:
 .section __DATA, __bss
 	.align 3
-.lcomm mono_aot_ShaftesApp_got, 5712
+.lcomm mono_aot_ShaftesApp_got, 5728
 got_end:
 .section __TEXT, __const
 	.align 3
@@ -40777,7 +40832,7 @@ runtime_version:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "9160B997-4806-42D5-85D5-2B0158A0DE65"
+	.asciz "E3247C43-F72B-494A-9834-1A2A9016CDD5"
 .section __TEXT, __const
 	.align 2
 assembly_name:
@@ -40854,13 +40909,13 @@ _mono_aot_file_info:
 	.align 3
 	.quad unbox_trampoline_addresses
 
-	.long 399,5712,315,182,70,387000831,0,66003
-	.long 128,8,8,10,0,26,70712,4696
-	.long 4440,3280,0,3992,4376,3456,0,2480
+	.long 401,5728,315,182,70,387000831,0,66099
+	.long 128,8,8,10,0,26,70816,4704
+	.long 4448,3280,0,4000,4384,3456,0,2480
 	.long 264,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 149,58,233,193,11,68,158,47,236,13,200,26,115,213,26,139
+	.byte 166,124,222,225,193,57,194,188,170,143,33,39,30,77,5,20
 	.globl _mono_aot_module_ShaftesApp_info
 	.align 3
 _mono_aot_module_ShaftesApp_info:
@@ -43959,7 +44014,7 @@ Lfde52_end:
 	.asciz "ShaftesApp.Views.ProfileView:Initialize"
 	.asciz "ShaftesApp_Views_ProfileView_Initialize"
 
-	.byte 12,58
+	.byte 12,60
 	.quad ShaftesApp_Views_ProfileView_Initialize
 	.quad Lme_35
 
@@ -43988,7 +44043,7 @@ Lfde53_end:
 	.asciz "ShaftesApp.Views.ProfileView:AddToView"
 	.asciz "ShaftesApp_Views_ProfileView_AddToView"
 
-	.byte 12,101
+	.byte 12,103
 	.quad ShaftesApp_Views_ProfileView_AddToView
 	.quad Lme_36
 
@@ -44017,7 +44072,7 @@ Lfde54_end:
 	.asciz "ShaftesApp.Views.ProfileView:InitRooms"
 	.asciz "ShaftesApp_Views_ProfileView_InitRooms"
 
-	.byte 12,112
+	.byte 12,114
 	.quad ShaftesApp_Views_ProfileView_InitRooms
 	.quad Lme_37
 
@@ -44046,7 +44101,7 @@ Lfde55_end:
 	.asciz "ShaftesApp.Views.ProfileView:ShowRooms"
 	.asciz "ShaftesApp_Views_ProfileView_ShowRooms"
 
-	.byte 12,138,1
+	.byte 12,140,1
 	.quad ShaftesApp_Views_ProfileView_ShowRooms
 	.quad Lme_38
 
@@ -44091,7 +44146,7 @@ Lfde56_end:
 	.asciz "ShaftesApp.Views.ProfileView:DismissRooms"
 	.asciz "ShaftesApp_Views_ProfileView_DismissRooms"
 
-	.byte 12,162,1
+	.byte 12,164,1
 	.quad ShaftesApp_Views_ProfileView_DismissRooms
 	.quad Lme_39
 
@@ -44120,7 +44175,7 @@ Lfde57_end:
 	.asciz "ShaftesApp.Views.ProfileView:DissmissView"
 	.asciz "ShaftesApp_Views_ProfileView_DissmissView"
 
-	.byte 12,179,1
+	.byte 12,181,1
 	.quad ShaftesApp_Views_ProfileView_DissmissView
 	.quad Lme_3a
 
@@ -44886,11 +44941,11 @@ Lfde71_end:
 .section __DWARF, __debug_info,regular,debug
 
 	.byte 2
-	.asciz "ShaftesApp.Views.ProfileView/<>c:<ShowRooms>b__16_0"
-	.asciz "ShaftesApp_Views_ProfileView__c__ShowRoomsb__16_0"
+	.asciz "ShaftesApp.Views.ProfileView/<>c:<ShowRooms>b__18_0"
+	.asciz "ShaftesApp_Views_ProfileView__c__ShowRoomsb__18_0"
 
-	.byte 12,153,1
-	.quad ShaftesApp_Views_ProfileView__c__ShowRoomsb__16_0
+	.byte 12,155,1
+	.quad ShaftesApp_Views_ProfileView__c__ShowRoomsb__18_0
 	.quad Lme_48
 
 	.byte 2,118,16,3
@@ -44908,9 +44963,9 @@ Lfde72_start:
 
 	.long 0
 	.align 3
-	.quad ShaftesApp_Views_ProfileView__c__ShowRoomsb__16_0
+	.quad ShaftesApp_Views_ProfileView__c__ShowRoomsb__18_0
 
-LDIFF_SYM507=Lme_48 - ShaftesApp_Views_ProfileView__c__ShowRoomsb__16_0
+LDIFF_SYM507=Lme_48 - ShaftesApp_Views_ProfileView__c__ShowRoomsb__18_0
 	.long LDIFF_SYM507
 	.long 0
 	.byte 12,31,0,68,14,192,1,157,24,158,23,68,13,29
@@ -44920,11 +44975,11 @@ Lfde72_end:
 .section __DWARF, __debug_info,regular,debug
 
 	.byte 2
-	.asciz "ShaftesApp.Views.ProfileView/<>c:<ShowRooms>b__16_1"
-	.asciz "ShaftesApp_Views_ProfileView__c__ShowRoomsb__16_1"
+	.asciz "ShaftesApp.Views.ProfileView/<>c:<ShowRooms>b__18_1"
+	.asciz "ShaftesApp_Views_ProfileView__c__ShowRoomsb__18_1"
 
-	.byte 12,156,1
-	.quad ShaftesApp_Views_ProfileView__c__ShowRoomsb__16_1
+	.byte 12,158,1
+	.quad ShaftesApp_Views_ProfileView__c__ShowRoomsb__18_1
 	.quad Lme_49
 
 	.byte 2,118,16,3
@@ -44942,9 +44997,9 @@ Lfde73_start:
 
 	.long 0
 	.align 3
-	.quad ShaftesApp_Views_ProfileView__c__ShowRoomsb__16_1
+	.quad ShaftesApp_Views_ProfileView__c__ShowRoomsb__18_1
 
-LDIFF_SYM510=Lme_49 - ShaftesApp_Views_ProfileView__c__ShowRoomsb__16_1
+LDIFF_SYM510=Lme_49 - ShaftesApp_Views_ProfileView__c__ShowRoomsb__18_1
 	.long LDIFF_SYM510
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
@@ -44954,11 +45009,11 @@ Lfde73_end:
 .section __DWARF, __debug_info,regular,debug
 
 	.byte 2
-	.asciz "ShaftesApp.Views.ProfileView/<>c:<DismissRooms>b__17_0"
-	.asciz "ShaftesApp_Views_ProfileView__c__DismissRoomsb__17_0"
+	.asciz "ShaftesApp.Views.ProfileView/<>c:<DismissRooms>b__19_0"
+	.asciz "ShaftesApp_Views_ProfileView__c__DismissRoomsb__19_0"
 
-	.byte 12,165,1
-	.quad ShaftesApp_Views_ProfileView__c__DismissRoomsb__17_0
+	.byte 12,167,1
+	.quad ShaftesApp_Views_ProfileView__c__DismissRoomsb__19_0
 	.quad Lme_4a
 
 	.byte 2,118,16,3
@@ -44976,9 +45031,9 @@ Lfde74_start:
 
 	.long 0
 	.align 3
-	.quad ShaftesApp_Views_ProfileView__c__DismissRoomsb__17_0
+	.quad ShaftesApp_Views_ProfileView__c__DismissRoomsb__19_0
 
-LDIFF_SYM513=Lme_4a - ShaftesApp_Views_ProfileView__c__DismissRoomsb__17_0
+LDIFF_SYM513=Lme_4a - ShaftesApp_Views_ProfileView__c__DismissRoomsb__19_0
 	.long LDIFF_SYM513
 	.long 0
 	.byte 12,31,0,68,14,224,1,157,28,158,27,68,13,29
@@ -44988,11 +45043,11 @@ Lfde74_end:
 .section __DWARF, __debug_info,regular,debug
 
 	.byte 2
-	.asciz "ShaftesApp.Views.ProfileView/<>c:<DismissRooms>b__17_1"
-	.asciz "ShaftesApp_Views_ProfileView__c__DismissRoomsb__17_1"
+	.asciz "ShaftesApp.Views.ProfileView/<>c:<DismissRooms>b__19_1"
+	.asciz "ShaftesApp_Views_ProfileView__c__DismissRoomsb__19_1"
 
-	.byte 12,168,1
-	.quad ShaftesApp_Views_ProfileView__c__DismissRoomsb__17_1
+	.byte 12,170,1
+	.quad ShaftesApp_Views_ProfileView__c__DismissRoomsb__19_1
 	.quad Lme_4b
 
 	.byte 2,118,16,3
@@ -45010,9 +45065,9 @@ Lfde75_start:
 
 	.long 0
 	.align 3
-	.quad ShaftesApp_Views_ProfileView__c__DismissRoomsb__17_1
+	.quad ShaftesApp_Views_ProfileView__c__DismissRoomsb__19_1
 
-LDIFF_SYM516=Lme_4b - ShaftesApp_Views_ProfileView__c__DismissRoomsb__17_1
+LDIFF_SYM516=Lme_4b - ShaftesApp_Views_ProfileView__c__DismissRoomsb__19_1
 	.long LDIFF_SYM516
 	.long 0
 	.byte 12,31,0,68,14,48,157,6,158,5,68,13,29
