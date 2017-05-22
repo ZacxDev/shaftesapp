@@ -66,12 +66,12 @@ namespace ShaftesApp
             render(Access.newRect(C.MOX, C.MOY, vc.ViewWidth, vc.ViewHeight, UIColor.DarkGray));
 
             //logo background
-            UIView logoBack = Access.newRect(0, 0, vc.ViewWidth, 32, UIColor.Black);
+            UIView logoBack = Access.newRect(0, 0, vc.ViewWidth, 48, UIColor.Black);
             render(logoBack);
 
             //shaftes logo
             UIImageView logo = new UIImageView(UIImage.FromBundle("main_logo"));
-            logo.Frame = new CGRect(C.X_MID - 64, 0, 128, 32);
+            logo.Frame = new CGRect(C.X_MID - 64, 0, 128, 48);
             render(logo);
 
             //bars button
@@ -117,23 +117,23 @@ namespace ShaftesApp
             //render bottom bar
 
             //announcements button 
-            SRButton announce = new SRButton(C.X_MID - 176, C.Y_MAX - 56, 64, 64, new Selector("AnnounceFunc"), "button_announcements");
+            SRButton announce = new SRButton(C.X_MID - 176, C.Y_MAX - 40, 48, 48, new Selector("AnnounceFunc"), "button_announcements");
             announce.Render();
 
             //tutor button
-            SRButton tutor = new SRButton(C.X_MID - 104, C.Y_MAX - 56, 64, 64, new Selector("TutorFunc"), "button_tutor");
+            SRButton tutor = new SRButton(C.X_MID - 104, C.Y_MAX - 40, 48, 48, new Selector("TutorFunc"), "button_tutor");
             tutor.Render();
 
             //forum button
-            SRButton forum = new SRButton(C.X_MID - 32, C.Y_MAX - 56, 64, 64, new Selector("ForumFunc"), "button_forum");
+            SRButton forum = new SRButton(C.X_MID - 32, C.Y_MAX - 40, 48, 48, new Selector("ForumFunc"), "button_forum");
             forum.Render();
 
             //grades button
-            SRButton grades = new SRButton(C.X_MID + 40, C.Y_MAX - 56, 64, 64, new Selector("GradesFunc"), "button_grades");
+            SRButton grades = new SRButton(C.X_MID + 40, C.Y_MAX - 40, 48, 48, new Selector("GradesFunc"), "button_grades");
             grades.Render();
 
             //profile button
-            SRButton profile = new SRButton(C.X_MID + 112, C.Y_MAX - 56, 64, 64, new Selector("ProfileFunc"), "button_profile");
+            SRButton profile = new SRButton(C.X_MID + 112, C.Y_MAX - 40, 48, 48, new Selector("ProfileFunc"), "button_profile");
             profile.Render();
 
         }

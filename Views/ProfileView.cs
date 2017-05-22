@@ -65,7 +65,7 @@ namespace ShaftesApp.Views
             Avatar.Image = ViewController.Client.Image;
 
             AvatarFrame = new UIImageView();
-            AvatarFrame.Frame = new CGRect(0, 38, C.X_MAX - 24, 74);
+            AvatarFrame.Frame = new CGRect(0, 38, C.X_MAX - 16, 74);
             AvatarFrame.BackgroundColor = UIColor.Clear;
             AvatarFrame.Image = UIImage.FromBundle("avatar_frame");
 
@@ -78,14 +78,14 @@ namespace ShaftesApp.Views
             Username.Font = Fonts.Settings_Title;
 
             Bio = new UITextView();
-            Bio.Frame = new CGRect(C.X_MID - 104, 56, 208, 56);
+            Bio.Frame = new CGRect(C.X_MID - 96, 56, 208, 56);
             Bio.Text = ViewController.Client.Bio;
             Bio.TextAlignment = UITextAlignment.Center;
             Bio.BackgroundColor = UIColor.Clear;
             Bio.TextColor = UIColor.White;
             Bio.Font = UIFont.SystemFontOfSize(8);
 
-            Rooms = new SRButton(C.X_MID - 112, 84, 128, 32, new Selector("ProfileRoomsFunc"));
+            Rooms = new SRButton(C.X_MID - 96, 84, 128, 32, new Selector("ProfileRoomsFunc"));
             Rooms.SetText($"Classrooms: {ViewController.Client.RoomIds.Count}");
 
             Grade = new UITextView();
@@ -118,6 +118,7 @@ namespace ShaftesApp.Views
             RoomsTitle.Frame = new CGRect(Access.vc.ViewWidth + C.X_MID - 64, 32, 128, 32);
             RoomsTitle.Font = Fonts.Settings_Title;
             RoomsTitle.BackgroundColor = UIColor.Clear;
+            RoomsTitle.Editable = false;
 
             Back = new SRButton(0, 0, 32, 32, new Selector("RoomsBackToProfile"), "button_back");
 
@@ -126,7 +127,7 @@ namespace ShaftesApp.Views
             RoomsViewScroll.Frame = new CGRect(Access.vc.ViewWidth * 2, 64, Access.vc.ViewWidth, Access.vc.ViewHeight - 96);
             RoomsViewScroll.DirectionalLockEnabled = true;
             //RoomsViewScroll.ContentOffset = new CGPoint(0, rooms.Count * 64);
-            RoomsViewScroll.ContentSize = new CGSize(Access.vc.ViewWidth, rooms.Count * 104 + 64);
+            RoomsViewScroll.ContentSize = new CGSize(Access.vc.ViewWidth, rooms.Count * 96 + 64);
             RoomsViewScroll.ScrollEnabled = true;
             RoomsViewScroll.Bounces = true;
             RoomsViewScroll.AlwaysBounceVertical = true;
