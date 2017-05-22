@@ -29,14 +29,14 @@ namespace ShaftesApp.Views
         {
 
             Title = new UITextView();
-            Title.Frame = new CGRect(C.X_MID - 92, 24, 184, 64);
+            Title.Frame = new CGRect(C.X_MID - 92, 48, 184, 64);
             Title.BackgroundColor = UIColor.Clear;
             Title.Text = "Announcements";
             Title.Font = Fonts.Settings_Title;
             Title.Editable = false;
 
             Display = new UITextView();
-            Display.Frame = new CGRect(0, 64, C.X_MAX, C.Y_MAX);
+            Display.Frame = new CGRect(0, 88, C.X_MAX, C.Y_MAX);
             Display.BackgroundColor = UIColor.Clear;
             Display.TextColor = UIColor.White;
             Display.Text = "This is an example Announcment\n TODO:\n - Make Announcment object so we have complete control of the overall sexiness.\n - Bold title\n - recieve announcments as json from DB";

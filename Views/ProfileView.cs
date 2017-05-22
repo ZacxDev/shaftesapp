@@ -18,6 +18,8 @@ namespace ShaftesApp.Views
         private static bool RoomsInit = false;
         private static List<String> rooms = new List<String>();
 
+        private static int X = 0, Y = 48;
+
         //profile
         public static UIImageView Avatar;
         public static UIImageView AvatarFrame;
@@ -60,17 +62,17 @@ namespace ShaftesApp.Views
             init = true;
 
             Avatar = new UIImageView();
-            Avatar.Frame = new CGRect(4, 48, 64, 64);
+            Avatar.Frame = new CGRect(X + 4, Y, 64, 64);
             Avatar.BackgroundColor = UIColor.Clear;
             Avatar.Image = ViewController.Client.Image;
 
             AvatarFrame = new UIImageView();
-            AvatarFrame.Frame = new CGRect(0, 38, C.X_MAX - 16, 74);
+            AvatarFrame.Frame = new CGRect(X, Y - 10, C.X_MAX - 16, 74);
             AvatarFrame.BackgroundColor = UIColor.Clear;
             AvatarFrame.Image = UIImage.FromBundle("avatar_frame");
 
             Username = new UITextView();
-            Username.Frame = new CGRect(C.X_MID - 64, 32, 128, 32);
+            Username.Frame = new CGRect(C.X_MID - 64, Y - 16, 128, 32);
             Username.Text = ViewController.Client.Username;
             Username.TextAlignment = UITextAlignment.Center;
             Username.BackgroundColor = UIColor.Clear;
@@ -78,18 +80,18 @@ namespace ShaftesApp.Views
             Username.Font = Fonts.Settings_Title;
 
             Bio = new UITextView();
-            Bio.Frame = new CGRect(C.X_MID - 96, 56, 208, 56);
+            Bio.Frame = new CGRect(C.X_MID - 96, Y + 8, 208, 56);
             Bio.Text = ViewController.Client.Bio;
             Bio.TextAlignment = UITextAlignment.Center;
             Bio.BackgroundColor = UIColor.Clear;
             Bio.TextColor = UIColor.White;
             Bio.Font = UIFont.SystemFontOfSize(8);
 
-            Rooms = new SRButton(C.X_MID - 96, 84, 128, 32, new Selector("ProfileRoomsFunc"));
+            Rooms = new SRButton(C.X_MID - 96, Y + 44, 128, 32, new Selector("ProfileRoomsFunc"));
             Rooms.SetText($"Classrooms: {ViewController.Client.RoomIds.Count}");
 
             Grade = new UITextView();
-            Grade.Frame = new CGRect(C.X_MID, 84, 128, 32);
+            Grade.Frame = new CGRect(C.X_MID, Y + 44, 128, 32);
             Grade.Text = $"Grade: {ViewController.Client.Grade}";
             Grade.TextAlignment = UITextAlignment.Center;
             Grade.BackgroundColor = UIColor.Clear;
