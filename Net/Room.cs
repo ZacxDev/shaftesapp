@@ -7,6 +7,7 @@ using Foundation;
 using UIKit;
 using CoreGraphics;
 using ObjCRuntime;
+using System.Diagnostics;
 
 namespace ShaftesApp.Net
 {
@@ -33,6 +34,11 @@ namespace ShaftesApp.Net
         public Room(String name)
         {
             Name = name;
+
+            Messages.Add(new RoomMessage("Assignment 1", "Your job is to kys lol rekt matey"));
+            Messages.Add(new RoomMessage("Assignment 2", "Your job is to kyjdjdghjds lol rekt matey"));
+            Messages.Add(new RoomMessage("Assignment 3", "Your job is to kfakkkkkkfakkkkkfakkkfakkkys lol rekt matey"));
+
             Initialize();
             rooms.Add(this);
         }
@@ -43,30 +49,29 @@ namespace ShaftesApp.Net
             Background.Frame = new CGRect(0, Y, C.X_MAX, C.Y_MAX - 64);
 
             TitleView = new UITextView();
-            TitleView.Frame = new CGRect(C.X_MID - 32, Y, 64, 32);
+            TitleView.Frame = new CGRect(C.X_MID - 64, Y, 128, 64);
             TitleView.Font = Fonts.Settings_Title;
             TitleView.Text = Name;
+            TitleView.BackgroundColor = UIColor.Clear;
+            TitleView.TextColor = UIColor.White;
 
             DescView = new UITextView();
-            DescView.Frame = new CGRect(C.X_MID - 128, Y + 40, 256, 32);
+            DescView.Frame = new CGRect(C.X_MID - 192, Y + 40, 384, 64);
             DescView.Font = Fonts.Announcements_Text;
             DescView.Text = Desc;
+            DescView.BackgroundColor = UIColor.Clear;
+            DescView.TextColor = UIColor.White;
 
             StudentsView = new UITextView();
-            StudentsView.Frame = new CGRect(C.X_MID + 64, Y, 128, 32);
+            StudentsView.Frame = new CGRect(C.X_MID + 64, Y, 128, 64);
             StudentsView.Font = Fonts.Announcements_Text;
-            StudentsView.Text = Desc;
-
-            nfloat ScrollHeight = 0f;
-            for (int i = 0; i < Messages.Count; i++)
-            {
-                ScrollHeight += Messages[i].Background.Frame.Height;
-            }
-
+            StudentsView.Text = $"Students: {StudentIds.Count}";
+            StudentsView.BackgroundColor = UIColor.Clear;
+            StudentsView.TextColor = UIColor.White;
+            
             MessageScroll = new UIScrollView();
-            MessageScroll.Frame = new CGRect(0, Y + 48, C.X_MAX, C.Y_MAX - 32);
+            MessageScroll.Frame = new CGRect(0, Y + 96, C.X_MAX, C.Y_MAX - 128);
             MessageScroll.DirectionalLockEnabled = true;
-            MessageScroll.ContentSize = new CGSize(C.X_MAX, ScrollHeight);
             MessageScroll.ScrollEnabled = true;
             MessageScroll.Bounces = true;
             MessageScroll.AlwaysBounceVertical = true;
@@ -81,6 +86,15 @@ namespace ShaftesApp.Net
             v.AddSubview(DescView);
             v.AddSubview(StudentsView);
             Back.Render();
+
+            nfloat ScrollHeight = 0f;
+            for (int i = 0; i < Messages.Count; i++)
+            {
+                Messages[i].SetY((int)ScrollHeight);
+                Messages[i].AddToView(MessageScroll);
+                ScrollHeight += 256;
+            }
+            MessageScroll.ContentSize = new CGSize(C.X_MAX, ScrollHeight + 128);
             v.AddSubview(MessageScroll);
         }
 

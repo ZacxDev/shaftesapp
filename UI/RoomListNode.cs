@@ -64,7 +64,6 @@ namespace ShaftesApp.UI
         [Export("ShowRoom")]
         void ShowRoom()
         {
-            Debug.WriteLine("herehere");
             Loader.Room = Room;
             new Loader(AppState.ROOM);
         }
