@@ -9,6 +9,7 @@ using CoreGraphics;
 using ObjCRuntime;
 using ShaftesApp.UI;
 using ShaftesApp.Net;
+using System.Diagnostics;
 
 namespace ShaftesApp.Views
 {
@@ -146,6 +147,8 @@ namespace ShaftesApp.Views
             ViewController.LoaderInstance.ShowBackground();
             ViewController.LoaderInstance.ShowHeader();
             ViewController.LoaderInstance.ShowTaskbar();
+            //readding to view so that you can see it fade
+            AddToView();
 
             Access.vc.View.AddSubview(RoomsScrollView);
             Access.vc.View.AddSubview(RoomsTitle);
@@ -177,13 +180,13 @@ namespace ShaftesApp.Views
             RoomsScrollView.RemoveFromSuperview();
 
             new Loader(AppState.PROFILE);
-            ViewController.ViewDismiss.DismissProfileView(0.0f);
+            ViewController.ViewDismiss.DismissProfileView(0.0);
             ViewController.ViewDismiss.PresentProfileView();
         }
 
         public static void DissmissView()
         {
-            ViewController.ViewDismiss.DismissProfileView(0.5f);
+            ViewController.ViewDismiss.DismissProfileView(0.5);
         }
     }
 }

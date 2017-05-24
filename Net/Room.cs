@@ -35,9 +35,9 @@ namespace ShaftesApp.Net
         {
             Name = name;
 
-            Messages.Add(new RoomMessage("Assignment 1", "Your job is to kys lol rekt matey"));
-            Messages.Add(new RoomMessage("Assignment 2", "Your job is to kyjdjdghjds lol rekt matey"));
-            Messages.Add(new RoomMessage("Assignment 3", "Your job is to kfakkkkkkfakkkkkfakkkfakkkys lol rekt matey"));
+            Messages.Add(new RoomMessage("Assignment 1", "please complete the following tasks"));
+            Messages.Add(new RoomMessage("Assignment 2", "Your task is to eat my socks!"));
+            Messages.Add(new RoomMessage("Assignment 3", "Your job is to solve these equations"));
 
             Initialize();
             rooms.Add(this);
