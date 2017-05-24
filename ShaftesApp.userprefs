@@ -3,8 +3,15 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ShaftesApp" expanded="True" selected="True">
-            <Node name="ShaftesApp" expanded="True" />
+          <Node name="ShaftesApp" expanded="True">
+            <Node name="ShaftesApp" expanded="True">
+              <Node name="Properties" expanded="True" />
+              <Node name="Resources" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="SettingsView.cs" selected="True" />
+              </Node>
+              <Node name="ViewController.cs" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
