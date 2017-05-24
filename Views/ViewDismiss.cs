@@ -17,9 +17,9 @@ namespace ShaftesApp.View
 
         private NSThread ProfileFadeThread;
 
-        public void DismissProfileView()
+        public void DismissProfileView(nfloat i)
         {
-            UIView.Animate(0.5, 0, UIViewAnimationOptions.CurveEaseIn, () =>
+            UIView.Animate(i, 0, UIViewAnimationOptions.CurveEaseIn, () =>
             {
                 ProfileView.Avatar.Alpha = 0;
                 ProfileView.AvatarFrame.Alpha = 0;
@@ -27,6 +27,20 @@ namespace ShaftesApp.View
                 ProfileView.Grade.Alpha = 0;
                 ProfileView.Rooms.TextView.Alpha = 0;
                 ProfileView.Username.Alpha = 0;
+            }, () => { }
+                );
+        }
+
+        public void PresentProfileView()
+        {
+            UIView.Animate(0.5, 0, UIViewAnimationOptions.CurveEaseIn, () =>
+            {
+                ProfileView.Avatar.Alpha = 1;
+                ProfileView.AvatarFrame.Alpha = 1;
+                ProfileView.Bio.Alpha = 1;
+                ProfileView.Grade.Alpha = 1;
+                ProfileView.Rooms.TextView.Alpha = 1;
+                ProfileView.Username.Alpha = 1;
             }, () => { }
                 );
         }
