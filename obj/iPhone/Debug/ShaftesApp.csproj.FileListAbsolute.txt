@@ -1,0 +1,22 @@
+/Users/zach/Documents/github/shaftesapp/bin/iPhone/Debug/ShaftesApp.exe
+/Users/zach/Documents/github/shaftesapp/bin/iPhone/Debug/ShaftesApp.pdb
+/Users/zach/Documents/github/shaftesapp/obj/iPhone/Debug/device-builds/iphone8.1-9.3.3/ibtool/_BundleResourceWithLogicalName.items
+/Users/zach/Documents/github/shaftesapp/obj/iPhone/Debug/device-builds/iphone8.1-9.3.3/actool/_PartialAppManifest.items
+/Users/zach/Documents/github/shaftesapp/obj/iPhone/Debug/device-builds/iphone8.1-9.3.3/actool/_BundleResourceWithLogicalName.items
+/Users/zach/Documents/github/shaftesapp/obj/iPhone/Debug/device-builds/iphone8.1-9.3.3/optimized/Entitlements.plist
+/Users/zach/Documents/github/shaftesapp/obj/iPhone/Debug/device-builds/iphone8.1-9.3.3/optimized/
+/Users/zach/Documents/github/shaftesapp/obj/iPhone/Debug/ShaftesApp.csproj.CoreCompileInputs.cache
+/Users/zach/Documents/github/shaftesapp/obj/iPhone/Debug/ShaftesApp.exe
+/Users/zach/Documents/github/shaftesapp/obj/iPhone/Debug/ShaftesApp.pdb
+C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\bin\iPhone\Debug\ShaftesApp.exe
+C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\bin\iPhone\Debug\ShaftesApp.pdb
+C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhone\Debug\actool\_PartialAppManifest.items
+C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhone\Debug\optimized\Entitlements.plist
+C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhone\Debug\optimized\
+C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhone\Debug\ShaftesApp.csprojResolveAssemblyReference.cache
+C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhone\Debug\ShaftesApp.exe
+C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhone\Debug\ShaftesApp.pdb
+C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhone\Debug\ShaftesApp.exe.mdb
+C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\bin\iPhone\Debug\ShaftesApp.exe.mdb

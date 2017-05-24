@@ -1,0 +1,5 @@
+/Users/zach/Documents/github/shaftesapp/bin/iPhone/Debug/device-builds/iphone8.1-9.3.3/ShaftesApp.app:/Users/zach/Documents/github/shaftesapp/obj/iPhone/Debug/device-builds/iphone8.1-9.3.3/mtouch-cache/Link/ShaftesApp.exe
+/Users/zach/Documents/github/shaftesapp/bin/iPhone/Debug/device-builds/iphone8.1-9.3.3/ShaftesApp.app:/Users/zach/Documents/github/shaftesapp/obj/iPhone/Debug/device-builds/iphone8.1-9.3.3/mtouch-cache/Link/mscorlib.dll
+/Users/zach/Documents/github/shaftesapp/bin/iPhone/Debug/device-builds/iphone8.1-9.3.3/ShaftesApp.app:/Users/zach/Documents/github/shaftesapp/obj/iPhone/Debug/device-builds/iphone8.1-9.3.3/mtouch-cache/Link/Xamarin.iOS.dll
+/Users/zach/Documents/github/shaftesapp/bin/iPhone/Debug/device-builds/iphone8.1-9.3.3/ShaftesApp.app:/Users/zach/Documents/github/shaftesapp/obj/iPhone/Debug/device-builds/iphone8.1-9.3.3/mtouch-cache/Link/System.dll
+/Users/zach/Documents/github/shaftesapp/bin/iPhone/Debug/device-builds/iphone8.1-9.3.3/ShaftesApp.app:/Users/zach/Documents/github/shaftesapp/obj/iPhone/Debug/device-builds/iphone8.1-9.3.3/mtouch-cache/Link/Mono.Security.dll

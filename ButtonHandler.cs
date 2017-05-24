@@ -2,6 +2,9 @@
 using Mono;
 using ObjCRuntime;
 using Foundation;
+using ShaftesApp.Views;
+using System.Diagnostics;
+
 namespace ShaftesApp
 {
     public class ButtonHandler
@@ -34,7 +37,7 @@ namespace ShaftesApp
         [Export("AnnounceFunc")]
         void AnnounceFunc()
         {
-            Console.WriteLine("change state to announements");
+            Access.vc.changeView(AppState.ANNOUNCEMENTS);
         }
 
         [Export("TutorFunc")]
@@ -43,11 +46,52 @@ namespace ShaftesApp
             Console.WriteLine("change state to tutor");
         }
 
+        [Export("ForumFunc")]
+        void ForumFunc()
+        {
+            Console.WriteLine("change state to forum");
+        }
+
+        [Export("GradesFunc")]
+        void GradesFunc()
+        {
+            Console.WriteLine("change state to grdsea");
+        }
+
+        [Export("ProfileFunc")]
+        void ProfileFunc()
+        {
+            Access.vc.changeView(AppState.PROFILE);
+        }
+
+        [Export("ProfileRoomsFunc")]
+        void ProfileRoomsFunc()
+        {
+            ProfileView.ShowRooms(false);
+        }
+
         [Export("SettingsFunc")]
         void SettingsFunc()
         {
             Loader.ShowSettings();
         }
 
+        [Export("RoomsBackToProfile")]
+        void RoomsBackToProfile()
+        {
+            ProfileView.DismissRooms();
+        }
+
+        [Export("RoomBackToProfileRoomList")]
+        void RoomBackToProfileRoomList()
+        {
+            ProfileView.ShowRooms(true);
+        }
+
+        [Export("ShowRoom")]
+        void ShowRoom()
+        {
+            Debug.WriteLine("ffffffmatey");
+        }
     }
 }
