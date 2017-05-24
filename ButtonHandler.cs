@@ -67,7 +67,7 @@ namespace ShaftesApp
         [Export("ProfileRoomsFunc")]
         void ProfileRoomsFunc()
         {
-            ProfileView.ShowRooms();
+            ProfileView.ShowRooms(false);
         }
 
         [Export("SettingsFunc")]
@@ -85,7 +85,7 @@ namespace ShaftesApp
         [Export("RoomBackToProfileRoomList")]
         void RoomBackToProfileRoomList()
         {
-            ProfileView.ShowRooms();
+            ProfileView.ShowRooms(true);
         }
 
         [Export("ShowRoom")]

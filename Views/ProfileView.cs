@@ -128,22 +128,30 @@ namespace ShaftesApp.Views
 
             RoomsScrollView = new RoomsScrollView(rooms.Count);
 
-        }
-
-        public static void ShowRooms()
-        {
-            if (!RoomsInit)
-                InitRooms();
-
-            DissmissView();
-            Access.vc.View.AddSubview(RoomsScrollView);
-            Access.vc.View.AddSubview(RoomsTitle);
-            Back.Render();
-
             for (int i = 0; i < rooms.Count; i++)
             {
                 new RoomListNode(rooms[i].Name, i).AddToSuperView(RoomsScrollView);
             }
+
+        }
+
+        public static void ShowRooms(bool fromRoom)
+        {
+            if (!RoomsInit)
+                InitRooms();
+            if (!fromRoom)
+                DissmissView();
+
+            ViewController.LoaderInstance.clearSubviews();
+            ViewController.LoaderInstance.ShowBackground();
+            ViewController.LoaderInstance.ShowHeader();
+            ViewController.LoaderInstance.ShowTaskbar();
+
+            Access.vc.View.AddSubview(RoomsScrollView);
+            Access.vc.View.AddSubview(RoomsTitle);
+            Back.Render();
+
+            
 
             UIView.Animate(0.5, 0, UIViewAnimationOptions.CurveEaseIn, () =>
             {
@@ -168,12 +176,14 @@ namespace ShaftesApp.Views
             RoomsTitle.RemoveFromSuperview();
             RoomsScrollView.RemoveFromSuperview();
 
+            new Loader(AppState.PROFILE);
+            ViewController.ViewDismiss.DismissProfileView(0.0f);
             ViewController.ViewDismiss.PresentProfileView();
         }
 
         public static void DissmissView()
         {
-            ViewController.ViewDismiss.DismissProfileView();
+            ViewController.ViewDismiss.DismissProfileView(0.5f);
         }
     }
 }

@@ -57,36 +57,25 @@ namespace ShaftesApp
         public static AppState CurrentState;
         public static Room Room;
 
+        //header
+        UIImageView logo;
+        UIView logoBack;
+        SRButton settings;
+        SRButton bars;
+
         public Loader(AppState astate)
         {
+            ViewController.LoaderInstance = this;
             SETTINGS_OPEN = false;
             CurrentState = astate;
             vc = Access.vc;
             clearSubviews();
 
-            //main backgroud fill rect
-            render(Access.newRect(C.MOX, C.MOY, vc.ViewWidth, vc.ViewHeight, UIColor.DarkGray));
+            //background
+            ShowBackground();
 
-            //logo background
-            UIView logoBack = Access.newRect(0, 0, vc.ViewWidth, 48, UIColor.Black);
-            render(logoBack);
-
-            //shaftes logo
-            UIImageView logo = new UIImageView(UIImage.FromBundle("main_logo"));
-            logo.Frame = new CGRect(C.X_MID - 64, 0, 128, 48);
-            render(logo);
-
-            //bars button
-            SRButton bars = new SRButton(C.MOX, C.MOY + 16, 32, 32, new Selector("BarsFunc"), "button_bars");
-            bars.Render();
-
-            //little seperator line above icons
-            UIView seperator = Access.newRect(0, C.Y_MAX - 40, C.X_MAX, 2, UIColor.Gray);
-            render(seperator);
-
-            //setting button
-            SRButton settings = new SRButton(C.X_MAX - 74, 12, 32, 32, new Selector("SettingsFunc"), "button_settings");
-            settings.Render();
+            //header
+            ShowHeader();
 
             //add things based on appstate
             if (astate == AppState.ANNOUNCEMENTS)
@@ -120,7 +109,59 @@ namespace ShaftesApp
             {
                 new RoomView(Room);
             }
+
+            ShowTaskbar();
+
+        }
+
+        private void render(UIView v)
+        {
+            vc.View.AddSubview(v);
+        }
+
+        public void clearSubviews()
+        {
+            for (int i = 0; i < vc.View.Subviews.Length; i++)
+            {
+                vc.View.Subviews[i].RemoveFromSuperview();
+            }
+        }
+
+        public void ShowBackground()
+        {
+            //main backgroud fill rect
+            render(Access.newRect(C.MOX, C.MOY, vc.ViewWidth, vc.ViewHeight, UIColor.DarkGray));
+        }
+
+        public void ShowHeader()
+        {
+            //logo background
+            logoBack = Access.newRect(0, 0, vc.ViewWidth, 48, UIColor.Black);
+            render(logoBack);
+
+            //shaftes logo
+            logo = new UIImageView(UIImage.FromBundle("main_logo"));
+            logo.Frame = new CGRect(C.X_MID - 64, 0, 128, 48);
+            render(logo);
+
+            //settings button
+            settings = new SRButton(C.X_MAX - 74, 12, 32, 32, new Selector("SettingsFunc"), "button_settings");
+            settings.Render();
+
+            //bars
+            bars = new SRButton(C.MOX, C.MOY + 16, 32, 32, new Selector("BarsFunc"), "button_bars");
+            bars.Render();
+        }
+
+        public void ShowTaskbar()
+        {
             //render bottom bar
+            UIView footer = Access.newRect(0, C.Y_MAX - 40, C.X_MAX, 40, UIColor.DarkGray);
+            render(footer);
+
+            //little seperator line above icons
+            UIView seperator = Access.newRect(0, C.Y_MAX - 40, C.X_MAX, 2, UIColor.Gray);
+            render(seperator);
 
             //announcements button 
             SRButton announce = new SRButton(C.X_MID - 176, C.Y_MAX - 36, 32, 32, new Selector("AnnounceFunc"), "button_announcements");
@@ -141,20 +182,6 @@ namespace ShaftesApp
             //profile button
             SRButton profile = new SRButton(C.X_MID + 112, C.Y_MAX - 36, 32, 32, new Selector("ProfileFunc"), "button_profile");
             profile.Render();
-
-        }
-
-        private void render(UIView v)
-        {
-            vc.View.AddSubview(v);
-        }
-
-        private void clearSubviews()
-        {
-            for (int i = 0; i < vc.View.Subviews.Length; i++)
-            {
-                vc.View.Subviews[i].RemoveFromSuperview();
-            }
         }
 
         public static void ShowSettings()

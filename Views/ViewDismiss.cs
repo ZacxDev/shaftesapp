@@ -17,9 +17,9 @@ namespace ShaftesApp.View
 
         private NSThread ProfileFadeThread;
 
-        public void DismissProfileView()
+        public void DismissProfileView(nfloat i)
         {
-            UIView.Animate(0.5, 0, UIViewAnimationOptions.CurveEaseIn, () =>
+            UIView.Animate(i, 0, UIViewAnimationOptions.CurveEaseIn, () =>
             {
                 ProfileView.Avatar.Alpha = 0;
                 ProfileView.AvatarFrame.Alpha = 0;
