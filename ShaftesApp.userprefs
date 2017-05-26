@@ -1,40 +1,10 @@
 ﻿<Properties StartupConfiguration="{9C3D4CFC-C251-4328-904D-EC8B06FEA58F}|Default">
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="ShaftesApp" expanded="True">
-            <Node name="ShaftesApp" expanded="True">
-              <Node name="Properties" expanded="True" />
-              <Node name="Resources" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="SettingsView.cs" selected="True" />
-              </Node>
-              <Node name="ViewController.cs" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Loader.cs">
-    <Files>
-      <File FileName="Views/AnnouncementsView.cs" Line="39" Column="45" />
-      <File FileName="Views/ProfileView.cs" Line="94" Column="53" />
-      <File FileName="Loader.cs" Line="1" Column="1" />
-    </Files>
->>>>>>> origin/master
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-<<<<<<< HEAD
   <MonoDevelop.Ide.ItemProperties.ShaftesApp PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.17F28691-9E2F-4C4E-ADF5-71BC25CDB750" />
-=======
-  <MonoDevelop.Ide.ItemProperties.ShaftesApp PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.99F2C402-8B89-4308-A0C6-BD7744844F0B" />
->>>>>>> origin/master
 </Properties>
