@@ -13,7 +13,7 @@ namespace ShaftesApp.Net
 
         public String Password = "123asdf";
         public String Username = "TestUser";
-        public String Bio = "This is a test bio, I enjoy school, sports, and nazi ideals.";
+        public String Bio = "This is a test bio, I enjoy school, sports, and writing bios.";
         public String id;
         public int Grade = 10;
         public List<int> RoomIds = new List<int>();
