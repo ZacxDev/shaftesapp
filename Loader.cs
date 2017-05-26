@@ -59,10 +59,21 @@ namespace ShaftesApp
         public static Room Room;
 
         //header
+        bool HeaderInit = false;
         UIImageView logo;
         UIView logoBack;
         SRButton settings;
         SRButton bars;
+
+        //taskbar
+        bool TaskbarInit = false;
+        UIView footer;
+        UIView seperator;
+        SRButton announce;
+        SRButton tutor;
+        SRButton forum;
+        SRButton grades;
+        SRButton profile;
 
         public Loader(AppState astate)
         {
@@ -167,54 +178,82 @@ namespace ShaftesApp
             render(Access.newRect(C.MOX, C.MOY, vc.ViewWidth, vc.ViewHeight, UIColor.DarkGray));
         }
 
+        private void InitHeader()
+        {
+            settings = new SRButton(C.X_MAX - 74, 12, 32, 32, new Selector("SettingsFunc"), "button_settings");
+            bars = new SRButton(C.MOX, C.MOY + 16, 32, 32, new Selector("BarsFunc"), "button_bars");
+            logo = new UIImageView(UIImage.FromBundle("main_logo"));
+            logoBack = Access.newRect(0, 0, vc.ViewWidth, 48, UIColor.Black);
+        }
+
         public void ShowHeader()
         {
+            if (!HeaderInit)
+                InitHeader();
+
             //logo background
-            logoBack = Access.newRect(0, 0, vc.ViewWidth, 48, UIColor.Black);
             render(logoBack);
 
             //shaftes logo
-            logo = new UIImageView(UIImage.FromBundle("main_logo"));
             logo.Frame = new CGRect(C.X_MID - 64, 0, 128, 48);
             render(logo);
 
             //settings button
-            settings = new SRButton(C.X_MAX - 74, 12, 32, 32, new Selector("SettingsFunc"), "button_settings");
             settings.Render();
 
             //bars
-            bars = new SRButton(C.MOX, C.MOY + 16, 32, 32, new Selector("BarsFunc"), "button_bars");
             bars.Render();
+        }
+
+        private void InitTaskbar()
+        {
+            //render bottom bar
+            footer = Access.newRect(0, C.Y_MAX - 40, C.X_MAX, 40, UIColor.DarkGray);
+
+            //little seperator line above icons
+            seperator = Access.newRect(0, C.Y_MAX - 40, C.X_MAX, 2, UIColor.Gray);
+            
+            //announcements button 
+            announce = new SRButton(C.X_MID - 176, C.Y_MAX - 36, 32, 32, new Selector("AnnounceFunc"), "button_announcements");
+
+            //tutor button
+            tutor = new SRButton(C.X_MID - 104, C.Y_MAX - 36, 32, 32, new Selector("TutorFunc"), "button_tutor");
+
+            //forum button
+            forum = new SRButton(C.X_MID - 32, C.Y_MAX - 36, 32, 32, new Selector("ForumFunc"), "button_forum");
+
+            //grades button
+            grades = new SRButton(C.X_MID + 40, C.Y_MAX - 36, 32, 32, new Selector("GradesFunc"), "button_grades");
+
+            //profile button
+            profile = new SRButton(C.X_MID + 112, C.Y_MAX - 36, 32, 32, new Selector("ProfileFunc"), "button_profile");
         }
 
         public void ShowTaskbar()
         {
+
+            if (!TaskbarInit)
+                InitTaskbar();
+
             //render bottom bar
-            UIView footer = Access.newRect(0, C.Y_MAX - 40, C.X_MAX, 40, UIColor.DarkGray);
             render(footer);
 
             //little seperator line above icons
-            UIView seperator = Access.newRect(0, C.Y_MAX - 40, C.X_MAX, 2, UIColor.Gray);
             render(seperator);
 
             //announcements button 
-            SRButton announce = new SRButton(C.X_MID - 176, C.Y_MAX - 36, 32, 32, new Selector("AnnounceFunc"), "button_announcements");
             announce.Render();
 
             //tutor button
-            SRButton tutor = new SRButton(C.X_MID - 104, C.Y_MAX - 36, 32, 32, new Selector("TutorFunc"), "button_tutor");
             tutor.Render();
 
             //forum button
-            SRButton forum = new SRButton(C.X_MID - 32, C.Y_MAX - 36, 32, 32, new Selector("ForumFunc"), "button_forum");
             forum.Render();
 
             //grades button
-            SRButton grades = new SRButton(C.X_MID + 40, C.Y_MAX - 36, 32, 32, new Selector("GradesFunc"), "button_grades");
             grades.Render();
 
             //profile button
-            SRButton profile = new SRButton(C.X_MID + 112, C.Y_MAX - 36, 32, 32, new Selector("ProfileFunc"), "button_profile");
             profile.Render();
         }
 

@@ -8,18 +8,16 @@ using UIKit;
 using ShaftesApp.Views;
 using CoreGraphics;
 using ObjCRuntime;
+using System.Diagnostics;
 
 namespace ShaftesApp.View
 {
     public class ViewDismiss
         : NSObject
     {
-
-        private NSThread ProfileFadeThread;
-
-        public void DismissProfileView(nfloat i)
+        public void DismissProfileView(double i)
         {
-            UIView.Animate(i, 0, UIViewAnimationOptions.CurveEaseIn, () =>
+            UIView.Animate(i, 0, UIViewAnimationOptions.CurveLinear, () =>
             {
                 ProfileView.Avatar.Alpha = 0;
                 ProfileView.AvatarFrame.Alpha = 0;
