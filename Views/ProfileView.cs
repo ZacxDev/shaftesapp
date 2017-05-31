@@ -43,7 +43,7 @@ namespace ShaftesApp.Views
             //AddToView();
         }
 
-        private static void Initialize()
+        public static void Initialize()
         {
 
             init = true;
@@ -108,8 +108,8 @@ namespace ShaftesApp.Views
             Access.vc.View.AddSubview(AvatarFrame);
             Access.vc.View.AddSubview(Username);
             Access.vc.View.AddSubview(Bio);
-            Rooms.Render();
-            Rooms.RenderText();
+            Rooms.Render(Access.vc.View);
+            Rooms.RenderText(Access.vc.View);
             Access.vc.View.AddSubview(Grade);
         }
 
@@ -152,7 +152,7 @@ namespace ShaftesApp.Views
 
             Access.vc.View.AddSubview(RoomsScrollView);
             Access.vc.View.AddSubview(RoomsTitle);
-            Back.Render();
+            Back.Render(Access.vc.View);
 
             
 

@@ -32,6 +32,8 @@ namespace ShaftesApp
             //init here becuz wont move
             bounds = new CGRect(x, y, width, height);
 
+            TextView = new UITextView();
+
             Select = select;
             View = new UIButton();
             View.Frame = bounds;
@@ -42,19 +44,18 @@ namespace ShaftesApp
             buttons.Add(this);
         }
 
-        public void Render()
+        public void Render(UIView v)
         {
-            Access.vc.View.AddSubview(View);
+           v.AddSubview(View);
         }
 
-        public void RenderText()
+        public void RenderText(UIView v)
         {
-            Access.vc.View.AddSubview(TextView);
+            v.AddSubview(TextView);
         }
 
         public void SetText(String text)
         {
-            TextView = new UITextView();
             TextView.UserInteractionEnabled = false;
             TextView.Frame = bounds;
             TextView.BackgroundColor = UIColor.Clear;
