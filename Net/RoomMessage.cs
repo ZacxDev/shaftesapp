@@ -12,6 +12,7 @@ namespace ShaftesApp.Net
 
         public int Y;
         public String Title;
+        public int Weight;
         public String Body;
         public bool Assignment = false;
 
@@ -21,10 +22,11 @@ namespace ShaftesApp.Net
         private UITextView GradeView;
         private UITextView RubrikView;
 
-        public RoomMessage(String title, String body)
+        public RoomMessage(String title, String body, int weight)
         {
             Title = title;
             Body = body;
+            Weight = weight;
 
             Initialize();
         }
