@@ -86,7 +86,7 @@ namespace ShaftesApp
             //background
             ShowBackground();
 
-<<<<<<< HEAD
+
             //logo background
             UIView logoBack = Access.newRect(0, 0, vc.ViewWidth, 32, UIColor.Black);
             render(logoBack);
@@ -100,7 +100,7 @@ namespace ShaftesApp
             SRButton bars = new SRButton(C.MOX, C.MOY + 16, 32, 32, new Selector("BarsFunc"), "button_bars");
             bars.Render();
 
-<<<<<<< HEAD
+         
             //announcements button
             SRButton announce = new SRButton(0, C.Y_MAX - 64, 64, 64, new Selector("AnnounceFunc"), "button_announcements");
             announce.Render();
@@ -108,19 +108,19 @@ namespace ShaftesApp
             //tutor button
             SRButton tutor = new SRButton(96, C.Y_MAX - 64, 32, 32, new Selector("TutorFunc"), "button_tutor");
             tutor.Render();
-=======
+
             //little seperator line above icons
             UIView seperator = Access.newRect(0, C.Y_MAX - 60, C.X_MAX, 2, UIColor.Gray);
             render(seperator);
->>>>>>> origin/master
+          
 
             //setting button
             SRButton settings = new SRButton(C.X_MAX - 74, 0, 32, 32, new Selector("SettingsFunc"), "button_settings");
             settings.Render();
-=======
+
             //header
             ShowHeader();
->>>>>>> origin/master
+           
 
             //add things based on appstate
             if (astate == AppState.ANNOUNCEMENTS)

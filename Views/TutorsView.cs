@@ -12,8 +12,8 @@ namespace ShaftesApp.Views
 {
     static class TutorsView
     {
-        public TutorsView()
-        {
-        }
+       // public TutorsView()
+       // {
+        //}
     }
 }
