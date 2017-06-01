@@ -22,6 +22,7 @@ namespace ShaftesApp.Net
         public int ID;
         public String Name = "TestRoom";
         public String Desc = "This is a test description. In this is Class you will learn all about knowledge, knowledge, and knowledge.";
+        public String Weights = "Homework: 30% Tests: 1% Exam: 100%";
         public int Key = 1234;
 
         public UIView Background;
@@ -35,9 +36,9 @@ namespace ShaftesApp.Net
         {
             Name = name;
 
-            Messages.Add(new RoomMessage("Assignment 1", "please complete the following tasks"));
-            Messages.Add(new RoomMessage("Assignment 2", "Your task is to eat my socks!"));
-            Messages.Add(new RoomMessage("Assignment 3", "Your job is to solve these equations"));
+            Messages.Add(new RoomMessage("Assignment 1", "please complete the following tasks", 204));
+            Messages.Add(new RoomMessage("Assignment 2", "Your task is to eat my socks!", 420));
+            Messages.Add(new RoomMessage("Assignment 3", "Your job is to solve these equations", 69));
 
             Initialize();
             rooms.Add(this);
@@ -56,11 +57,12 @@ namespace ShaftesApp.Net
             TitleView.TextColor = UIColor.White;
 
             DescView = new UITextView();
-            DescView.Frame = new CGRect(C.X_MID - 192, Y + 40, 384, 64);
+            DescView.Frame = new CGRect(C.X_MID - 186, Y + 40, 368, 64);
             DescView.Font = Fonts.Announcements_Text;
             DescView.Text = Desc;
             DescView.BackgroundColor = UIColor.Clear;
             DescView.TextColor = UIColor.White;
+            DescView.TextAlignment = UITextAlignment.Center;
 
             StudentsView = new UITextView();
             StudentsView.Frame = new CGRect(C.X_MID + 64, Y, 128, 64);
@@ -85,7 +87,7 @@ namespace ShaftesApp.Net
             v.AddSubview(TitleView);
             v.AddSubview(DescView);
             v.AddSubview(StudentsView);
-            Back.Render();
+            Back.Render(v);
 
             nfloat ScrollHeight = 0f;
             for (int i = 0; i < Messages.Count; i++)

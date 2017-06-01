@@ -81,6 +81,7 @@ namespace ShaftesApp
             SETTINGS_OPEN = false;
             CurrentState = astate;
             vc = Access.vc;
+            ProfileView.Initialize();
             clearSubviews();
 
             //background
@@ -154,6 +155,10 @@ namespace ShaftesApp
             {
                 new RoomView(Room);
             }
+            else if (astate == AppState.GRADES)
+            {
+                GradesView.AddToView();
+            }
 
             ShowTaskbar();
 
@@ -199,10 +204,10 @@ namespace ShaftesApp
             render(logo);
 
             //settings button
-            settings.Render();
+            settings.Render(vc.View);
 
             //bars
-            bars.Render();
+            bars.Render(vc.View);
         }
 
         private void InitTaskbar()
@@ -242,19 +247,19 @@ namespace ShaftesApp
             render(seperator);
 
             //announcements button 
-            announce.Render();
+            announce.Render(vc.View);
 
             //tutor button
-            tutor.Render();
+            tutor.Render(vc.View);
 
             //forum button
-            forum.Render();
+            forum.Render(vc.View);
 
             //grades button
-            grades.Render();
+            grades.Render(vc.View);
 
             //profile button
-            profile.Render();
+            profile.Render(vc.View);
         }
 
         public static void ShowSettings()

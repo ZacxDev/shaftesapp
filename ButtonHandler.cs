@@ -43,19 +43,19 @@ namespace ShaftesApp
         [Export("TutorFunc")]
         void TutorFunc()
         {
-            Console.WriteLine("change state to tutor");
+            Access.vc.changeView(AppState.TUTOR);
         }
 
         [Export("ForumFunc")]
         void ForumFunc()
         {
-            Console.WriteLine("change state to forum");
+            Access.vc.changeView(AppState.FORUMS);
         }
 
         [Export("GradesFunc")]
         void GradesFunc()
         {
-            Console.WriteLine("change state to grdsea");
+            Access.vc.changeView(AppState.GRADES);
         }
 
         [Export("ProfileFunc")]
@@ -92,6 +92,11 @@ namespace ShaftesApp
         void ShowRoom()
         {
             Debug.WriteLine("ffffffmatey");
+        }
+
+        [Export("DeadFunc")]
+        void DeadFunc()
+        {
         }
     }
 }

@@ -107,7 +107,10 @@
     <Compile Include="Views\TutorsView.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UI\GradeListNode.cs" />
     <Compile Include="UI\RoomListNode.cs" />
+    <Compile Include="Views\GradeScrollView.cs" />
+    <Compile Include="Views\GradesView.cs" />
     <Compile Include="Views\RoomsScrollView.cs" />
     <Compile Include="Views\RoomView.cs" />
     <Compile Include="Views\ViewDismiss.cs" />
