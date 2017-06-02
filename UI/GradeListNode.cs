@@ -36,7 +36,6 @@ namespace ShaftesApp.UI
         public GradeListNode(Room room, int x)
         {
 
-            Debug.WriteLine("init node");
             Y = x * 128;
             PoppedNode = this;
 
@@ -130,7 +129,6 @@ namespace ShaftesApp.UI
 
         public void AddToView(UIView v)
         {
-            Debug.WriteLine("add to view");
             this.AddSubview(Title);
             this.AddSubview(Assignments);
             this.AddSubview(Percentages);

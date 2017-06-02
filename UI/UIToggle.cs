@@ -6,6 +6,7 @@ using System.Text;
 using Foundation;
 using UIKit;
 using CoreGraphics;
+using System.Diagnostics;
 
 namespace ShaftesApp.UI
 {
@@ -15,7 +16,7 @@ namespace ShaftesApp.UI
 
         private bool _init = false;
 
-        private int X, Y, WIDTH, HEIGHT;
+        private int X, Y, WIDTH = 256, HEIGHT = 128;
 
         private String[] Values;
         public String Display;
@@ -41,12 +42,15 @@ namespace ShaftesApp.UI
                 return;
             _init = true;
 
+            UserInteractionEnabled = true;
             Frame = new CGRect(X, Y, WIDTH, HEIGHT);
 
             TextView = new UITextView();
             TextView.Frame = new CGRect(0, 0, WIDTH, HEIGHT);
             TextView.Text = Display;
             TextView.BackgroundColor = UIColor.Clear;
+            TextView.Editable = false;
+            TextView.UserInteractionEnabled = false;
 
             AddToView();
         }
@@ -54,6 +58,15 @@ namespace ShaftesApp.UI
         private void AddToView()
         {
             AddSubview(TextView);
+        }
+
+        public void SetFrame(CGRect r)
+        {
+            Frame = r;
+            X = (int) r.X;
+            Y = (int) r.Y;
+            WIDTH = (int) r.Width;
+            HEIGHT = (int) r.Height;
         }
 
         public void SetImages(UIImage[] imgs)
@@ -66,6 +79,7 @@ namespace ShaftesApp.UI
             ImageView.Image = Image;
             ImageView.Frame = new CGRect(0, 0, WIDTH, HEIGHT);
             ImageView.ContentMode = UIViewContentMode.ScaleAspectFit;
+            ImageView.UserInteractionEnabled = false;
 
             AddSubview(ImageView);
         }
@@ -73,10 +87,9 @@ namespace ShaftesApp.UI
         public override void TouchesEnded(NSSet touches, UIEvent evt)
         {
             base.TouchesEnded(touches, evt);
-
             ix++;
 
-            if ((_imageMode && ix >= Images.Length - 1) || ix >= Values.Length - 1)
+            if ((_imageMode && ix >= Images.Length ) || ix >= Values.Length)
             {
                 ix = 0;
             }

@@ -45,7 +45,7 @@ namespace ShaftesApp.Views
             Y = 64;
 
             Background = new UIView();
-            Background.Frame = new CGRect(X, Y, 256, C.Y_MAX - 64);
+            Background.Frame = new CGRect(X, Y, 256, C.Y_MAX - 128);
             Background.BackgroundColor = UIColor.Gray;
 
             Bounds = Background.Frame;
@@ -58,7 +58,7 @@ namespace ShaftesApp.Views
 
             TypeView = new UIToggle("Option1", "Option2");
             TypeView.SetImages(new UIImage[] { UIImage.FromBundle("settings_0"), UIImage.FromBundle("settings_1") });
-            TypeView.Frame = new CGRect(X + 16, C.Y_MAX - 202, 240, 128);
+            TypeView.SetFrame(new CGRect(X + 16, C.Y_MAX - 256, 240, 128));
         }
 
         private void AddToView()
