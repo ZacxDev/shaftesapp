@@ -108,6 +108,7 @@
   <ItemGroup>
     <Compile Include="UI\GradeListNode.cs" />
     <Compile Include="UI\RoomListNode.cs" />
+    <Compile Include="UI\UIToggle.cs" />
     <Compile Include="Views\GradeScrollView.cs" />
     <Compile Include="Views\GradesView.cs" />
     <Compile Include="Views\RoomsScrollView.cs" />
@@ -134,6 +135,24 @@
     <Content Include="Entitlements.plist" />
   </ItemGroup>
   <ItemGroup>
+    <ImageAsset Include="Resources\Toggle.xcassets\AppIcons.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Toggle.xcassets\LaunchImages.launchimage\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Toggle.xcassets\settings_0.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Toggle.xcassets\settings_0.imageset\student_button.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Toggle.xcassets\settings_1.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Toggle.xcassets\settings_1.imageset\tutor_button.png">
+      <InProject>false</InProject>
+    </ImageAsset>
     <ImageAsset Include="Resources\UIAssets.xcassets\AppIcons.appiconset\Contents.json">
       <InProject>false</InProject>
     </ImageAsset>

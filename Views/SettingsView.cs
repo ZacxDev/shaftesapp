@@ -6,6 +6,7 @@ using System.Text;
 using Foundation;
 using UIKit;
 using CoreGraphics;
+using ShaftesApp.UI;
 
 namespace ShaftesApp.Views
 {
@@ -18,6 +19,10 @@ namespace ShaftesApp.Views
 
         private UIView Background;
         private UITextView Title;
+        private UIToggle TypeView;
+        private UIToggle CanWork;
+
+        private int X, Y;
 
         public SettingsView()
         {
@@ -30,23 +35,37 @@ namespace ShaftesApp.Views
 
         public void Initialize()
         {
+
+            if (init)
+                return;
+
+            init = true;
+
+            X = C.X_MID - 128;
+            Y = 64;
+
             Background = new UIView();
-            Background.Frame = new CGRect(C.X_MID - 128, 64, 256, 512);
+            Background.Frame = new CGRect(X, Y, 256, C.Y_MAX - 64);
             Background.BackgroundColor = UIColor.Gray;
 
             Bounds = Background.Frame;
 
             Title = new UITextView();
-            Title.Frame = new CGRect(C.X_MID - 32, 74, 128, 64);
+            Title.Frame = new CGRect(X, Y, 256, 64);
             Title.BackgroundColor = UIColor.Gray;
             Title.Text = "Settings";
             Title.Font = Fonts.Settings_Title;
+
+            TypeView = new UIToggle("Option1", "Option2");
+            TypeView.SetImages(new UIImage[] { UIImage.FromBundle("settings_0"), UIImage.FromBundle("settings_1") });
+            TypeView.Frame = new CGRect(X + 16, C.Y_MAX - 202, 240, 128);
         }
 
         private void AddToView()
         {
             Access.vc.View.AddSubview(Background);
             Access.vc.View.AddSubview(Title);
+            Access.vc.View.AddSubview(TypeView);
         }
 
     }
