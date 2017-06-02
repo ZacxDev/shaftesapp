@@ -19,7 +19,6 @@ namespace ShaftesApp.Net
 
         public List<int> StudentIds = new List<int>();
         public List<RoomMessage> Messages = new List<RoomMessage>();
-        public int ID;
         public String Name = "TestRoom";
         public String Desc = "This is a test description. In this is Class you will learn all about knowledge, knowledge, and knowledge.";
         public String Weights = "Homework: 30% Tests: 1% Exam: 100%";

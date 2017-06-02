@@ -188,6 +188,12 @@
     <ImageAsset Include="Resources\UIAssets.xcassets\button_tutor.imageset\Contents.json">
       <InProject>false</InProject>
     </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\cheese_avatar.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\cheese_avatar.imageset\imgres.png">
+      <InProject>false</InProject>
+    </ImageAsset>
     <ImageAsset Include="Resources\UIAssets.xcassets\default_avatar.imageset\Contents.json">
       <InProject>false</InProject>
     </ImageAsset>

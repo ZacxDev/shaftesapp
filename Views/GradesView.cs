@@ -25,13 +25,16 @@ namespace ShaftesApp.Views
                 Initialize();
         }
 
-        static void Initialize()
+        public static void Initialize()
         {
+
+            if (_init)
+                return;
+
             _init = true;
-            
-            for (int i = 0; i < Room.rooms.Count; i++)
+            for (int i = 0; i < ViewController.Client.Rooms.Count; i++)
             {
-                new GradeListNode(Room.rooms[i], i);
+                new GradeListNode(ViewController.Client.Rooms[i], i);
             }
 
             Title = new UITextView();

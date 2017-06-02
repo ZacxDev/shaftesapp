@@ -37,7 +37,7 @@ namespace ShaftesApp.Views
             ScrollEnabled = true;
             Bounces = true;
             AlwaysBounceVertical = true;
-            ContentSize = new CGSize(C.X_MAX, GradeListNode.reports.Count * 128);
+            ContentSize = new CGSize(C.X_MAX, GradeListNode.reports.Count * 128 + 32);
         }
 
         [Export("Tap")]

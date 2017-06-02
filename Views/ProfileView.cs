@@ -45,29 +45,18 @@ namespace ShaftesApp.Views
 
         public static void Initialize()
         {
+            if (init)
+                return;
 
             init = true;
 
-            rooms.Add(new Room("TestRoom0"));
-            rooms.Add(new Room("TestRoom1"));
-            rooms.Add(new Room("TestRoom2"));
-            rooms.Add(new Room("TestRoom3"));
-            rooms.Add(new Room("TestRoom4"));
-            rooms.Add(new Room("TestRoom5"));
-            rooms.Add(new Room("TestRoom6"));
-            rooms.Add(new Room("TestRoom7"));
-            rooms.Add(new Room("TestRoom8"));
-            rooms.Add(new Room("TestRoom9"));
-            rooms.Add(new Room("TestRoom10"));
-            rooms.Add(new Room("TestRoom11"));
-            rooms.Add(new Room("TestRoom12"));
-            rooms.Add(new Room("TestRoom13"));
-            rooms.Add(new Room("TestRoom14"));
+            rooms = ViewController.Client.Rooms;
 
             Avatar = new UIImageView();
             Avatar.Frame = new CGRect(X + 4, Y, 64, 64);
             Avatar.BackgroundColor = UIColor.Clear;
             Avatar.Image = ViewController.Client.Image;
+            Avatar.ContentMode = UIViewContentMode.ScaleAspectFit;
 
             AvatarFrame = new UIImageView();
             AvatarFrame.Frame = new CGRect(X, Y - 10, C.X_MAX - 16, 74);
@@ -91,7 +80,7 @@ namespace ShaftesApp.Views
             Bio.Font = UIFont.SystemFontOfSize(8);
 
             Rooms = new SRButton(C.X_MID - 96, Y + 32, 128, 32, new Selector("ProfileRoomsFunc"));
-            Rooms.SetText($"Classrooms: {ViewController.Client.RoomIds.Count}");
+            Rooms.SetText($"Classrooms: {ViewController.Client.Rooms.Count}");
 
             Grade = new UITextView();
             Grade.Frame = new CGRect(C.X_MID, Y + 32, 128, 32);

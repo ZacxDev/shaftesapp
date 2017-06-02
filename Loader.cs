@@ -6,6 +6,7 @@ using Foundation;
 using ObjCRuntime;
 using ShaftesApp.Views;
 using ShaftesApp.Net;
+using System.Diagnostics;
 
 namespace ShaftesApp
 {
@@ -57,6 +58,8 @@ namespace ShaftesApp
         public static AppState CurrentState;
         public static Room Room;
 
+        private bool _initViews = false;
+
         //header
         bool HeaderInit = false;
         UIImageView logo;
@@ -82,6 +85,9 @@ namespace ShaftesApp
             vc = Access.vc;
             ProfileView.Initialize();
             clearSubviews();
+
+            if (!_initViews)
+                InitViews();
 
             //background
             ShowBackground();
@@ -226,6 +232,14 @@ namespace ShaftesApp
 
             //profile button
             profile.Render(vc.View);
+        }
+
+        private void InitViews()
+        {
+            _initViews = true;
+            ProfileView.Initialize();
+            ProfileView.InitRooms();
+            GradesView.Initialize();
         }
 
         public static void ShowSettings()

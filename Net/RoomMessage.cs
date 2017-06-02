@@ -10,7 +10,7 @@ namespace ShaftesApp.Net
     public class RoomMessage
     {
 
-        public int Y;
+        public int Y = 0;
         public String Title;
         public int Weight;
         public String Body;
@@ -27,17 +27,17 @@ namespace ShaftesApp.Net
             Title = title;
             Body = body;
             Weight = weight;
-
             Initialize();
         }
 
         private void Initialize()
         {
             Background = new UIView();
+            
             Background.Frame = new CGRect(0, Y, Access.vc.ViewWidth, 256);
             Background.Layer.BorderColor = UIColor.White.CGColor;
             Background.Layer.BorderWidth = 3;
-
+            
             TitleView = new UITextView();
             TitleView.Text = Title;
             TitleView.Frame = new CGRect(0, Y, C.X_MAX, 32);
@@ -45,7 +45,7 @@ namespace ShaftesApp.Net
             TitleView.Font = Fonts.Settings_Title;
             TitleView.BackgroundColor = UIColor.Clear;
             TitleView.TextColor = UIColor.White;
-           
+            
             BodyView = new UITextView();
             BodyView.Font = Fonts.Announcements_Text;
             BodyView.Text = Body;
@@ -54,7 +54,7 @@ namespace ShaftesApp.Net
             BodyView.ContentSize = new CGSize(0, BodyView.ContentSize.Height);
             BodyView.BackgroundColor = UIColor.Clear;
             BodyView.TextColor = UIColor.White;
-           
+            
             GradeView = new UITextView();
             GradeView.Font = Fonts.Announcements_Text;
             GradeView.Text = "/35";
@@ -70,7 +70,6 @@ namespace ShaftesApp.Net
             RubrikView.Layer.BorderWidth = 2;
             RubrikView.BackgroundColor = UIColor.Clear;
             RubrikView.TextColor = UIColor.Red;
-            
         }
 
         public void AddToView(UIView v)

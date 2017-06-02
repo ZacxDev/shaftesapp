@@ -8,16 +8,22 @@ using UIKit;
 
 namespace ShaftesApp.Net
 {
+    public enum ClientType
+    { STUDENT, TUTOR, TEACHER, ADMIN }
+
     public class Client
     {
 
         public String Password = "123asdf";
-        public String Username = "TestUser";
-        public String Bio = "This is a test bio, I enjoy school, sports, and writing bios.";
-        public String id;
+        public String Username;
+        public String Bio;
+        public int ID;
         public int Grade = 10;
-        public List<int> RoomIds = new List<int>();
+        public List<Room> Rooms = new List<Room>();
         public UIImage Image;
+
+        public ClientType Type;
+        public bool CanWork;
 
         public Client()
         {
@@ -26,8 +32,45 @@ namespace ShaftesApp.Net
 
         private void DownloadClient()
         {
-            Image = UIImage.FromBundle("default_avatar");
+            Image = UIImage.FromBundle("cheese_avatar");
+
+            for (int i = 0; i < 9; i++)
+            {
+                Rooms.Add(new Room($"Classroom{i}"));
+            }
+
+            Username = GetUsername();
+            Bio = GetBio();
+            ID = GetID();
+            Type = GetClientType();
+            CanWork = GetCanWork();
+
             // read json, download image
+        }
+
+        private ClientType GetClientType()
+        {
+            return ClientType.ADMIN;
+        }
+
+        private bool GetCanWork()
+        {
+            return true;
+        }
+
+        private String GetUsername()
+        {
+            return "Cheesus Christ";
+        }
+
+        private String GetBio()
+        {
+            return "I bless thee with a selection of savoury cheese.";
+        }
+
+        private int GetID()
+        {
+            return 0;
         }
 
     }

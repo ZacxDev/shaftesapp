@@ -29,7 +29,6 @@ namespace ShaftesApp
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            Client = new Client();
             // Perform any additional setup after loading the view, typically from a nib
             //Console.WriteLine("ffff");
             ViewWidth = (int)View.Bounds.Width * 2;
@@ -37,6 +36,8 @@ namespace ShaftesApp
 
             new C(this);
             _Access = new Access(this);
+
+            Client = new Client();
             BtnHandler = new ButtonHandler();
             ViewDismiss = new ViewDismiss();
             LoaderInstance = new Loader(state);

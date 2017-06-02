@@ -28,7 +28,7 @@ namespace ShaftesApp.Views
             AddToView();
         }
 
-        private void Initialize()
+        public void Initialize()
         {
             Background = new UIView();
             Background.Frame = new CGRect(C.X_MID - 128, 64, 256, 512);
