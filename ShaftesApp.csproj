@@ -189,6 +189,12 @@
     <ImageAsset Include="Resources\UIAssets.xcassets\button_grades.imageset\Contents.json">
       <InProject>false</InProject>
     </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\button_joinclass.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\button_joinclass.imageset\joinclass_button.png">
+      <InProject>false</InProject>
+    </ImageAsset>
     <ImageAsset Include="Resources\UIAssets.xcassets\button_profile.imageset\button_profile.png">
       <InProject>false</InProject>
     </ImageAsset>
