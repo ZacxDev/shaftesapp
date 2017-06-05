@@ -56,6 +56,7 @@ namespace ShaftesApp.Views
             AvatarView.Frame = new CGRect(X, Y + 16, 64, 64);
             AvatarView.SetImage(ViewController.Client.Image, UIControlState.Normal);
             AvatarView.AddTarget(ViewController.BtnHandler, new Selector("SelectAvatar"), UIControlEvent.TouchUpInside);
+            AvatarView.ContentMode = UIViewContentMode.ScaleAspectFit;
 
             Title = new UITextView();
             Title.Frame = new CGRect(X, Y, 256, 64);
