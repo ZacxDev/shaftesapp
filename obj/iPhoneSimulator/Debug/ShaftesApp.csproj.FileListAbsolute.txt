@@ -1,10 +1,10 @@
-C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\bin\iPhoneSimulator\Debug\ShaftesApp.exe
-C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\bin\iPhoneSimulator\Debug\ShaftesApp.pdb
 C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
 C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
 C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
 C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\optimized\Entitlements.plist
 C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\optimized\
-C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\ShaftesApp.csprojResolveAssemblyReference.cache
+C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\bin\iPhoneSimulator\Debug\ShaftesApp.exe
+C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\bin\iPhoneSimulator\Debug\ShaftesApp.pdb
 C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\ShaftesApp.exe
 C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\ShaftesApp.pdb
+C:\Users\Zach\Documents\Visual Studio 2017\Projects\ShaftesApp\ShaftesApp\obj\iPhoneSimulator\Debug\ShaftesApp.csprojResolveAssemblyReference.cache

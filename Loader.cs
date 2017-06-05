@@ -86,6 +86,12 @@ namespace ShaftesApp
             ProfileView.Initialize();
             clearSubviews();
 
+            RenderView(astate);
+
+        }
+
+        public void RenderView(AppState astate)
+        {
             if (!_initViews)
                 InitViews();
 
@@ -161,6 +167,8 @@ namespace ShaftesApp
             bars = new SRButton(C.MOX, C.MOY + 16, 32, 32, new Selector("BarsFunc"), "button_bars");
             logo = new UIImageView(UIImage.FromBundle("main_logo"));
             logoBack = Access.newRect(0, 0, vc.ViewWidth, 48, UIColor.Black);
+
+            HeaderInit = true;
         }
 
         public void ShowHeader()
@@ -204,6 +212,8 @@ namespace ShaftesApp
 
             //profile button
             profile = new SRButton(C.X_MID + 112, C.Y_MAX - 36, 32, 32, new Selector("ProfileFunc"), "button_profile");
+
+            TaskbarInit = true;
         }
 
         public void ShowTaskbar()

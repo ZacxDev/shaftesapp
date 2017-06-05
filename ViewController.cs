@@ -4,6 +4,7 @@ using Foundation;
 using UIKit;
 using ShaftesApp.Net;
 using ShaftesApp.View;
+using System.Diagnostics;
 
 namespace ShaftesApp
 {
@@ -17,6 +18,7 @@ namespace ShaftesApp
         public static ViewDismiss ViewDismiss;
         private static Access _Access;
         public static Client Client;
+        private UIImagePickerController ImagePicker;
 
         public AppState state;
         public int ViewHeight, ViewWidth;
@@ -52,7 +54,33 @@ namespace ShaftesApp
         public void changeView(AppState s)
         {
             state = s;
-            LoaderInstance = new Loader(state);
+            LoaderInstance.RenderView(s);
+            //LoaderInstance = new Loader(state);
+        }
+
+        public void SelectImage()
+        {
+            ImagePicker = new UIImagePickerController();
+            //ImagePicker.Delegate = this;
+            ImagePicker.AllowsEditing = true;
+            ImagePicker.SourceType = UIImagePickerControllerSourceType.PhotoLibrary;
+
+            ImagePicker.FinishedPickingMedia += Handle_FinishedPickingMedia;
+            ImagePicker.Canceled += (sender, e) =>
+            {
+                ImagePicker.DismissViewController(true, null);
+            };
+
+            PresentViewController(ImagePicker, true, null);   
+        }
+
+        protected void Handle_FinishedPickingMedia(object sender, UIImagePickerMediaPickedEventArgs e)
+        {
+
+            UIImage i = e.Info[UIImagePickerController.OriginalImage] as UIImage;
+            Client.Image = i;
+            ImagePicker.DismissViewController(true, null);
+            new Loader(state);
         }
 
         public override bool PrefersStatusBarHidden()

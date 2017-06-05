@@ -39,5 +39,7 @@
 	</array>
 	<key>MinimumOSVersion</key>
 	<string>9.1</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Select a profile picture.</string>
 </dict>
 </plist>

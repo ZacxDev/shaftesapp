@@ -94,6 +94,12 @@ namespace ShaftesApp
             Debug.WriteLine("ffffffmatey");
         }
 
+        [Export("SelectAvatar")]
+        void SelectAvater()
+        {
+            Access.vc.SelectImage();
+        }
+
         [Export("DeadFunc")]
         void DeadFunc()
         {

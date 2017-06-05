@@ -7,6 +7,7 @@ using Foundation;
 using UIKit;
 using CoreGraphics;
 using ShaftesApp.UI;
+using ObjCRuntime;
 
 namespace ShaftesApp.Views
 {
@@ -21,6 +22,7 @@ namespace ShaftesApp.Views
         private UITextView Title;
         private UIToggle TypeView;
         private UIToggle CanWork;
+        private UIButton AvatarView;
 
         private int X, Y;
 
@@ -50,6 +52,11 @@ namespace ShaftesApp.Views
 
             Bounds = Background.Frame;
 
+            AvatarView = new UIButton();
+            AvatarView.Frame = new CGRect(X, Y + 16, 64, 64);
+            AvatarView.SetImage(ViewController.Client.Image, UIControlState.Normal);
+            AvatarView.AddTarget(ViewController.BtnHandler, new Selector("SelectAvatar"), UIControlEvent.TouchUpInside);
+
             Title = new UITextView();
             Title.Frame = new CGRect(X, Y, 256, 64);
             Title.BackgroundColor = UIColor.Gray;
@@ -66,6 +73,7 @@ namespace ShaftesApp.Views
             Access.vc.View.AddSubview(Background);
             Access.vc.View.AddSubview(Title);
             Access.vc.View.AddSubview(TypeView);
+            Access.vc.View.AddSubview(AvatarView);
         }
 
     }
