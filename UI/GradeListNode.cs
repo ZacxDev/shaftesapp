@@ -142,6 +142,10 @@ namespace ShaftesApp.UI
                 UnPopAssignments();
                 return;
             }
+
+            if (PoppedNode != null)
+                PoppedNode.UnPopAssignments();
+
             Assignments.Frame = new CGRect(0, Y, C.X_MAX, 128);
             PoppedNode = this;
             _popped = true;

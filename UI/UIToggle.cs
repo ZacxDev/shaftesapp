@@ -16,14 +16,12 @@ namespace ShaftesApp.UI
 
         private bool _init = false;
 
-        private int X, Y, WIDTH = 256, HEIGHT = 128;
-
         private String[] Values;
         public String Display;
         public int ix = 0;
 
         private UITextView TextView;
-        private UIImageView ImageView;
+        public UIImageView ImageView;
         private bool locked = false;
         private bool _imageMode = false;
         private UIImage[] Images;
@@ -33,20 +31,18 @@ namespace ShaftesApp.UI
         public UIToggle(String a, String b)
         {
             Values = new String[] { a, b };
-            Initialize();
         }
 
-        private void Initialize()
+        public void Initialize()
         {
             if (_init)
                 return;
             _init = true;
 
             UserInteractionEnabled = true;
-            Frame = new CGRect(X, Y, WIDTH, HEIGHT);
 
             TextView = new UITextView();
-            TextView.Frame = new CGRect(0, 0, WIDTH, HEIGHT);
+            TextView.Frame = new CGRect(0, 0, Frame.Width, Frame.Height);
             TextView.Text = Display;
             TextView.BackgroundColor = UIColor.Clear;
             TextView.Editable = false;
@@ -60,24 +56,15 @@ namespace ShaftesApp.UI
             AddSubview(TextView);
         }
 
-        public void SetFrame(CGRect r)
-        {
-            Frame = r;
-            X = (int) r.X;
-            Y = (int) r.Y;
-            WIDTH = (int) r.Width;
-            HEIGHT = (int) r.Height;
-        }
-
         public void SetImages(UIImage[] imgs)
         {
             _imageMode = true;
             Images = imgs;
-
+            
             Image = Images[0];
             ImageView = new UIImageView();
             ImageView.Image = Image;
-            ImageView.Frame = new CGRect(0, 0, WIDTH, HEIGHT);
+            ImageView.Frame = new CGRect(0, 0, Frame.Width, Frame.Height);
             ImageView.ContentMode = UIViewContentMode.ScaleAspectFit;
             ImageView.UserInteractionEnabled = false;
 

@@ -8,26 +8,40 @@ using UIKit;
 using CoreGraphics;
 using ShaftesApp.UI;
 using ObjCRuntime;
+using System.Diagnostics;
 
 namespace ShaftesApp.Views
 {
     class SettingsView
+        : UIView
     {
 
-        public static CGRect Bounds;
 
         private bool init = false;
 
-        private UIView Background;
+        //main views
         private UITextView Title;
+        private UIView Header;
         private UIToggle TypeView;
-        private UIButton JoinClass;
+        private UIButton JoinClassView;
         private UIToggle CanWork;
         private UIButton AvatarView;
         private UITextView Username;
         private UITextView Bio;
+        private UIButton Cancel;
 
         private int X, Y;
+
+        //join class views
+        private UITextView Title1;
+        private UITextField CodeView;
+
+        //confirm class views
+        private UITextView Title2;
+        private UITextView RoomName;
+        private UIImageView RoomPic;
+        private UIView Foreground;
+        private UIButton JoinButton;
 
         public SettingsView()
         {
@@ -35,7 +49,7 @@ namespace ShaftesApp.Views
             if (!init)
                 Initialize();
             new PrimeView();
-            AddToView();
+            RenderMain();
         }
 
         public void Initialize()
@@ -49,58 +63,115 @@ namespace ShaftesApp.Views
             X = C.X_MID - 128;
             Y = 64;
 
-            Background = new UIView();
-            Background.Frame = new CGRect(X, Y, 256, C.Y_MAX - 128);
-            Background.BackgroundColor = UIColor.Gray;
-
-            Bounds = Background.Frame;
+            Frame = new CGRect(X, Y, 256, C.Y_MAX - 128);
+            BackgroundColor = UIColor.Gray;
+            Layer.BorderWidth = 3;
+            Layer.BorderColor = UIColor.White.CGColor;
 
             AvatarView = new UIButton();
-            AvatarView.Frame = new CGRect(X, Y + 16, 64, 64);
+            AvatarView.Frame = new CGRect(8, 32, 64, 64);
             AvatarView.SetImage(ViewController.Client.Image, UIControlState.Normal);
             AvatarView.AddTarget(ViewController.BtnHandler, new Selector("SelectAvatar"), UIControlEvent.TouchUpInside);
             AvatarView.ContentMode = UIViewContentMode.ScaleAspectFit;
 
             Title = new UITextView();
-            Title.Frame = new CGRect(X, Y, 256, 64);
-            Title.BackgroundColor = UIColor.Gray;
+            Title.Frame = new CGRect(64, 4, 128, 64);
+            Title.BackgroundColor = UIColor.Clear;
             Title.Text = "Settings";
             Title.Font = Fonts.Settings_Title;
+            Title.TextAlignment = UITextAlignment.Center;
+
+            Header = new UIView();
+            Header.BackgroundColor = UIColor.Red;
+            Header.Frame = new CGRect(0, 0, Frame.Width, 32);
 
             TypeView = new UIToggle("Option1", "Option2");
+            TypeView.Frame = new CGRect(0, Frame.Width - 138, 240, 128);
+            TypeView.Initialize();
             TypeView.SetImages(new UIImage[] { UIImage.FromBundle("settings_0"), UIImage.FromBundle("settings_1") });
-            TypeView.SetFrame(new CGRect(X + 16, C.Y_MAX - 256, 240, 128));
 
-            JoinClass = new UIButton();
-            JoinClass.Frame = new CGRect(X + 16, C.Y_MAX - 394, 240, 128);
-            JoinClass.SetImage(UIImage.FromBundle("button_joinclass"), UIControlState.Normal);
-            JoinClass.ContentMode = UIViewContentMode.ScaleAspectFit;
-            JoinClass.AddTarget(ViewController.BtnHandler, new Selector("JoinClass"), UIControlEvent.TouchUpInside);
-
+            JoinClassView = new UIButton();
+            JoinClassView.Frame = new CGRect(0, Frame.Height - 266, 240, 128);
+            JoinClassView.SetImage(UIImage.FromBundle("button_joinclass"), UIControlState.Normal);
+            JoinClassView.ImageView.ContentMode = UIViewContentMode.ScaleAspectFit;
+            JoinClassView.AddTarget(this, new Selector("JoinClass"), UIControlEvent.TouchUpInside);
+            
             Username = new UITextView();
             Username.Text = ViewController.Client.Username;
-            Username.Frame = new CGRect(X + 74, Y + 16, 128, 32);
+            Username.Frame = new CGRect(80, 24, 128, 32);
             Username.BackgroundColor = UIColor.Clear;
             Username.Font = Fonts.Medium;
 
             Bio = new UITextView();
             Bio.Text = ViewController.Client.Bio;
-            Bio.Frame = new CGRect(X + 74, Y + 16, 128, 32);
+            Bio.Frame = new CGRect(48, 48, 192, 64);
             Bio.BackgroundColor = UIColor.Clear;
-            Bio.Font = Fonts.Announcements_Text;
+            Bio.Font = Fonts.Small;
             Bio.TextAlignment = UITextAlignment.Center;
+
+            Cancel = new UIButton();
+            Cancel.Frame = new CGRect(Frame.Width - 32, 0, 32, 32);
+            Cancel.SetImage(UIImage.FromBundle("button_cancel"), UIControlState.Normal);
+            Cancel.ContentMode = UIViewContentMode.ScaleAspectFit;
 
         }
 
-        private void AddToView()
+        private void RenderMain()
         {
-            Access.vc.View.AddSubview(Background);
-            Access.vc.View.AddSubview(Title);
-            Access.vc.View.AddSubview(TypeView);
-            Access.vc.View.AddSubview(AvatarView);
-            Access.vc.View.AddSubview(JoinClass);
-            Access.vc.View.AddSubview(Username);
-            Access.vc.View.AddSubview(Bio);
+            AddSubview(Header);
+            AddSubview(Title);
+            AddSubview(TypeView);
+            AddSubview(AvatarView);
+            AddSubview(JoinClassView);
+            AddSubview(Username);
+            AddSubview(Bio);
+            AddSubview(Cancel);
+
+            Access.vc.View.AddSubview(this);
+        }
+
+        private void InitializeJoinClass()
+        {
+            Title1 = new UITextView();
+            Title1.Text = "Enter Class Code";
+            Title1.Frame = new CGRect(0, 0, Frame.Width, 48);
+            Title1.Font = Fonts.Settings_Title;
+            Title1.BackgroundColor = UIColor.Clear;
+            Title1.TextAlignment = UITextAlignment.Center;
+            Title1.Editable = false;
+            Title1.UserInteractionEnabled = false;
+
+            CodeView = new UITextField();
+            CodeView.Frame = new CGRect(0, Frame.Height / 2, 256, 64);
+            CodeView.Font = Fonts.Settings_Title;
+            CodeView.KeyboardType = UIKeyboardType.NumberPad;
+        }
+
+        private void RenderJoinClass()
+        {
+            AddSubview(Title1);
+            AddSubview(CodeView);
+        }
+
+        private void ClearSubviews()
+        {
+            for (int i = 0; i < Subviews.Length; i++)
+            {
+                Subviews[i].RemoveFromSuperview();
+            }
+        }
+
+        [Export("JoinClass")]
+        public void JoinClass()
+        {
+            ClearSubviews();
+
+            X = C.X_MID - 192;
+            Y = C.Y_MID - 128;
+
+            Frame = new CGRect(X, Y, 384, 256);
+            InitializeJoinClass();
+            RenderJoinClass();
         }
 
     }
