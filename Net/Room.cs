@@ -23,8 +23,10 @@ namespace ShaftesApp.Net
         public String Desc = "This is a test description. In this is Class you will learn all about knowledge, knowledge, and knowledge.";
         public String Weights = "Homework: 30% Tests: 1% Exam: 100%";
         public int Key = 1234;
+        public UIImage Image;
 
         public UIView Background;
+        public UIImageView ImageView;
         public UITextView TitleView;
         public UITextView DescView;
         public UITextView StudentsView;
@@ -40,6 +42,12 @@ namespace ShaftesApp.Net
             Messages.Add(new RoomMessage("Assignment 3", "Your job is to solve these equations", 69));
 
             Initialize();
+
+            Key = new Random().Next(10000);
+
+            //change to download image from server
+            Image = UIImage.FromBundle("room_image");
+
             rooms.Add(this);
         }
 
@@ -47,6 +55,11 @@ namespace ShaftesApp.Net
         {
             Background = new UIView();
             Background.Frame = new CGRect(0, Y, C.X_MAX, C.Y_MAX - 64);
+
+            ImageView = new UIImageView();
+            ImageView.Image = Image;
+            ImageView.Frame = new CGRect(C.X_MID - 128, Y, 64, 64);
+            ImageView.ContentMode = UIViewContentMode.ScaleAspectFit;
 
             TitleView = new UITextView();
             TitleView.Frame = new CGRect(C.X_MID - 64, Y, 128, 64);
@@ -84,6 +97,7 @@ namespace ShaftesApp.Net
         {
             v.AddSubview(Background);
             v.AddSubview(TitleView);
+            v.AddSubview(ImageView);
             v.AddSubview(DescView);
             v.AddSubview(StudentsView);
             Back.Render(v);
@@ -109,6 +123,15 @@ namespace ShaftesApp.Net
             return null;
         }
 
+        public static Room GetRoom(int id)
+        {
+            for (int i = 0; i < rooms.Count; i++)
+            {
+                if (rooms[i].Key == id)
+                    return rooms[i];
+            }
+            return null;
+        }
 
     }
 }

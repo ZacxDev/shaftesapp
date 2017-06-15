@@ -213,6 +213,12 @@
     <ImageAsset Include="Resources\UIAssets.xcassets\button_settings.imageset\gear.png">
       <InProject>false</InProject>
     </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\button_submit.imageset\button_submit.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\button_submit.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
     <ImageAsset Include="Resources\UIAssets.xcassets\button_tutor.imageset\button_tutor.png">
       <InProject>false</InProject>
     </ImageAsset>
@@ -238,6 +244,12 @@
       <InProject>false</InProject>
     </ImageAsset>
     <ImageAsset Include="Resources\UIAssets.xcassets\main_logo.imageset\main_logo.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\room_image.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\UIAssets.xcassets\room_image.imageset\room_image.png">
       <InProject>false</InProject>
     </ImageAsset>
   </ItemGroup>

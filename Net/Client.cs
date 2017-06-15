@@ -73,5 +73,10 @@ namespace ShaftesApp.Net
             return 0;
         }
 
+        public void JoinRoom(Room room)
+        {
+            Rooms.Add(room);
+        }
+
     }
 }

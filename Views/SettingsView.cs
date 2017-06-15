@@ -9,6 +9,7 @@ using CoreGraphics;
 using ShaftesApp.UI;
 using ObjCRuntime;
 using System.Diagnostics;
+using ShaftesApp.Net;
 
 namespace ShaftesApp.Views
 {
@@ -35,13 +36,14 @@ namespace ShaftesApp.Views
         //join class views
         private UITextView Title1;
         private UITextField CodeView;
+        private UIButton SubmitArrow;
 
         //confirm class views
-        private UITextView Title2;
         private UITextView RoomName;
         private UIImageView RoomPic;
         private UIView Foreground;
         private UIButton JoinButton;
+        private Room Room;
 
         public SettingsView()
         {
@@ -94,7 +96,7 @@ namespace ShaftesApp.Views
             JoinClassView.Frame = new CGRect(0, Frame.Height - 266, 240, 128);
             JoinClassView.SetImage(UIImage.FromBundle("button_joinclass"), UIControlState.Normal);
             JoinClassView.ImageView.ContentMode = UIViewContentMode.ScaleAspectFit;
-            JoinClassView.AddTarget(this, new Selector("JoinClass"), UIControlEvent.TouchUpInside);
+            JoinClassView.AddTarget(this, new Selector("ShowJoinClass"), UIControlEvent.TouchUpInside);
             
             Username = new UITextView();
             Username.Text = ViewController.Client.Username;
@@ -142,37 +144,117 @@ namespace ShaftesApp.Views
             Title1.UserInteractionEnabled = false;
 
             CodeView = new UITextField();
-            CodeView.Frame = new CGRect(0, Frame.Height / 2, 256, 64);
+            CodeView.Frame = new CGRect(16, Frame.Height / 2, 224, 64);
             CodeView.Font = Fonts.Settings_Title;
             CodeView.KeyboardType = UIKeyboardType.NumberPad;
+            CodeView.Layer.BorderColor = UIColor.White.CGColor;
+            CodeView.Layer.BorderWidth = 1;
+            CodeView.Font = Fonts.Big;
+            CodeView.TouchUpInside += (sender, e) =>
+            {
+                CodeView.Layer.BorderColor = UIColor.White.CGColor;
+            };
+
+
+            SubmitArrow = new UIButton();
+            SubmitArrow.Frame = new CGRect(48, Frame.Height / 2, 64, 64);
+            SubmitArrow.SetImage(UIImage.FromBundle("button_submit"), UIControlState.Normal);
+            SubmitArrow.AddTarget(this, new Selector("FindClass"), UIControlEvent.TouchUpInside);
+            SubmitArrow.ContentMode = UIViewContentMode.ScaleAspectFit;
+
+            Cancel.Frame = new CGRect(Frame.Width - 32, 0, 32, 32);
         }
 
         private void RenderJoinClass()
         {
+            Title1.Text = "Enter Class Code";
             AddSubview(Title1);
             AddSubview(CodeView);
+            AddSubview(Cancel);
+        }
+
+        private void InitializeConfirm()
+        {
+            RoomName = new UITextView();
+            RoomName.Frame = new CGRect(0, 0, Frame.Width, Frame.Height);
+            RoomName.Text = Room.Name;
+
+            RoomPic = new UIImageView();
+            RoomPic.Frame = new CGRect(C.X_MID - 48, 0, 96, 96);
+            RoomPic.Image = Room.Image;
+
+            JoinButton = new UIButton();
+            JoinButton.Frame = new CGRect(C.X_MID - 48, 96, 128, 64);
+            JoinButton.SetImage(UIImage.FromBundle("button_joinclass"), UIControlState.Normal);
+            JoinButton.AddTarget(this, new Selector("JoinClass"), UIControlEvent.TouchUpInside);
+        }
+
+        private void RenderConfirm()
+        {
+            AddSubview(Foreground);
+            AddSubview(RoomPic);
+            Title1.Text = Room.Name;
+            AddSubview(Title1);
+            AddSubview(JoinButton);
+        }
+
+        private void RenderCannotFind()
+        {
+            CodeView.Layer.BorderColor = UIColor.Red.CGColor;
+            CodeView.Text = "";
         }
 
         private void ClearSubviews()
         {
-            for (int i = 0; i < Subviews.Length; i++)
+            foreach (UIView v in Subviews)
             {
-                Subviews[i].RemoveFromSuperview();
+                v.RemoveFromSuperview();
             }
+        }
+
+        [Export("ShowJoinClass")]
+        public void ShowJoinClass()
+        {
+            ClearSubviews();
+
+            X = C.X_MID - 128;
+            Y = C.Y_MID - 64;
+
+            Frame = new CGRect(X, Y, 256, 128);
+            InitializeJoinClass();
+            RenderJoinClass();
+        }
+
+        [Export("FindClass")]
+        public void FindClass()
+        {
+            X = C.X_MID - 128;
+            Y = C.Y_MID - 64;
+
+            Frame = new CGRect(X, Y, 256, 128);
+
+            int id = int.Parse(CodeView.Text);
+            Room = Room.GetRoom(id);
+
+            if (Room == null)
+            {
+                RenderCannotFind();
+            }
+            else
+            {
+                ClearSubviews();
+                InitializeConfirm();
+                RenderConfirm();
+            }
+
         }
 
         [Export("JoinClass")]
         public void JoinClass()
         {
-            ClearSubviews();
-
-            X = C.X_MID - 192;
-            Y = C.Y_MID - 128;
-
-            Frame = new CGRect(X, Y, 384, 256);
-            InitializeJoinClass();
-            RenderJoinClass();
+            ViewController.Client.JoinRoom(Room);
         }
+
 
     }
 }
