@@ -44,7 +44,9 @@ namespace ShaftesApp
 
             //if tap is outside setting window thingy, reload current view without settings window (effectivly closing it)
             if (Loader.SETTINGS_OPEN)
-                new Loader(Loader.CurrentState);
+            {
+                ViewController.LoaderInstance.RenderView(Loader.CurrentState);
+            }
 
         }
 
@@ -140,6 +142,11 @@ namespace ShaftesApp
 
             ShowTaskbar();
 
+        }
+
+        public void RefreshView()
+        {
+            RenderView(Loader.CurrentState);
         }
 
         private void render(UIView v)

@@ -34,10 +34,10 @@ namespace ShaftesApp.Net
         {
             Image = UIImage.FromBundle("cheese_avatar");
 
-            for (int i = 0; i < 9; i++)
-            {
-                Rooms.Add(new Room($"Classroom{i}"));
-            }
+            //for (int i = 0; i < 9; i++)
+            //{
+            //    Rooms.Add(new Room($"Classroom{i}"));
+            //}
 
             Username = GetUsername();
             Bio = GetBio();

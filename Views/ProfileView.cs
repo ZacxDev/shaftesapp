@@ -93,6 +93,8 @@ namespace ShaftesApp.Views
 
         public static void AddToView()
         {
+            RefreshView();
+
             Access.vc.View.AddSubview(Avatar);
             Access.vc.View.AddSubview(AvatarFrame);
             Access.vc.View.AddSubview(Username);
@@ -123,6 +125,17 @@ namespace ShaftesApp.Views
                 new RoomListNode(rooms[i].Name, i).AddToSuperView(RoomsScrollView);
             }
 
+        }
+
+        private static void RefreshView()
+        {
+            Rooms.SetText($"Classrooms: {ViewController.Client.Rooms.Count}");
+            RoomsScrollView = new RoomsScrollView(rooms.Count);
+
+            for (int i = 0; i < rooms.Count; i++)
+            {
+                new RoomListNode(rooms[i].Name, i).AddToSuperView(RoomsScrollView);
+            }
         }
 
         public static void ShowRooms(bool fromRoom)

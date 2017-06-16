@@ -39,10 +39,10 @@ namespace ShaftesApp.Views
         private UIButton SubmitArrow;
 
         //confirm class views
-        private UITextView RoomName;
         private UIImageView RoomPic;
         private UIView Foreground;
         private UIButton JoinButton;
+        private UIButton ViewButton;
         private Room Room;
 
         public SettingsView()
@@ -77,7 +77,7 @@ namespace ShaftesApp.Views
             AvatarView.ContentMode = UIViewContentMode.ScaleAspectFit;
 
             Title = new UITextView();
-            Title.Frame = new CGRect(64, 4, 128, 64);
+            Title.Frame = new CGRect(64, 0, 128, 64);
             Title.BackgroundColor = UIColor.Clear;
             Title.Text = "Settings";
             Title.Font = Fonts.Settings_Title;
@@ -93,10 +93,10 @@ namespace ShaftesApp.Views
             TypeView.SetImages(new UIImage[] { UIImage.FromBundle("settings_0"), UIImage.FromBundle("settings_1") });
 
             JoinClassView = new UIButton();
-            JoinClassView.Frame = new CGRect(0, Frame.Height - 266, 240, 128);
-            JoinClassView.SetImage(UIImage.FromBundle("button_joinclass"), UIControlState.Normal);
+            JoinClassView.Frame = new CGRect(0, Frame.Height - 186, 240, 128);
+            JoinClassView.SetImage(UIImage.FromBundle("button_joinroom"), UIControlState.Normal);
             JoinClassView.ImageView.ContentMode = UIViewContentMode.ScaleAspectFit;
-            JoinClassView.AddTarget(this, new Selector("ShowJoinClass"), UIControlEvent.TouchUpInside);
+            JoinClassView.AddTarget(this, new Selector("ShowJoinRoom"), UIControlEvent.TouchUpInside);
             
             Username = new UITextView();
             Username.Text = ViewController.Client.Username;
@@ -115,6 +115,7 @@ namespace ShaftesApp.Views
             Cancel.Frame = new CGRect(Frame.Width - 32, 0, 32, 32);
             Cancel.SetImage(UIImage.FromBundle("button_cancel"), UIControlState.Normal);
             Cancel.ContentMode = UIViewContentMode.ScaleAspectFit;
+            Cancel.AddTarget(this, new Selector("Cancel"), UIControlEvent.TouchUpInside);
 
         }
 
@@ -135,7 +136,7 @@ namespace ShaftesApp.Views
         private void InitializeJoinClass()
         {
             Title1 = new UITextView();
-            Title1.Text = "Enter Class Code";
+            Title1.Text = "Enter Room Code";
             Title1.Frame = new CGRect(0, 0, Frame.Width, 48);
             Title1.Font = Fonts.Settings_Title;
             Title1.BackgroundColor = UIColor.Clear;
@@ -144,7 +145,7 @@ namespace ShaftesApp.Views
             Title1.UserInteractionEnabled = false;
 
             CodeView = new UITextField();
-            CodeView.Frame = new CGRect(16, Frame.Height / 2, 224, 64);
+            CodeView.Frame = new CGRect(16, Frame.Height / 3, 196, 64);
             CodeView.Font = Fonts.Settings_Title;
             CodeView.KeyboardType = UIKeyboardType.NumberPad;
             CodeView.Layer.BorderColor = UIColor.White.CGColor;
@@ -157,9 +158,9 @@ namespace ShaftesApp.Views
 
 
             SubmitArrow = new UIButton();
-            SubmitArrow.Frame = new CGRect(48, Frame.Height / 2, 64, 64);
+            SubmitArrow.Frame = new CGRect(196, Frame.Height / 3, 64, 64);
             SubmitArrow.SetImage(UIImage.FromBundle("button_submit"), UIControlState.Normal);
-            SubmitArrow.AddTarget(this, new Selector("FindClass"), UIControlEvent.TouchUpInside);
+            SubmitArrow.AddTarget(this, new Selector("FindRoom"), UIControlEvent.TouchUpInside);
             SubmitArrow.ContentMode = UIViewContentMode.ScaleAspectFit;
 
             Cancel.Frame = new CGRect(Frame.Width - 32, 0, 32, 32);
@@ -167,35 +168,42 @@ namespace ShaftesApp.Views
 
         private void RenderJoinClass()
         {
-            Title1.Text = "Enter Class Code";
+            Title1.Text = "Enter Room Code";
             AddSubview(Title1);
             AddSubview(CodeView);
             AddSubview(Cancel);
+            AddSubview(SubmitArrow);
         }
 
         private void InitializeConfirm()
         {
-            RoomName = new UITextView();
-            RoomName.Frame = new CGRect(0, 0, Frame.Width, Frame.Height);
-            RoomName.Text = Room.Name;
+
+            Title1.Text = Room.Name;
+            Title1.Frame = new CGRect(0, Frame.Height / 4, Frame.Width, 32);
+            Title1.TextAlignment = UITextAlignment.Left;
 
             RoomPic = new UIImageView();
-            RoomPic.Frame = new CGRect(C.X_MID - 48, 0, 96, 96);
+            RoomPic.Frame = new CGRect(8, Frame.Height / 2, 64, 64);
             RoomPic.Image = Room.Image;
+            RoomPic.ContentMode = UIViewContentMode.ScaleAspectFit;
 
             JoinButton = new UIButton();
-            JoinButton.Frame = new CGRect(C.X_MID - 48, 96, 128, 64);
-            JoinButton.SetImage(UIImage.FromBundle("button_joinclass"), UIControlState.Normal);
-            JoinButton.AddTarget(this, new Selector("JoinClass"), UIControlEvent.TouchUpInside);
+            JoinButton.Frame = new CGRect(128, 8, 120, 64);
+            JoinButton.SetImage(UIImage.FromBundle("button_joinroom"), UIControlState.Normal);
+            JoinButton.AddTarget(this, new Selector("JoinRoom"), UIControlEvent.TouchUpInside);
+
+            ViewButton = new UIButton();
+            ViewButton.Frame = new CGRect(128, 80, 120, 64);
+            ViewButton.SetImage(UIImage.FromBundle("button_viewroom"), UIControlState.Normal);
+            ViewButton.AddTarget(this, new Selector("ViewRoom"), UIControlEvent.TouchUpInside);
         }
 
         private void RenderConfirm()
         {
-            AddSubview(Foreground);
             AddSubview(RoomPic);
-            Title1.Text = Room.Name;
             AddSubview(Title1);
             AddSubview(JoinButton);
+            AddSubview(ViewButton);
         }
 
         private void RenderCannotFind()
@@ -212,8 +220,8 @@ namespace ShaftesApp.Views
             }
         }
 
-        [Export("ShowJoinClass")]
-        public void ShowJoinClass()
+        [Export("ShowJoinRoom")]
+        public void ShowJoinRoom()
         {
             ClearSubviews();
 
@@ -225,13 +233,19 @@ namespace ShaftesApp.Views
             RenderJoinClass();
         }
 
-        [Export("FindClass")]
-        public void FindClass()
+        [Export("FindRoom")]
+        public void FindRoom()
         {
             X = C.X_MID - 128;
             Y = C.Y_MID - 64;
 
-            Frame = new CGRect(X, Y, 256, 128);
+            Frame = new CGRect(X, Y, 256, 160);
+
+            if (CodeView.Text.Length == 0)
+            {
+                RenderCannotFind();
+                return;
+            }
 
             int id = int.Parse(CodeView.Text);
             Room = Room.GetRoom(id);
@@ -249,10 +263,24 @@ namespace ShaftesApp.Views
 
         }
 
-        [Export("JoinClass")]
-        public void JoinClass()
+        [Export("JoinRoom")]
+        public void JoinRoom()
         {
             ViewController.Client.JoinRoom(Room);
+            ViewController.LoaderInstance.RefreshView();
+        }
+
+        [Export("ViewRoom")]
+        void ViewRoom()
+        {
+            Loader.Room = Room;
+            ViewController.LoaderInstance.RenderView(AppState.ROOM);
+        }
+
+        [Export("Cancel")]
+        public void CancelJoin()
+        {
+            ViewController.LoaderInstance.RenderView(Loader.CurrentState);
         }
 
 

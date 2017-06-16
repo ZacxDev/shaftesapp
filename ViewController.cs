@@ -43,6 +43,11 @@ namespace ShaftesApp
             BtnHandler = new ButtonHandler();
             ViewDismiss = new ViewDismiss();
             LoaderInstance = new Loader(state);
+
+            for (int i = 0; i < 9; i++)
+            {
+                new Room($"Classroom{i}");
+            }
         }
 
         public override void DidReceiveMemoryWarning()
@@ -86,6 +91,12 @@ namespace ShaftesApp
         public override bool PrefersStatusBarHidden()
         {
             return true;
+        }
+
+        public override void TouchesEnded(NSSet touches, UIEvent evt)
+        {
+            base.TouchesEnded(touches, evt);
+            Access.vc.View.EndEditing(true);
         }
 
     }

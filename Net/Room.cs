@@ -44,6 +44,7 @@ namespace ShaftesApp.Net
             Initialize();
 
             Key = new Random().Next(10000);
+            Debug.WriteLine(Key);
 
             //change to download image from server
             Image = UIImage.FromBundle("room_image");
