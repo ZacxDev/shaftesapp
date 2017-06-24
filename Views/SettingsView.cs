@@ -13,7 +13,7 @@ using ShaftesApp.Net;
 
 namespace ShaftesApp.Views
 {
-    class SettingsView
+   public class SettingsView
         : UIView
     {
 
@@ -50,7 +50,6 @@ namespace ShaftesApp.Views
 
             if (!init)
                 Initialize();
-            new PrimeView();
             RenderMain();
         }
 
@@ -119,8 +118,16 @@ namespace ShaftesApp.Views
 
         }
 
-        private void RenderMain()
+        public void RenderMain()
         {
+            new PrimeView();
+
+            X = C.X_MID - 128;
+            Y = 64;
+
+            Frame = new CGRect(X, Y, 256, C.Y_MAX - 128);
+
+            ClearSubviews();
             AddSubview(Header);
             AddSubview(Title);
             AddSubview(TypeView);

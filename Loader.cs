@@ -41,11 +41,13 @@ namespace ShaftesApp
             Console.WriteLine("n");
             UITouch t = touches.AnyObject as UITouch;
             CGPoint tap = t.LocationInView(this);
+            CurrentPrime.RemoveFromSuperview();
 
             //if tap is outside setting window thingy, reload current view without settings window (effectivly closing it)
             if (Loader.SETTINGS_OPEN)
             {
-                ViewController.LoaderInstance.RenderView(Loader.CurrentState);
+                //ViewController.LoaderInstance.RenderView(Loader.CurrentState);
+                Loader.SettingsView.RemoveFromSuperview();
             }
 
         }
@@ -59,6 +61,7 @@ namespace ShaftesApp
         public static bool SETTINGS_OPEN = false;
         public static AppState CurrentState;
         public static Room Room;
+        public static SettingsView SettingsView;
 
         private bool _initViews = false;
 
@@ -261,8 +264,13 @@ namespace ShaftesApp
 
         public static void ShowSettings()
         {
-            new SettingsView();
             SETTINGS_OPEN = true;
+            if (SettingsView == null)
+            {
+                SettingsView = new SettingsView();
+                return;
+            }
+            SettingsView.RenderMain();
         }
 
     }
