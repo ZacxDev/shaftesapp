@@ -38,7 +38,7 @@ namespace ShaftesApp
         public override void TouchesBegan(Foundation.NSSet touches, UIEvent evt)
         {
             base.TouchesBegan(touches, evt);
-            Console.WriteLine("n");
+            
             UITouch t = touches.AnyObject as UITouch;
             CGPoint tap = t.LocationInView(this);
             CurrentPrime.RemoveFromSuperview();
