@@ -42,8 +42,8 @@ namespace ShaftesApp
             UITouch t = touches.AnyObject as UITouch;
             CGPoint tap = t.LocationInView(this);
             CurrentPrime.RemoveFromSuperview();
-
-            //if tap is outside setting window thingy, reload current view without settings window (effectivly closing it)
+            
+            //if tap is outside setting window thingy, remove from view
             if (Loader.SETTINGS_OPEN)
             {
                 //ViewController.LoaderInstance.RenderView(Loader.CurrentState);
